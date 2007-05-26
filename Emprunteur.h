@@ -10,6 +10,7 @@ class Emprunteur
 {
 public:
 	Emprunteur(void);
+	Emprunteur(std::string lenom, std::string leprenom, Date ladate_naissance, Adresse ladresseemprunteur, std::string lenumero_carte_identite="NULL");
 public:
 	~Emprunteur(void);
 private:

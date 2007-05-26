@@ -1,5 +1,6 @@
 #pragma once
-#include "StdAfx.h" 
+#include "StdAfx.h"
+#include "listeEmprunteur.h"
 
 namespace efreiloca {
 
@@ -9,6 +10,7 @@ namespace efreiloca {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace std;
 
 	/// <summary>
 	/// Description résumée de Form1
@@ -22,13 +24,18 @@ namespace efreiloca {
 	public ref class Form1 : public System::Windows::Forms::Form
 	{
 	public:
-		Form1(void)
+
+		
+
+		Form1(void)  
 		{
 			InitializeComponent();
 			//
 			//TODO : ajoutez ici le code du constructeur
 			//
 		}
+
+		
 
 
 	protected:
@@ -82,7 +89,8 @@ namespace efreiloca {
 	private: System::Windows::Forms::TabPage^  tabPage8;
 	private: System::Windows::Forms::Label^  Label_New_Nom;
 	private: System::Windows::Forms::Label^  label_New_Prenom;
-	private: System::Windows::Forms::DateTimePicker^  dateTimePicker1;
+	private: System::Windows::Forms::DateTimePicker^  date_Naissance;
+
 	private: System::Windows::Forms::Label^  label_New_DateNaissance;
 	private: System::Windows::Forms::TextBox^  textBox_Prenom;
 	private: System::Windows::Forms::TextBox^  textBox_Nom;
@@ -396,7 +404,7 @@ private: System::ComponentModel::IContainer^  components;
 			this->textBox_rue = (gcnew System::Windows::Forms::TextBox());
 			this->TextBox_Num = (gcnew System::Windows::Forms::MaskedTextBox());
 			this->label_New_Num = (gcnew System::Windows::Forms::Label());
-			this->dateTimePicker1 = (gcnew System::Windows::Forms::DateTimePicker());
+			this->date_Naissance = (gcnew System::Windows::Forms::DateTimePicker());
 			this->label_New_DateNaissance = (gcnew System::Windows::Forms::Label());
 			this->textBox_Prenom = (gcnew System::Windows::Forms::TextBox());
 			this->textBox_Nom = (gcnew System::Windows::Forms::TextBox());
@@ -659,7 +667,7 @@ private: System::ComponentModel::IContainer^  components;
 			this->tabPage2->Controls->Add(this->groupBox2);
 			this->tabPage2->Controls->Add(this->groupBox1);
 			this->tabPage2->Controls->Add(this->Adresse);
-			this->tabPage2->Controls->Add(this->dateTimePicker1);
+			this->tabPage2->Controls->Add(this->date_Naissance);
 			this->tabPage2->Controls->Add(this->label_New_DateNaissance);
 			this->tabPage2->Controls->Add(this->textBox_Prenom);
 			this->tabPage2->Controls->Add(this->textBox_Nom);
@@ -1716,14 +1724,14 @@ private: System::ComponentModel::IContainer^  components;
 			this->label_New_Num->TabIndex = 2;
 			this->label_New_Num->Text = L"N° :";
 			// 
-			// dateTimePicker1
+			// date_Naissance
 			// 
-			this->dateTimePicker1->CalendarTitleBackColor = System::Drawing::SystemColors::HotTrack;
-			this->dateTimePicker1->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
-			this->dateTimePicker1->Location = System::Drawing::Point(229, 127);
-			this->dateTimePicker1->Name = L"dateTimePicker1";
-			this->dateTimePicker1->Size = System::Drawing::Size(86, 20);
-			this->dateTimePicker1->TabIndex = 6;
+			this->date_Naissance->CalendarTitleBackColor = System::Drawing::SystemColors::HotTrack;
+			this->date_Naissance->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
+			this->date_Naissance->Location = System::Drawing::Point(229, 127);
+			this->date_Naissance->Name = L"date_Naissance";
+			this->date_Naissance->Size = System::Drawing::Size(86, 20);
+			this->date_Naissance->TabIndex = 6;
 			// 
 			// label_New_DateNaissance
 			// 
@@ -2012,7 +2020,7 @@ private: System::Void label37_Click(System::Object^  sender, System::EventArgs^ 
 private: System::Void textBox15_TextChanged(System::Object^  sender, System::EventArgs^  e) {
 		 }
 private: System::Void validationEmprunteur_Click(System::Object^  sender, System::EventArgs^  e) {
-
+			 //ListeEmprumteur::getinstance()-> 
 		 }
 };
 }

@@ -208,6 +208,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Config.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\Date.cpp"
 				>
 			</File>
@@ -228,7 +232,19 @@
 				>
 			</File>
 			<File
+				RelativePath=".\gestionEmprunteurs.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\GestionVehicule.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\listeEmprunteur.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\ListeLocation.cpp"
 				>
 			</File>
 			<File
@@ -318,6 +334,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Config.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Date.h"
 				>
 			</File>
@@ -344,7 +364,19 @@
 				</File>
 			</File>
 			<File
+				RelativePath=".\gestionEmprunteurs.h"
+				>
+			</File>
+			<File
+				RelativePath=".\GestionVehicule.h"
+				>
+			</File>
+			<File
 				RelativePath=".\listeEmprunteur.h"
+				>
+			</File>
+			<File
+				RelativePath=".\ListeLocation.h"
 				>
 			</File>
 			<File

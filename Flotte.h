@@ -17,11 +17,15 @@ private:
     void afficherliste(void);
 
 
-public:
+private:
 	Flotte(void);
-	vehicule vehicule;
+	static Flotte* instance;
 public:
+	vehicule vehicule;
+	static Flotte* getinstance();
+private:
 	~Flotte(void);
+public:
 	int num_vehicule;
 
 

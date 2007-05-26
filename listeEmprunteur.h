@@ -8,11 +8,16 @@
 
 class ListeEmprunteur
 {
-public:
-	ListeEmprunteur(void);
-	~ListeEmprunteur(void);
 private:
-	stdext::hash_map< Date, Emprunteur > TabEmprunteurs;
+	ListeEmprunteur(void); 
+	~ListeEmprunteur(void);
+	static ListeEmprunteur* instance;
+	int id;
+public:
+	static ListeEmprunteur* getinstance();
+	void ajout(ListeEmprunteur* nouveauEmprunteur); 
+private:
+	stdext::hash_map< std::string , Emprunteur > TabEmprunteurs;
 
    
 
