@@ -1,5 +1,5 @@
 #pragma once
-#include "c:\documents and settings\patrick\bureau\efrei-loca\vehicule\moto.h"
+#include "moto.h"
 
 class Moto_Scooter :
 	public Moto
