@@ -196,11 +196,59 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
+				RelativePath=".\Adresse.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\AssemblyInfo.cpp"
 				>
 			</File>
 			<File
+				RelativePath=".\Conducteur.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Date.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\efreiloca.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Emprunteur.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Exemplaire.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Flotte.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\listeEmprunteur.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Location.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Moto.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Moto_GrosseCylindre.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Moto_PetiteCylindre.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Moto_Scooter.cpp"
 				>
 			</File>
 			<File
@@ -223,6 +271,38 @@
 					/>
 				</FileConfiguration>
 			</File>
+			<File
+				RelativePath=".\vehicule.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\voiture.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Voiture_Compacte.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Voiture_Economique.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Voiture_Familiale.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Voiture_Luxe.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Voiture_Sport.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Voiture_Utilitaire.cpp"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="Fichiers d&apos;en-tête"
@@ -230,15 +310,7 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
-				RelativePath=".\Adresse.cpp"
-				>
-			</File>
-			<File
 				RelativePath=".\Adresse.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Conducteur.cpp"
 				>
 			</File>
 			<File
@@ -246,19 +318,19 @@
 				>
 			</File>
 			<File
-				RelativePath=".\Date.cpp"
-				>
-			</File>
-			<File
 				RelativePath=".\Date.h"
 				>
 			</File>
 			<File
-				RelativePath=".\Emprunteur.cpp"
+				RelativePath=".\Emprunteur.h"
 				>
 			</File>
 			<File
-				RelativePath=".\Emprunteur.h"
+				RelativePath=".\Exemplaire.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Flotte.h"
 				>
 			</File>
 			<File
@@ -272,19 +344,27 @@
 				</File>
 			</File>
 			<File
-				RelativePath=".\listeEmprunteur.cpp"
-				>
-			</File>
-			<File
 				RelativePath=".\listeEmprunteur.h"
 				>
 			</File>
 			<File
-				RelativePath=".\Location.cpp"
+				RelativePath=".\Location.h"
 				>
 			</File>
 			<File
-				RelativePath=".\Location.h"
+				RelativePath=".\Moto.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Moto_GrosseCylindre.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Moto_PetiteCylindre.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Moto_Scooter.h"
 				>
 			</File>
 			<File
@@ -293,6 +373,38 @@
 			</File>
 			<File
 				RelativePath=".\stdafx.h"
+				>
+			</File>
+			<File
+				RelativePath=".\vehicule.h"
+				>
+			</File>
+			<File
+				RelativePath=".\voiture.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Voiture_Compacte.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Voiture_Economique.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Voiture_Familiale.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Voiture_Luxe.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Voiture_Sport.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Voiture_Utilitaire.h"
 				>
 			</File>
 		</Filter>

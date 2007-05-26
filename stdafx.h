@@ -12,8 +12,9 @@
 #include "Adresse.h"
 #include "Conducteur.h"
 #include "Location.h"
-#include <hash_map>
 
+#include <hash_map>
+#include <vector>
 
 using namespace std;
 // TODO : faites référence ici aux en-têtes supplémentaires nécessaires au programme
