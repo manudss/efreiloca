@@ -230,6 +230,38 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
+				RelativePath=".\Adresse.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Adresse.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Conducteur.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Conducteur.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Date.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Date.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Emprunteur.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Emprunteur.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Form1.h"
 				FileType="3"
 				>
@@ -238,6 +270,22 @@
 					SubType="Designer"
 					>
 				</File>
+			</File>
+			<File
+				RelativePath=".\listeEmprunteur.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\listeEmprunteur.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Location.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Location.h"
+				>
 			</File>
 			<File
 				RelativePath=".\resource.h"
@@ -262,6 +310,18 @@
 				>
 			</File>
 		</Filter>
+		<File
+			RelativePath=".\Adresse.datasource"
+			>
+		</File>
+		<File
+			RelativePath=".\Emprunteur.datasource"
+			>
+		</File>
+		<File
+			RelativePath=".\Form1.datasource"
+			>
+		</File>
 		<File
 			RelativePath=".\ReadMe.txt"
 			>
