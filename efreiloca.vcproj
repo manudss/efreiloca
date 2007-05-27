@@ -252,22 +252,6 @@
 				>
 			</File>
 			<File
-				RelativePath=".\Moto.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Moto_GrosseCylindre.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Moto_PetiteCylindre.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Moto_Scooter.cpp"
-				>
-			</File>
-			<File
 				RelativePath=".\stdafx.cpp"
 				>
 				<FileConfiguration
@@ -291,34 +275,58 @@
 				RelativePath=".\vehicule.cpp"
 				>
 			</File>
-			<File
-				RelativePath=".\voiture.cpp"
+			<Filter
+				Name="Moto"
 				>
-			</File>
-			<File
-				RelativePath=".\Voiture_Compacte.cpp"
+				<File
+					RelativePath=".\Moto.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Moto_GrosseCylindre.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Moto_PetiteCylindre.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Moto_Scooter.cpp"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="voiture"
 				>
-			</File>
-			<File
-				RelativePath=".\Voiture_Economique.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Voiture_Familiale.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Voiture_Luxe.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Voiture_Sport.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Voiture_Utilitaire.cpp"
-				>
-			</File>
+				<File
+					RelativePath=".\voiture.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Voiture_Compacte.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Voiture_Economique.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Voiture_Familiale.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Voiture_Luxe.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Voiture_Sport.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Voiture_Utilitaire.cpp"
+					>
+				</File>
+			</Filter>
 		</Filter>
 		<Filter
 			Name="Fichiers d&apos;en-tête"
@@ -384,22 +392,6 @@
 				>
 			</File>
 			<File
-				RelativePath=".\Moto.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Moto_GrosseCylindre.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Moto_PetiteCylindre.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Moto_Scooter.h"
-				>
-			</File>
-			<File
 				RelativePath=".\resource.h"
 				>
 			</File>
@@ -411,34 +403,58 @@
 				RelativePath=".\vehicule.h"
 				>
 			</File>
-			<File
-				RelativePath=".\voiture.h"
+			<Filter
+				Name="Moto"
 				>
-			</File>
-			<File
-				RelativePath=".\Voiture_Compacte.h"
+				<File
+					RelativePath=".\Moto.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Moto_GrosseCylindre.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Moto_PetiteCylindre.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Moto_Scooter.h"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="voiture"
 				>
-			</File>
-			<File
-				RelativePath=".\Voiture_Economique.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Voiture_Familiale.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Voiture_Luxe.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Voiture_Sport.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Voiture_Utilitaire.h"
-				>
-			</File>
+				<File
+					RelativePath=".\voiture.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Voiture_Compacte.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Voiture_Economique.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Voiture_Familiale.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Voiture_Luxe.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Voiture_Sport.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Voiture_Utilitaire.h"
+					>
+				</File>
+			</Filter>
 		</Filter>
 		<Filter
 			Name="Fichiers de ressources"
