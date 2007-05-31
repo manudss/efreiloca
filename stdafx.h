@@ -13,9 +13,18 @@
 #include "Conducteur.h"
 #include "Location.h"
 
+
 #include <hash_map>
 #include <vector>
 
 using namespace std;
-// TODO : faites référence ici aux en-têtes supplémentaires nécessaires au programme
+using namespace System;
+using namespace System::ComponentModel;
+using namespace System::Collections;
+using namespace System::Windows::Forms;
+using namespace System::Data;
+using namespace System::Drawing;
 
+// TODO : faites référence ici aux en-têtes supplémentaires nécessaires au programme
+void ConvertString ( String ^ s, string& os ); 
+std::string ConvertString ( String ^ s);

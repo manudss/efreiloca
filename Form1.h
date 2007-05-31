@@ -1,6 +1,11 @@
 #pragma once
 #include "StdAfx.h"
 #include "listeEmprunteur.h"
+#include "GestionEmprunteurs.h"
+#include "Adresse.h"
+#include "Date.h"
+
+
 
 namespace efreiloca {
 
@@ -568,7 +573,6 @@ private: System::ComponentModel::IContainer^  components;
 			this->locationEnCoursToolStripMenuItem->Name = L"locationEnCoursToolStripMenuItem";
 			this->locationEnCoursToolStripMenuItem->Size = System::Drawing::Size(75, 20);
 			this->locationEnCoursToolStripMenuItem->Text = L"Location";
-			this->locationEnCoursToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::locationEnCoursToolStripMenuItem_Click);
 			// 
 			// nouveauToolStripMenuItem
 			// 
@@ -688,7 +692,6 @@ private: System::ComponentModel::IContainer^  components;
 			this->textBox_numero_carte_didentite->Name = L"textBox_numero_carte_didentite";
 			this->textBox_numero_carte_didentite->Size = System::Drawing::Size(216, 20);
 			this->textBox_numero_carte_didentite->TabIndex = 20;
-			this->textBox_numero_carte_didentite->TextChanged += gcnew System::EventHandler(this, &Form1::textBox15_TextChanged);
 			// 
 			// label_numero_carte_didentite
 			// 
@@ -700,7 +703,6 @@ private: System::ComponentModel::IContainer^  components;
 			this->label_numero_carte_didentite->Size = System::Drawing::Size(218, 24);
 			this->label_numero_carte_didentite->TabIndex = 19;
 			this->label_numero_carte_didentite->Text = L"Numéro Carte d\'identité :";
-			this->label_numero_carte_didentite->Click += gcnew System::EventHandler(this, &Form1::label37_Click);
 			// 
 			// validationEmprunteur
 			// 
@@ -760,7 +762,6 @@ private: System::ComponentModel::IContainer^  components;
 			this->groupBox5->TabIndex = 15;
 			this->groupBox5->TabStop = false;
 			this->groupBox5->Text = L"Permis";
-			this->groupBox5->Enter += gcnew System::EventHandler(this, &Form1::groupBox5_Enter);
 			// 
 			// checkBox4
 			// 
@@ -846,7 +847,7 @@ private: System::ComponentModel::IContainer^  components;
 			this->textBox4->Name = L"textBox4";
 			this->textBox4->Size = System::Drawing::Size(196, 20);
 			this->textBox4->TabIndex = 14;
-			this->textBox4->TextChanged += gcnew System::EventHandler(this, &Form1::textBox4_TextChanged);
+			
 			// 
 			// label11
 			// 
@@ -858,7 +859,7 @@ private: System::ComponentModel::IContainer^  components;
 			this->label11->Size = System::Drawing::Size(69, 18);
 			this->label11->TabIndex = 13;
 			this->label11->Text = L"Prénom :";
-			this->label11->Click += gcnew System::EventHandler(this, &Form1::label11_Click);
+			
 			// 
 			// dateTimePicker6
 			// 
@@ -1500,7 +1501,6 @@ private: System::ComponentModel::IContainer^  components;
 			this->checkBox1->TabIndex = 9;
 			this->checkBox1->Text = L"Permis Moto";
 			this->checkBox1->UseVisualStyleBackColor = true;
-			this->checkBox1->CheckedChanged += gcnew System::EventHandler(this, &Form1::checkBox1_CheckedChanged);
 			// 
 			// textBox1
 			// 
@@ -1561,7 +1561,6 @@ private: System::ComponentModel::IContainer^  components;
 			this->groupBox1->TabIndex = 12;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"Permis Voiture";
-			this->groupBox1->Enter += gcnew System::EventHandler(this, &Form1::groupBox1_Enter);
 			// 
 			// label3
 			// 
@@ -1665,7 +1664,6 @@ private: System::ComponentModel::IContainer^  components;
 			this->label_New_Ville->Size = System::Drawing::Size(50, 20);
 			this->label_New_Ville->TabIndex = 7;
 			this->label_New_Ville->Text = L"Ville  :";
-			this->label_New_Ville->Click += gcnew System::EventHandler(this, &Form1::label1_Click_2);
 			// 
 			// TextBox_CodePostal
 			// 
@@ -1685,7 +1683,6 @@ private: System::ComponentModel::IContainer^  components;
 			this->label_New_Codepostal->Size = System::Drawing::Size(107, 20);
 			this->label_New_Codepostal->TabIndex = 3;
 			this->label_New_Codepostal->Text = L"Code Postal  :";
-			this->label_New_Codepostal->Click += gcnew System::EventHandler(this, &Form1::label_New_Codepostal_Click);
 			// 
 			// label_New_Rue
 			// 
@@ -1757,7 +1754,6 @@ private: System::ComponentModel::IContainer^  components;
 			this->textBox_Nom->Name = L"textBox_Nom";
 			this->textBox_Nom->Size = System::Drawing::Size(204, 20);
 			this->textBox_Nom->TabIndex = 3;
-			this->textBox_Nom->TextChanged += gcnew System::EventHandler(this, &Form1::textBox_Nom_TextChanged);
 			// 
 			// label_New_Prenom
 			// 
@@ -1780,7 +1776,6 @@ private: System::ComponentModel::IContainer^  components;
 			this->Label_New_Nom->Size = System::Drawing::Size(61, 24);
 			this->Label_New_Nom->TabIndex = 1;
 			this->Label_New_Nom->Text = L"Nom :";
-			this->Label_New_Nom->Click += gcnew System::EventHandler(this, &Form1::label1_Click_1);
 			// 
 			// NouvelEmprunteur
 			// 
@@ -1793,7 +1788,6 @@ private: System::ComponentModel::IContainer^  components;
 			this->NouvelEmprunteur->TabIndex = 0;
 			this->NouvelEmprunteur->Text = L"Nouvel Emprunteur";
 			this->NouvelEmprunteur->TextAlign = System::Drawing::ContentAlignment::TopCenter;
-			this->NouvelEmprunteur->Click += gcnew System::EventHandler(this, &Form1::label1_Click);
 			// 
 			// tabPage3
 			// 
@@ -1816,13 +1810,12 @@ private: System::ComponentModel::IContainer^  components;
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(5) {this->ID, this->Nom, 
 				this->Prénom, this->Naissance, this->Location});
-			this->dataGridView1->DataSource = this->emprunteurBindingSource;
+			//this->dataGridView1->DataSource = this->emprunteurBindingSource;
 			this->dataGridView1->Location = System::Drawing::Point(13, 102);
 			this->dataGridView1->MultiSelect = false;
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->Size = System::Drawing::Size(969, 545);
 			this->dataGridView1->TabIndex = 3;
-			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &Form1::dataGridView1_CellContentClick);
 			// 
 			// ID
 			// 
@@ -1855,7 +1848,7 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// emprunteurBindingSource
 			// 
-			this->emprunteurBindingSource->DataSource = Emprunteur::typeid;
+			//this->emprunteurBindingSource->DataSource = Emprunteur::typeid;
 			// 
 			// label_listeE_ListeEmprunteur
 			// 
@@ -1920,7 +1913,7 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// adresseBindingSource1
 			// 
-			this->adresseBindingSource1->DataSource = Adresse::typeid;
+			//this->adresseBindingSource1->DataSource = Adresse::typeid;
 			// 
 			// Form1
 			// 
@@ -1935,7 +1928,6 @@ private: System::ComponentModel::IContainer^  components;
 			this->Name = L"Form1";
 			this->Text = L"EfreiLoca : La location de véhicule tout simplement";
 			this->WindowState = System::Windows::Forms::FormWindowState::Maximized;
-			this->FormClosed += gcnew System::Windows::Forms::FormClosedEventHandler(this, &Form1::Form1_FormClosed);
 			this->menuhaut->ResumeLayout(false);
 			this->menuhaut->PerformLayout();
 			this->TabPage->ResumeLayout(false);
@@ -1981,46 +1973,39 @@ private: System::ComponentModel::IContainer^  components;
 #pragma endregion
 	private: System::Void voitureToolStripMenuItem1_Click(System::Object^  sender, System::EventArgs^  e) {
 			 }
-private: System::Void label1_Click(System::Object^  sender, System::EventArgs^  e) {
-		 }
-private: System::Void label1_Click_1(System::Object^  sender, System::EventArgs^  e) {
-		 }
-private: System::Void label_New_Codepostal_Click(System::Object^  sender, System::EventArgs^  e) {
-		 }
-private: System::Void label1_Click_2(System::Object^  sender, System::EventArgs^  e) {
-		 }
+
 private: System::Void listeDesEmprunteursToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
 			
 			 this->TabPage->SelectedIndex = 1;
 		 }
 private: System::Void nouvelEmprunteurToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
-			 //TabPage->;
+			 
 			 this->TabPage->SelectedIndex = 0;
 		 }
-private: System::Void dataGridView1_CellContentClick(System::Object^  sender, System::Windows::Forms::DataGridViewCellEventArgs^  e) {
-		 }
-private: System::Void textBox_Nom_TextChanged(System::Object^  sender, System::EventArgs^  e) {
-		 }
-private: System::Void checkBox1_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-		 }
-private: System::Void groupBox1_Enter(System::Object^  sender, System::EventArgs^  e) {
-			 }
-private: System::Void Form1_FormClosed(System::Object^  sender, System::Windows::Forms::FormClosedEventArgs^  e) {
-			 }
-private: System::Void label11_Click(System::Object^  sender, System::EventArgs^  e) {
-		 }
-private: System::Void textBox4_TextChanged(System::Object^  sender, System::EventArgs^  e) {
-		 }
-private: System::Void groupBox5_Enter(System::Object^  sender, System::EventArgs^  e) {
-		 }
-private: System::Void locationEnCoursToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
-		 }
-private: System::Void label37_Click(System::Object^  sender, System::EventArgs^  e) {
-		 }
-private: System::Void textBox15_TextChanged(System::Object^  sender, System::EventArgs^  e) {
-		 }
-private: System::Void validationEmprunteur_Click(System::Object^  sender, System::EventArgs^  e) {
-			 //ListeEmprumteur::getinstance()-> 
+
+		 
+
+protected: System::Void validationEmprunteur_Click(System::Object^  sender, System::EventArgs^  e) {
+			 
+			  /* 
+			   //ConvertString (this->textBox_Nom->Text, Str);
+			   std::string &Str = ConvertString (this->textBox_Nom->Text);
+			   String^ str2 = gcnew String(Str.c_str());
+			   this->textBox_Prenom->Text = str2;
+			   gestionEmprunteurs* emp = gestionEmprunteurs::getinstance();
+				   
+				   emp->setname(ConvertString (this->textBox_Nom->Text));
+
+				  // String^ str3 = gcnew String(emp->setname().c_str());
+
+				   this->textBox_numero_carte_didentite->Text = gcnew String(emp->getname().c_str());
+
+			   //Adresse* L_Adresse;
+			 //L_Adresse = new Adresse((std:string) this->TextBox_Num->Text, (std:string) this->textBox_rue->Text, (std:string) this->TextBox_CodePostal, (std:string) this->textBox_Ville);
+			 //Date*   LaDate = new Date( this->date_Naissance->value.ToString() ); 
+				   //emp->nouveauEmprunteurs(ConvertString (this->textBox_Nom->Text), ConvertString (this->textBox_Prenom->Text), ConvertString (this->TextBox_Num->Text), ConvertString (this->textBox_rue->Text), ConvertString (this->TextBox_CodePostal->Text), ConvertString (this->textBox_Ville->Text), ConvertString (this->textBox_numero_carte_didentite->Text));
+		 
+			*/
 		 }
 };
 }

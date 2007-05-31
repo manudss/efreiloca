@@ -15,9 +15,9 @@ private:
 	int id;
 public:
 	static ListeEmprunteur* getinstance();
-	void ajout(ListeEmprunteur* nouveauEmprunteur); 
+	void ajout(Emprunteur* nouveauEmprunteur); 
 private:
-	stdext::hash_map< std::string , Emprunteur > TabEmprunteurs;
+	stdext::hash_map< std::string , Emprunteur* > TabEmprunteurs;
 
    
 
