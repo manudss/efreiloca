@@ -7,6 +7,8 @@
 
 #include <stdio.h>
 #include <iostream>
+#include <fstream>
+#include <stdlib.h>
 #include "Date.h"
 #include "Emprunteur.h"
 #include "Adresse.h"

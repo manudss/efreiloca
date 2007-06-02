@@ -6,6 +6,9 @@
 #include "Emprunteur.h"
 #include <hash_map>
 
+using namespace std;
+using namespace stdext;
+
 class ListeEmprunteur
 {
 private:
@@ -14,11 +17,17 @@ private:
 	static ListeEmprunteur* instance;
 	int id;
 public:
+
 	static ListeEmprunteur* getinstance();
 	void ajout(Emprunteur* nouveauEmprunteur); 
+
+	int chargement () ;
+	int enregistrement() ;
+	
 private:
 	stdext::hash_map< std::string , Emprunteur* > TabEmprunteurs;
-
+	stdext::hash_map< std::string , Emprunteur* >:: iterator hash_iter;
+	typedef pair <std::string , Emprunteur* > Int_Pair;
    
 
 };

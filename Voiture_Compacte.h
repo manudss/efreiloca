@@ -8,4 +8,6 @@ public:
 	Voiture_Compacte(void);
 public:
 	~Voiture_Compacte(void);
+
+	
 };

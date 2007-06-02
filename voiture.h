@@ -8,4 +8,7 @@ public:
 	voiture(void);
 public:
 	~voiture(void);
+private:
+
+
 };
