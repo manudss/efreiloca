@@ -1,8 +1,23 @@
-#include "StdAfx.h"
+#include "stdafx.h"
 #include "Emprunteur.h"
 
 Emprunteur::Emprunteur(void)
 {
+	this->nom = "";
+	this->prenom = "";
+	this->numero_carte_identite = "";
+	this->numero_permisauto = "";
+	this->numero_permismoto = "";
+	this->permis_moto = false;
+	this->permis_voiture = false;
+	this->id = 0;
+	for(int i=0 ; i < 4; i++) // CHANGER '4' pr optimisation memoire !
+			{
+				autre_conducteur[i]=new Conducteur;
+			}
+
+
+	
 }
 
 Emprunteur::~Emprunteur(void)
@@ -15,6 +30,7 @@ Emprunteur::Emprunteur(std::string lenom, std::string leprenom, Date ladate_nais
 	permis_voiture = false;
 	permis_moto = false;
 }
+
 
 void Emprunteur::setpermisauto(std::string le_num_permisauto, Date la_delivrance_permis_voiture,	Date l_expiration_permis_voiture)
 {
@@ -74,10 +90,7 @@ void Emprunteur::set (int a, std::string chain)
 			
 			//int nb;
 			//nb = atoi (chain.c_str());
-			for(int i=0 ; i < 4; i++) // CHANGER '4' pr optimisation memoire !
-			{
-				autre_conducteur[i]=new Conducteur;
-			}
+			
 			break;
 
 
@@ -278,7 +291,8 @@ switch (a)
 		default : 
 			break ;
 
-}
+	}
+	return "";
 
 
 

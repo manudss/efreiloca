@@ -1,8 +1,11 @@
-#include "StdAfx.h"
+#include "stdafx.h"
 #include "Date.h"
 
 Date::Date(void)
 {
+	this->aaaa = 0;
+	this->jj = 0;
+	this->mm = 0;
 }
 
 Date::~Date(void)

@@ -1,4 +1,4 @@
-#include "StdAfx.h"
+#include "stdafx.h"
 #include "listeEmprunteur.h"
 
 
@@ -26,6 +26,25 @@ ListeEmprunteur* ListeEmprunteur::getinstance()
 		instance = new ListeEmprunteur();
 	}
 	return instance;
+}
+
+Emprunteur* ListeEmprunteur::returnEmprunteurscour()
+{
+	
+	return this->iter_cour->second;
+}
+void ListeEmprunteur::emprumteursuiv()
+{
+	iter_cour ++;
+}
+void ListeEmprunteur::emprumteurbegin()
+{
+	iter_cour = TabEmprunteurs.begin( ); 
+}
+
+int ListeEmprunteur::nbrEmprunteur()
+{
+	return TabEmprunteurs.size();
 }
 
 int ListeEmprunteur::chargement ()
@@ -92,7 +111,7 @@ ofstream outfile;
 
 if (outfile.bad()==0)
 {
-outfile.open("client_out.txt",  ios::out | ios::trunc);
+outfile.open("client.txt",  ios::out | ios::trunc);
 
 
 for ( hash_iter = TabEmprunteurs.begin( ); hash_iter != TabEmprunteurs.end( ); hash_iter++ )

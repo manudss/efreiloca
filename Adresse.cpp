@@ -3,6 +3,10 @@
 
 Adresse::Adresse(void)
 {
+	this->codepostale = 0;
+	this->numero = 0;
+	this->rue = "";
+	this->ville = "";
 }
 
 Adresse::~Adresse(void)

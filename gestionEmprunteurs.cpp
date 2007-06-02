@@ -1,4 +1,4 @@
-#include "StdAfx.h"
+#include "stdafx.h"
 #include "gestionEmprunteurs.h"
 #include "listeEmprunteur.h"
 
@@ -6,6 +6,7 @@ gestionEmprunteurs* gestionEmprunteurs::instance = 0;
 
 gestionEmprunteurs::gestionEmprunteurs(void)
 {
+	ListeEmp = ListeEmprunteur::getinstance();
 }
 
 gestionEmprunteurs::~gestionEmprunteurs(void)
@@ -18,6 +19,7 @@ gestionEmprunteurs* gestionEmprunteurs::getinstance()
 		instance = new gestionEmprunteurs();
 	return instance;
 }
+
 
 
 Emprunteur* nouveauEmprunteurs(std::string lenom, std::string leprenom, std::string lenumero, std::string larue, std::string lecodepostale, std::string laville, std::string lenumero_carte_identite="NULL")
@@ -40,3 +42,47 @@ std::string gestionEmprunteurs::getname()
 {
 	return nom;
 }
+
+void gestionEmprunteurs::chargementcour()
+{
+	this->Emprunteurcourrent = this->ListeEmp->returnEmprunteurscour();
+}
+
+
+void gestionEmprunteurs::chargementbegin()
+{
+	this->ListeEmp->emprumteurbegin();
+}
+
+void gestionEmprunteurs::chargementsuiv()
+{
+	this->ListeEmp->emprumteursuiv();
+}
+
+int gestionEmprunteurs::NbrEmprunteur()
+{
+	int retour = this->ListeEmp->nbrEmprunteur();
+	return retour;
+}
+
+void gestionEmprunteurs::nouveau()
+{
+	this->Emprunteurcourrent = new Emprunteur;
+}
+
+void  gestionEmprunteurs::ajout()
+{
+	this->ListeEmp->ajout(this->Emprunteurcourrent);
+}
+
+void gestionEmprunteurs::chargement(int i)
+{
+	 this->ListeEmp->emprumteurbegin();
+	 for (int j=0; j < i-1; j++)
+		this->ListeEmp->emprumteursuiv();
+
+	 this->Emprunteurcourrent = this->ListeEmp->returnEmprunteurscour();
+}
+
+
+

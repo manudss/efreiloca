@@ -88,7 +88,7 @@ ofstream outfile;
 
 if (outfile.bad()==0)
 {
-outfile.open("exemplaires_out.txt",  ios::out | ios::trunc);
+outfile.open("exemplaires.txt",  ios::out | ios::trunc);
 
 
 for ( hash_iter = tabFlotte.begin( ); hash_iter != tabFlotte.end( ); hash_iter++ )

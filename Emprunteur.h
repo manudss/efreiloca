@@ -15,6 +15,7 @@ public:
 
 public:
 	~Emprunteur(void);
+
 	void setpermisauto(std::string le_num_permisauto, Date la_delivrance_permis_voiture,	Date l_expiration_permis_voiture);
 	void setpermismoto(std::string le_num_permismoto, Date la_delivrance_permis_moto,	Date l_expiration_permis_moto);
 	
@@ -24,6 +25,7 @@ public:
 	//Getter:
 
 	std::string get (int);
+
 
 private:
 	int id;

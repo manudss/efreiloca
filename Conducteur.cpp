@@ -3,6 +3,11 @@
 
 Conducteur::Conducteur(void)
 {
+	this->nom = "";
+	this->prenom = "";
+	this->permis_moto = false;
+	this->permis_voiture = false;
+	this->num_permis = "";
 }
 
 Conducteur::~Conducteur(void)
