@@ -2,6 +2,7 @@
 #include "StdAfx.h"
 #include "listeEmprunteur.h"
 #include "GestionEmprunteurs.h"
+#include "GestionVehicule.h"
 #include "Adresse.h"
 #include "Date.h"
 
@@ -62,13 +63,13 @@ namespace efreiloca {
 	private: System::Windows::Forms::ToolStripMenuItem^  listeDesEmprunteursToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  vehiculeToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  listeDesVéhiculesToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^  voitureToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^  motoToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^  autreToolStripMenuItem;
+
+
+
 	private: System::Windows::Forms::ToolStripMenuItem^  listeDesVéhiculesToolStripMenuItem1;
-	private: System::Windows::Forms::ToolStripMenuItem^  voitureToolStripMenuItem1;
-	private: System::Windows::Forms::ToolStripMenuItem^  motosToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^  tousToolStripMenuItem;
+
+
+
 	private: System::Windows::Forms::ToolStripMenuItem^  locationEnCoursToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  nouveauToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  retourLocationToolStripMenuItem;
@@ -84,7 +85,8 @@ namespace efreiloca {
 
 
 	private: System::Windows::Forms::TabPage^  tabPage2;
-	private: System::Windows::Forms::Label^  NouvelEmprunteur;
+	private: System::Windows::Forms::Label^  Label_NouvelEmprunteur;
+
 
 	private: System::Windows::Forms::TabPage^  tabPage3;
 	private: System::Windows::Forms::TabPage^  tabPage4;
@@ -285,6 +287,66 @@ private: System::Windows::Forms::BindingSource^  emprunteurBindingSource;
 private: System::Windows::Forms::DataGridView^  dataGridView1;
 private: System::Windows::Forms::Button^  button_precedent;
 private: System::Windows::Forms::Button^  button_suivant;
+private: System::Windows::Forms::CheckBox^  checkBox_disponible;
+
+private: System::Windows::Forms::Label^  label_titreexemplaire;
+private: System::Windows::Forms::Label^  label37;
+private: System::Windows::Forms::ComboBox^  comboBox_niveauessence;
+private: System::Windows::Forms::ComboBox^  comboBox_Etat;
+
+private: System::Windows::Forms::Label^  label39;
+private: System::Windows::Forms::TextBox^  textBox1;
+private: System::Windows::Forms::Label^  label38;
+private: System::Windows::Forms::GroupBox^  groupBox_etatvoiture;
+private: System::Windows::Forms::GroupBox^  groupBox_refexemplaire;
+private: System::Windows::Forms::TextBox^  textBox_referencevehicule;
+private: System::Windows::Forms::Label^  label40;
+private: System::Windows::Forms::ComboBox^  comboBox_type;
+
+private: System::Windows::Forms::Label^  label43;
+private: System::Windows::Forms::TextBox^  textBox_modele;
+
+private: System::Windows::Forms::Label^  label42;
+private: System::Windows::Forms::TextBox^  textBox_Marque;
+
+private: System::Windows::Forms::Label^  label41;
+private: System::Windows::Forms::Label^  label47;
+private: System::Windows::Forms::TextBox^  textBox_puissance;
+
+private: System::Windows::Forms::Label^  label46;
+private: System::Windows::Forms::Label^  label45;
+private: System::Windows::Forms::TextBox^  textBox_consomation;
+
+private: System::Windows::Forms::Label^  label44;
+private: System::Windows::Forms::Label^  label48;
+private: System::Windows::Forms::ComboBox^  comboBox_carburant;
+
+private: System::Windows::Forms::TextBox^  textBox3;
+private: System::Windows::Forms::Label^  label50;
+private: System::Windows::Forms::TextBox^  textBox_nombreplace;
+private: System::Windows::Forms::Label^  label49;
+private: System::Windows::Forms::Label^  label53;
+private: System::Windows::Forms::Label^  label52;
+private: System::Windows::Forms::TextBox^  textBox_prix;
+
+private: System::Windows::Forms::Label^  label51;
+private: System::Windows::Forms::DateTimePicker^  dateTimePicker1;
+private: System::Windows::Forms::DataGridView^  dataGridView_ListesExemplaires;
+
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column_Marque;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column_Modele;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column_type;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column_ref;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column_prix;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column_nbrplace;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column_carburant;
+private: System::Windows::Forms::Button^  button3;
+private: System::Windows::Forms::Button^  button1;
+private: System::Windows::Forms::Button^  button2;
+private: System::Windows::Forms::Button^  button_nouveau;
+
+
+
 
 
 
@@ -337,13 +399,7 @@ private: System::ComponentModel::IContainer^  components;
 			this->listeDesEmprunteursToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->vehiculeToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->listeDesVéhiculesToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->voitureToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->motoToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->autreToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->listeDesVéhiculesToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->voitureToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->motosToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->tousToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->locationEnCoursToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->nouveauToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->retourLocationToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -468,7 +524,7 @@ private: System::ComponentModel::IContainer^  components;
 			this->textBox_Nom = (gcnew System::Windows::Forms::TextBox());
 			this->label_New_Prenom = (gcnew System::Windows::Forms::Label());
 			this->Label_New_Nom = (gcnew System::Windows::Forms::Label());
-			this->NouvelEmprunteur = (gcnew System::Windows::Forms::Label());
+			this->Label_NouvelEmprunteur = (gcnew System::Windows::Forms::Label());
 			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
 			this->dataListeEmprunteur = (gcnew System::Windows::Forms::DataGridView());
 			this->ID = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
@@ -478,6 +534,53 @@ private: System::ComponentModel::IContainer^  components;
 			this->Location = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->label_listeE_ListeEmprunteur = (gcnew System::Windows::Forms::Label());
 			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
+			this->button_nouveau = (gcnew System::Windows::Forms::Button());
+			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->dataGridView_ListesExemplaires = (gcnew System::Windows::Forms::DataGridView());
+			this->Column_Marque = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column_Modele = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column_type = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column_ref = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column_prix = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column_nbrplace = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column_carburant = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->groupBox_refexemplaire = (gcnew System::Windows::Forms::GroupBox());
+			this->dateTimePicker1 = (gcnew System::Windows::Forms::DateTimePicker());
+			this->label53 = (gcnew System::Windows::Forms::Label());
+			this->label52 = (gcnew System::Windows::Forms::Label());
+			this->textBox_prix = (gcnew System::Windows::Forms::TextBox());
+			this->label51 = (gcnew System::Windows::Forms::Label());
+			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
+			this->label50 = (gcnew System::Windows::Forms::Label());
+			this->textBox_nombreplace = (gcnew System::Windows::Forms::TextBox());
+			this->label49 = (gcnew System::Windows::Forms::Label());
+			this->comboBox_carburant = (gcnew System::Windows::Forms::ComboBox());
+			this->label48 = (gcnew System::Windows::Forms::Label());
+			this->label47 = (gcnew System::Windows::Forms::Label());
+			this->textBox_puissance = (gcnew System::Windows::Forms::TextBox());
+			this->label46 = (gcnew System::Windows::Forms::Label());
+			this->label45 = (gcnew System::Windows::Forms::Label());
+			this->textBox_consomation = (gcnew System::Windows::Forms::TextBox());
+			this->label44 = (gcnew System::Windows::Forms::Label());
+			this->comboBox_type = (gcnew System::Windows::Forms::ComboBox());
+			this->label43 = (gcnew System::Windows::Forms::Label());
+			this->textBox_modele = (gcnew System::Windows::Forms::TextBox());
+			this->label42 = (gcnew System::Windows::Forms::Label());
+			this->textBox_Marque = (gcnew System::Windows::Forms::TextBox());
+			this->label41 = (gcnew System::Windows::Forms::Label());
+			this->textBox_referencevehicule = (gcnew System::Windows::Forms::TextBox());
+			this->label40 = (gcnew System::Windows::Forms::Label());
+			this->groupBox_etatvoiture = (gcnew System::Windows::Forms::GroupBox());
+			this->comboBox_Etat = (gcnew System::Windows::Forms::ComboBox());
+			this->checkBox_disponible = (gcnew System::Windows::Forms::CheckBox());
+			this->label39 = (gcnew System::Windows::Forms::Label());
+			this->comboBox_niveauessence = (gcnew System::Windows::Forms::ComboBox());
+			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->label37 = (gcnew System::Windows::Forms::Label());
+			this->label38 = (gcnew System::Windows::Forms::Label());
+			this->label_titreexemplaire = (gcnew System::Windows::Forms::Label());
 			this->tabPage5 = (gcnew System::Windows::Forms::TabPage());
 			this->tabPage6 = (gcnew System::Windows::Forms::TabPage());
 			this->tabPage7 = (gcnew System::Windows::Forms::TabPage());
@@ -506,6 +609,10 @@ private: System::ComponentModel::IContainer^  components;
 			this->Groupebox_Adresse->SuspendLayout();
 			this->tabPage3->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataListeEmprunteur))->BeginInit();
+			this->tabPage4->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataGridView_ListesExemplaires))->BeginInit();
+			this->groupBox_refexemplaire->SuspendLayout();
+			this->groupBox_etatvoiture->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->emprunteurBindingSource))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->adresseBindingSource))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->adresseBindingSource1))->BeginInit();
@@ -562,60 +669,21 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// listeDesVéhiculesToolStripMenuItem
 			// 
-			this->listeDesVéhiculesToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {this->voitureToolStripMenuItem, 
-				this->motoToolStripMenuItem, this->autreToolStripMenuItem});
 			this->listeDesVéhiculesToolStripMenuItem->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"listeDesVéhiculesToolStripMenuItem.Image")));
 			this->listeDesVéhiculesToolStripMenuItem->Name = L"listeDesVéhiculesToolStripMenuItem";
 			this->listeDesVéhiculesToolStripMenuItem->ShortcutKeys = System::Windows::Forms::Keys::F9;
 			this->listeDesVéhiculesToolStripMenuItem->Size = System::Drawing::Size(193, 22);
 			this->listeDesVéhiculesToolStripMenuItem->Text = L"Nouveau";
-			// 
-			// voitureToolStripMenuItem
-			// 
-			this->voitureToolStripMenuItem->Name = L"voitureToolStripMenuItem";
-			this->voitureToolStripMenuItem->Size = System::Drawing::Size(119, 22);
-			this->voitureToolStripMenuItem->Text = L"Voiture";
-			// 
-			// motoToolStripMenuItem
-			// 
-			this->motoToolStripMenuItem->Name = L"motoToolStripMenuItem";
-			this->motoToolStripMenuItem->Size = System::Drawing::Size(119, 22);
-			this->motoToolStripMenuItem->Text = L"Moto";
-			// 
-			// autreToolStripMenuItem
-			// 
-			this->autreToolStripMenuItem->Name = L"autreToolStripMenuItem";
-			this->autreToolStripMenuItem->Size = System::Drawing::Size(119, 22);
-			this->autreToolStripMenuItem->Text = L"autre";
+			this->listeDesVéhiculesToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::listeDesVéhiculesToolStripMenuItem_Click);
 			// 
 			// listeDesVéhiculesToolStripMenuItem1
 			// 
-			this->listeDesVéhiculesToolStripMenuItem1->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {this->voitureToolStripMenuItem1, 
-				this->motosToolStripMenuItem, this->tousToolStripMenuItem});
 			this->listeDesVéhiculesToolStripMenuItem1->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"listeDesVéhiculesToolStripMenuItem1.Image")));
 			this->listeDesVéhiculesToolStripMenuItem1->Name = L"listeDesVéhiculesToolStripMenuItem1";
 			this->listeDesVéhiculesToolStripMenuItem1->ShortcutKeys = System::Windows::Forms::Keys::F4;
 			this->listeDesVéhiculesToolStripMenuItem1->Size = System::Drawing::Size(193, 22);
 			this->listeDesVéhiculesToolStripMenuItem1->Text = L"Liste des véhicules";
-			// 
-			// voitureToolStripMenuItem1
-			// 
-			this->voitureToolStripMenuItem1->Name = L"voitureToolStripMenuItem1";
-			this->voitureToolStripMenuItem1->Size = System::Drawing::Size(124, 22);
-			this->voitureToolStripMenuItem1->Text = L"Voitures";
-			this->voitureToolStripMenuItem1->Click += gcnew System::EventHandler(this, &Form1::voitureToolStripMenuItem1_Click);
-			// 
-			// motosToolStripMenuItem
-			// 
-			this->motosToolStripMenuItem->Name = L"motosToolStripMenuItem";
-			this->motosToolStripMenuItem->Size = System::Drawing::Size(124, 22);
-			this->motosToolStripMenuItem->Text = L"Motos";
-			// 
-			// tousToolStripMenuItem
-			// 
-			this->tousToolStripMenuItem->Name = L"tousToolStripMenuItem";
-			this->tousToolStripMenuItem->Size = System::Drawing::Size(124, 22);
-			this->tousToolStripMenuItem->Text = L"Tous";
+			this->listeDesVéhiculesToolStripMenuItem1->Click += gcnew System::EventHandler(this, &Form1::listeDesVéhiculesToolStripMenuItem1_Click);
 			// 
 			// locationEnCoursToolStripMenuItem
 			// 
@@ -732,7 +800,7 @@ private: System::ComponentModel::IContainer^  components;
 			this->tabPage2->Controls->Add(this->textBox_Nom);
 			this->tabPage2->Controls->Add(this->label_New_Prenom);
 			this->tabPage2->Controls->Add(this->Label_New_Nom);
-			this->tabPage2->Controls->Add(this->NouvelEmprunteur);
+			this->tabPage2->Controls->Add(this->Label_NouvelEmprunteur);
 			this->tabPage2->Location = System::Drawing::Point(14, 4);
 			this->tabPage2->Name = L"tabPage2";
 			this->tabPage2->Padding = System::Windows::Forms::Padding(3);
@@ -1851,17 +1919,17 @@ private: System::ComponentModel::IContainer^  components;
 			this->Label_New_Nom->TabIndex = 1;
 			this->Label_New_Nom->Text = L"Nom :";
 			// 
-			// NouvelEmprunteur
+			// Label_NouvelEmprunteur
 			// 
-			this->NouvelEmprunteur->AutoSize = true;
-			this->NouvelEmprunteur->Font = (gcnew System::Drawing::Font(L"Arial Black", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->Label_NouvelEmprunteur->AutoSize = true;
+			this->Label_NouvelEmprunteur->Font = (gcnew System::Drawing::Font(L"Arial Black", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->NouvelEmprunteur->Location = System::Drawing::Point(128, 3);
-			this->NouvelEmprunteur->Name = L"NouvelEmprunteur";
-			this->NouvelEmprunteur->Size = System::Drawing::Size(354, 45);
-			this->NouvelEmprunteur->TabIndex = 0;
-			this->NouvelEmprunteur->Text = L"Nouvel Emprunteur";
-			this->NouvelEmprunteur->TextAlign = System::Drawing::ContentAlignment::TopCenter;
+			this->Label_NouvelEmprunteur->Location = System::Drawing::Point(128, 3);
+			this->Label_NouvelEmprunteur->Name = L"Label_NouvelEmprunteur";
+			this->Label_NouvelEmprunteur->Size = System::Drawing::Size(354, 45);
+			this->Label_NouvelEmprunteur->TabIndex = 0;
+			this->Label_NouvelEmprunteur->Text = L"Nouvel Emprunteur";
+			this->Label_NouvelEmprunteur->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			// 
 			// tabPage3
 			// 
@@ -1947,6 +2015,14 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// tabPage4
 			// 
+			this->tabPage4->Controls->Add(this->button_nouveau);
+			this->tabPage4->Controls->Add(this->button3);
+			this->tabPage4->Controls->Add(this->button1);
+			this->tabPage4->Controls->Add(this->button2);
+			this->tabPage4->Controls->Add(this->dataGridView_ListesExemplaires);
+			this->tabPage4->Controls->Add(this->groupBox_refexemplaire);
+			this->tabPage4->Controls->Add(this->groupBox_etatvoiture);
+			this->tabPage4->Controls->Add(this->label_titreexemplaire);
 			this->tabPage4->Location = System::Drawing::Point(14, 4);
 			this->tabPage4->Name = L"tabPage4";
 			this->tabPage4->Padding = System::Windows::Forms::Padding(3);
@@ -1954,6 +2030,441 @@ private: System::ComponentModel::IContainer^  components;
 			this->tabPage4->TabIndex = 3;
 			this->tabPage4->Text = L"tabPage4";
 			this->tabPage4->UseVisualStyleBackColor = true;
+			this->tabPage4->Click += gcnew System::EventHandler(this, &Form1::tabPage4_Click);
+			// 
+			// button_nouveau
+			// 
+			this->button_nouveau->Location = System::Drawing::Point(784, 10);
+			this->button_nouveau->Name = L"button_nouveau";
+			this->button_nouveau->Size = System::Drawing::Size(133, 31);
+			this->button_nouveau->TabIndex = 26;
+			this->button_nouveau->Text = L"Nouveau";
+			this->button_nouveau->UseVisualStyleBackColor = true;
+			this->button_nouveau->Click += gcnew System::EventHandler(this, &Form1::button4_Click);
+			// 
+			// button3
+			// 
+			this->button3->Location = System::Drawing::Point(607, 251);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(143, 40);
+			this->button3->TabIndex = 25;
+			this->button3->Text = L"Valider";
+			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &Form1::button3_Click);
+			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(76, 260);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(67, 22);
+			this->button1->TabIndex = 24;
+			this->button1->Text = L"Precedent";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &Form1::button1_Click);
+			// 
+			// button2
+			// 
+			this->button2->Location = System::Drawing::Point(149, 260);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(62, 22);
+			this->button2->TabIndex = 23;
+			this->button2->Text = L"Suivant";
+			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &Form1::button2_Click);
+			// 
+			// dataGridView_ListesExemplaires
+			// 
+			this->dataGridView_ListesExemplaires->AllowUserToAddRows = false;
+			this->dataGridView_ListesExemplaires->AllowUserToDeleteRows = false;
+			this->dataGridView_ListesExemplaires->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView_ListesExemplaires->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(7) {this->Column_Marque, 
+				this->Column_Modele, this->Column_type, this->Column_ref, this->Column_prix, this->Column_nbrplace, this->Column_carburant});
+			this->dataGridView_ListesExemplaires->Location = System::Drawing::Point(54, 311);
+			this->dataGridView_ListesExemplaires->Name = L"dataGridView_ListesExemplaires";
+			this->dataGridView_ListesExemplaires->ReadOnly = true;
+			this->dataGridView_ListesExemplaires->Size = System::Drawing::Size(896, 327);
+			this->dataGridView_ListesExemplaires->TabIndex = 10;
+			// 
+			// Column_Marque
+			// 
+			this->Column_Marque->HeaderText = L"Marque";
+			this->Column_Marque->Name = L"Column_Marque";
+			this->Column_Marque->ReadOnly = true;
+			// 
+			// Column_Modele
+			// 
+			this->Column_Modele->HeaderText = L"Modele";
+			this->Column_Modele->Name = L"Column_Modele";
+			this->Column_Modele->ReadOnly = true;
+			// 
+			// Column_type
+			// 
+			this->Column_type->HeaderText = L"type";
+			this->Column_type->Name = L"Column_type";
+			this->Column_type->ReadOnly = true;
+			// 
+			// Column_ref
+			// 
+			this->Column_ref->HeaderText = L"Réf";
+			this->Column_ref->Name = L"Column_ref";
+			this->Column_ref->ReadOnly = true;
+			// 
+			// Column_prix
+			// 
+			this->Column_prix->HeaderText = L"Prix";
+			this->Column_prix->Name = L"Column_prix";
+			this->Column_prix->ReadOnly = true;
+			// 
+			// Column_nbrplace
+			// 
+			this->Column_nbrplace->HeaderText = L"Place";
+			this->Column_nbrplace->Name = L"Column_nbrplace";
+			this->Column_nbrplace->ReadOnly = true;
+			// 
+			// Column_carburant
+			// 
+			this->Column_carburant->HeaderText = L"Carburant";
+			this->Column_carburant->Name = L"Column_carburant";
+			this->Column_carburant->ReadOnly = true;
+			// 
+			// groupBox_refexemplaire
+			// 
+			this->groupBox_refexemplaire->Controls->Add(this->dateTimePicker1);
+			this->groupBox_refexemplaire->Controls->Add(this->label53);
+			this->groupBox_refexemplaire->Controls->Add(this->label52);
+			this->groupBox_refexemplaire->Controls->Add(this->textBox_prix);
+			this->groupBox_refexemplaire->Controls->Add(this->label51);
+			this->groupBox_refexemplaire->Controls->Add(this->textBox3);
+			this->groupBox_refexemplaire->Controls->Add(this->label50);
+			this->groupBox_refexemplaire->Controls->Add(this->textBox_nombreplace);
+			this->groupBox_refexemplaire->Controls->Add(this->label49);
+			this->groupBox_refexemplaire->Controls->Add(this->comboBox_carburant);
+			this->groupBox_refexemplaire->Controls->Add(this->label48);
+			this->groupBox_refexemplaire->Controls->Add(this->label47);
+			this->groupBox_refexemplaire->Controls->Add(this->textBox_puissance);
+			this->groupBox_refexemplaire->Controls->Add(this->label46);
+			this->groupBox_refexemplaire->Controls->Add(this->label45);
+			this->groupBox_refexemplaire->Controls->Add(this->textBox_consomation);
+			this->groupBox_refexemplaire->Controls->Add(this->label44);
+			this->groupBox_refexemplaire->Controls->Add(this->comboBox_type);
+			this->groupBox_refexemplaire->Controls->Add(this->label43);
+			this->groupBox_refexemplaire->Controls->Add(this->textBox_modele);
+			this->groupBox_refexemplaire->Controls->Add(this->label42);
+			this->groupBox_refexemplaire->Controls->Add(this->textBox_Marque);
+			this->groupBox_refexemplaire->Controls->Add(this->label41);
+			this->groupBox_refexemplaire->Controls->Add(this->textBox_referencevehicule);
+			this->groupBox_refexemplaire->Controls->Add(this->label40);
+			this->groupBox_refexemplaire->Location = System::Drawing::Point(54, 67);
+			this->groupBox_refexemplaire->Name = L"groupBox_refexemplaire";
+			this->groupBox_refexemplaire->Size = System::Drawing::Size(605, 178);
+			this->groupBox_refexemplaire->TabIndex = 9;
+			this->groupBox_refexemplaire->TabStop = false;
+			this->groupBox_refexemplaire->Text = L"Référence du véhicule";
+			// 
+			// dateTimePicker1
+			// 
+			this->dateTimePicker1->CustomFormat = L"dd/MM/yyyy";
+			this->dateTimePicker1->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
+			this->dateTimePicker1->Location = System::Drawing::Point(502, 110);
+			this->dateTimePicker1->Name = L"dateTimePicker1";
+			this->dateTimePicker1->Size = System::Drawing::Size(86, 20);
+			this->dateTimePicker1->TabIndex = 24;
+			// 
+			// label53
+			// 
+			this->label53->AutoSize = true;
+			this->label53->Location = System::Drawing::Point(406, 112);
+			this->label53->Name = L"label53";
+			this->label53->Size = System::Drawing::Size(74, 13);
+			this->label53->TabIndex = 23;
+			this->label53->Text = L"Date d\'achat :";
+			this->label53->Click += gcnew System::EventHandler(this, &Form1::label53_Click);
+			// 
+			// label52
+			// 
+			this->label52->AutoSize = true;
+			this->label52->Location = System::Drawing::Point(228, 148);
+			this->label52->Name = L"label52";
+			this->label52->Size = System::Drawing::Size(13, 13);
+			this->label52->TabIndex = 22;
+			this->label52->Text = L"€";
+			// 
+			// textBox_prix
+			// 
+			this->textBox_prix->Location = System::Drawing::Point(161, 144);
+			this->textBox_prix->Name = L"textBox_prix";
+			this->textBox_prix->Size = System::Drawing::Size(70, 20);
+			this->textBox_prix->TabIndex = 21;
+			// 
+			// label51
+			// 
+			this->label51->AutoSize = true;
+			this->label51->Location = System::Drawing::Point(23, 147);
+			this->label51->Name = L"label51";
+			this->label51->Size = System::Drawing::Size(132, 13);
+			this->label51->TabIndex = 20;
+			this->label51->Text = L"Prix de loaction (par jour) : ";
+			// 
+			// textBox3
+			// 
+			this->textBox3->Location = System::Drawing::Point(248, 109);
+			this->textBox3->Name = L"textBox3";
+			this->textBox3->Size = System::Drawing::Size(103, 20);
+			this->textBox3->TabIndex = 19;
+			// 
+			// label50
+			// 
+			this->label50->AutoSize = true;
+			this->label50->Location = System::Drawing::Point(193, 112);
+			this->label50->Name = L"label50";
+			this->label50->Size = System::Drawing::Size(49, 13);
+			this->label50->TabIndex = 18;
+			this->label50->Text = L"Couleur :";
+			// 
+			// textBox_nombreplace
+			// 
+			this->textBox_nombreplace->Location = System::Drawing::Point(121, 109);
+			this->textBox_nombreplace->Name = L"textBox_nombreplace";
+			this->textBox_nombreplace->Size = System::Drawing::Size(50, 20);
+			this->textBox_nombreplace->TabIndex = 17;
+			// 
+			// label49
+			// 
+			this->label49->AutoSize = true;
+			this->label49->Location = System::Drawing::Point(19, 112);
+			this->label49->Name = L"label49";
+			this->label49->Size = System::Drawing::Size(95, 13);
+			this->label49->TabIndex = 16;
+			this->label49->Text = L"Nombre de Place :";
+			// 
+			// comboBox_carburant
+			// 
+			this->comboBox_carburant->FormattingEnabled = true;
+			this->comboBox_carburant->Items->AddRange(gcnew cli::array< System::Object^  >(5) {L"Diesel", L"Essence", L"GPL", L"Electricité", 
+				L"Autre"});
+			this->comboBox_carburant->Location = System::Drawing::Point(471, 78);
+			this->comboBox_carburant->Name = L"comboBox_carburant";
+			this->comboBox_carburant->Size = System::Drawing::Size(117, 21);
+			this->comboBox_carburant->TabIndex = 15;
+			// 
+			// label48
+			// 
+			this->label48->AutoSize = true;
+			this->label48->Location = System::Drawing::Point(406, 81);
+			this->label48->Name = L"label48";
+			this->label48->Size = System::Drawing::Size(59, 13);
+			this->label48->TabIndex = 14;
+			this->label48->Text = L"Carburant :";
+			// 
+			// label47
+			// 
+			this->label47->AutoSize = true;
+			this->label47->Location = System::Drawing::Point(366, 81);
+			this->label47->Name = L"label47";
+			this->label47->Size = System::Drawing::Size(20, 13);
+			this->label47->TabIndex = 13;
+			this->label47->Text = L"Ch";
+			// 
+			// textBox_puissance
+			// 
+			this->textBox_puissance->Location = System::Drawing::Point(332, 78);
+			this->textBox_puissance->Name = L"textBox_puissance";
+			this->textBox_puissance->Size = System::Drawing::Size(35, 20);
+			this->textBox_puissance->TabIndex = 12;
+			// 
+			// label46
+			// 
+			this->label46->AutoSize = true;
+			this->label46->Location = System::Drawing::Point(260, 81);
+			this->label46->Name = L"label46";
+			this->label46->Size = System::Drawing::Size(65, 13);
+			this->label46->TabIndex = 11;
+			this->label46->Text = L"Puissance : ";
+			// 
+			// label45
+			// 
+			this->label45->AutoSize = true;
+			this->label45->Location = System::Drawing::Point(170, 82);
+			this->label45->Name = L"label45";
+			this->label45->Size = System::Drawing::Size(50, 13);
+			this->label45->TabIndex = 10;
+			this->label45->Text = L"L/100km";
+			// 
+			// textBox_consomation
+			// 
+			this->textBox_consomation->Location = System::Drawing::Point(95, 78);
+			this->textBox_consomation->Name = L"textBox_consomation";
+			this->textBox_consomation->Size = System::Drawing::Size(76, 20);
+			this->textBox_consomation->TabIndex = 9;
+			// 
+			// label44
+			// 
+			this->label44->AutoSize = true;
+			this->label44->Location = System::Drawing::Point(17, 81);
+			this->label44->Name = L"label44";
+			this->label44->Size = System::Drawing::Size(74, 13);
+			this->label44->TabIndex = 8;
+			this->label44->Text = L"Consomation :";
+			// 
+			// comboBox_type
+			// 
+			this->comboBox_type->FormattingEnabled = true;
+			this->comboBox_type->Items->AddRange(gcnew cli::array< System::Object^  >(10) {L"Moto - Grosse Cylindrée", L"Moto - Petite Cylindrée", 
+				L"Moto - Scooter", L"Voiture - Compacte", L"Voiture - Luxe", L"Voiture - Familliale", L"Voiture - Sports", L"Voiture - Utilitaire", 
+				L"Voiture - Economique", L"Autre"});
+			this->comboBox_type->Location = System::Drawing::Point(384, 16);
+			this->comboBox_type->Name = L"comboBox_type";
+			this->comboBox_type->Size = System::Drawing::Size(205, 21);
+			this->comboBox_type->TabIndex = 7;
+			this->comboBox_type->SelectedIndexChanged += gcnew System::EventHandler(this, &Form1::comboBox_type_SelectedIndexChanged);
+			// 
+			// label43
+			// 
+			this->label43->AutoSize = true;
+			this->label43->Location = System::Drawing::Point(313, 24);
+			this->label43->Name = L"label43";
+			this->label43->Size = System::Drawing::Size(40, 13);
+			this->label43->TabIndex = 6;
+			this->label43->Text = L"Type : ";
+			// 
+			// textBox_modele
+			// 
+			this->textBox_modele->Location = System::Drawing::Point(384, 47);
+			this->textBox_modele->Name = L"textBox_modele";
+			this->textBox_modele->Size = System::Drawing::Size(205, 20);
+			this->textBox_modele->TabIndex = 5;
+			// 
+			// label42
+			// 
+			this->label42->AutoSize = true;
+			this->label42->Location = System::Drawing::Point(312, 50);
+			this->label42->Name = L"label42";
+			this->label42->Size = System::Drawing::Size(51, 13);
+			this->label42->TabIndex = 4;
+			this->label42->Text = L"Modèle  :";
+			// 
+			// textBox_Marque
+			// 
+			this->textBox_Marque->Location = System::Drawing::Point(89, 47);
+			this->textBox_Marque->Name = L"textBox_Marque";
+			this->textBox_Marque->Size = System::Drawing::Size(204, 20);
+			this->textBox_Marque->TabIndex = 3;
+			// 
+			// label41
+			// 
+			this->label41->AutoSize = true;
+			this->label41->Location = System::Drawing::Point(17, 50);
+			this->label41->Name = L"label41";
+			this->label41->Size = System::Drawing::Size(49, 13);
+			this->label41->TabIndex = 2;
+			this->label41->Text = L"Marque :";
+			// 
+			// textBox_referencevehicule
+			// 
+			this->textBox_referencevehicule->Location = System::Drawing::Point(89, 19);
+			this->textBox_referencevehicule->Name = L"textBox_referencevehicule";
+			this->textBox_referencevehicule->Size = System::Drawing::Size(204, 20);
+			this->textBox_referencevehicule->TabIndex = 1;
+			// 
+			// label40
+			// 
+			this->label40->AutoSize = true;
+			this->label40->Location = System::Drawing::Point(17, 24);
+			this->label40->Name = L"label40";
+			this->label40->Size = System::Drawing::Size(66, 13);
+			this->label40->TabIndex = 0;
+			this->label40->Text = L"Référence : ";
+			// 
+			// groupBox_etatvoiture
+			// 
+			this->groupBox_etatvoiture->Controls->Add(this->comboBox_Etat);
+			this->groupBox_etatvoiture->Controls->Add(this->checkBox_disponible);
+			this->groupBox_etatvoiture->Controls->Add(this->label39);
+			this->groupBox_etatvoiture->Controls->Add(this->comboBox_niveauessence);
+			this->groupBox_etatvoiture->Controls->Add(this->textBox1);
+			this->groupBox_etatvoiture->Controls->Add(this->label37);
+			this->groupBox_etatvoiture->Controls->Add(this->label38);
+			this->groupBox_etatvoiture->Location = System::Drawing::Point(719, 67);
+			this->groupBox_etatvoiture->Name = L"groupBox_etatvoiture";
+			this->groupBox_etatvoiture->Size = System::Drawing::Size(231, 178);
+			this->groupBox_etatvoiture->TabIndex = 8;
+			this->groupBox_etatvoiture->TabStop = false;
+			this->groupBox_etatvoiture->Text = L"Etat du véhicule :";
+			// 
+			// comboBox_Etat
+			// 
+			this->comboBox_Etat->FormattingEnabled = true;
+			this->comboBox_Etat->Items->AddRange(gcnew cli::array< System::Object^  >(7) {L"Neuf", L"Très bon", L"Bon", L"Moyen", L"Mauvais", 
+				L"Très Mauvais", L"Accidenté"});
+			this->comboBox_Etat->Location = System::Drawing::Point(92, 78);
+			this->comboBox_Etat->Name = L"comboBox_Etat";
+			this->comboBox_Etat->Size = System::Drawing::Size(121, 21);
+			this->comboBox_Etat->TabIndex = 7;
+			// 
+			// checkBox_disponible
+			// 
+			this->checkBox_disponible->AutoSize = true;
+			this->checkBox_disponible->Location = System::Drawing::Point(18, 25);
+			this->checkBox_disponible->Name = L"checkBox_disponible";
+			this->checkBox_disponible->Size = System::Drawing::Size(73, 17);
+			this->checkBox_disponible->TabIndex = 1;
+			this->checkBox_disponible->Text = L"disponible";
+			this->checkBox_disponible->UseVisualStyleBackColor = true;
+			// 
+			// label39
+			// 
+			this->label39->AutoSize = true;
+			this->label39->Location = System::Drawing::Point(18, 86);
+			this->label39->Name = L"label39";
+			this->label39->Size = System::Drawing::Size(35, 13);
+			this->label39->TabIndex = 6;
+			this->label39->Text = L"Etat : ";
+			// 
+			// comboBox_niveauessence
+			// 
+			this->comboBox_niveauessence->FormattingEnabled = true;
+			this->comboBox_niveauessence->Items->AddRange(gcnew cli::array< System::Object^  >(6) {L"100", L"75", L"50", L"25", L"30", 
+				L"0"});
+			this->comboBox_niveauessence->Location = System::Drawing::Point(149, 106);
+			this->comboBox_niveauessence->Name = L"comboBox_niveauessence";
+			this->comboBox_niveauessence->Size = System::Drawing::Size(64, 21);
+			this->comboBox_niveauessence->TabIndex = 2;
+			// 
+			// textBox1
+			// 
+			this->textBox1->Location = System::Drawing::Point(92, 48);
+			this->textBox1->Name = L"textBox1";
+			this->textBox1->Size = System::Drawing::Size(121, 20);
+			this->textBox1->TabIndex = 5;
+			// 
+			// label37
+			// 
+			this->label37->AutoSize = true;
+			this->label37->Location = System::Drawing::Point(18, 114);
+			this->label37->Name = L"label37";
+			this->label37->Size = System::Drawing::Size(101, 13);
+			this->label37->TabIndex = 3;
+			this->label37->Text = L"Niveau  d\'essence :";
+			// 
+			// label38
+			// 
+			this->label38->AutoSize = true;
+			this->label38->Location = System::Drawing::Point(18, 51);
+			this->label38->Name = L"label38";
+			this->label38->Size = System::Drawing::Size(68, 13);
+			this->label38->TabIndex = 4;
+			this->label38->Text = L"Kilométrage :";
+			// 
+			// label_titreexemplaire
+			// 
+			this->label_titreexemplaire->AutoSize = true;
+			this->label_titreexemplaire->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 27.75F, System::Drawing::FontStyle::Regular, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->label_titreexemplaire->Location = System::Drawing::Point(159, 10);
+			this->label_titreexemplaire->Name = L"label_titreexemplaire";
+			this->label_titreexemplaire->Size = System::Drawing::Size(290, 42);
+			this->label_titreexemplaire->TabIndex = 0;
+			this->label_titreexemplaire->Text = L"Les exemplaires";
 			// 
 			// tabPage5
 			// 
@@ -2043,6 +2554,13 @@ private: System::ComponentModel::IContainer^  components;
 			this->tabPage3->ResumeLayout(false);
 			this->tabPage3->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataListeEmprunteur))->EndInit();
+			this->tabPage4->ResumeLayout(false);
+			this->tabPage4->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataGridView_ListesExemplaires))->EndInit();
+			this->groupBox_refexemplaire->ResumeLayout(false);
+			this->groupBox_refexemplaire->PerformLayout();
+			this->groupBox_etatvoiture->ResumeLayout(false);
+			this->groupBox_etatvoiture->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->emprunteurBindingSource))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->adresseBindingSource))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->adresseBindingSource1))->EndInit();
@@ -2064,8 +2582,11 @@ private: System::Void nouvelEmprunteurToolStripMenuItem_Click(System::Object^  s
 			 nouv = true;
 			 gestionEmprunteurs::getinstance()->nouveau();
 			 chargement();
+			 this->Label_NouvelEmprunteur->Text = L"Ajouter un Emprunteur";
 			 this->TabPage->SelectedIndex = 0;
 		 }
+
+  /* GESTION DES EMPRUNTEURS */
 
 
 private: System::Void AfficherListeDesEmprunteurs(System::Void)
@@ -2103,7 +2624,7 @@ private: System::Void AfficherListeDesEmprunteurs(System::Void)
 
 protected: System::Void validationEmprunteur_Click(System::Object^  sender, System::EventArgs^  e) {
 			 
-			   static bool trouve;
+			   
 			   // mettre au format pour l'enregistrement 
 			   date_Naissance->CustomFormat = "ddMMyyyy";
 			   this->dateTimePicker_conducteur1_delivrepermis->CustomFormat = "ddMMyyyy";
@@ -2209,8 +2730,7 @@ protected: System::Void validationEmprunteur_Click(System::Object^  sender, Syst
 
 				static bool nouv;
 			   
-			   if (nouv == true)
-			   {
+			   
 				   emp->ajout();
 				    
 					// ajout dans la liste des emprunteurs  
@@ -2218,7 +2738,7 @@ protected: System::Void validationEmprunteur_Click(System::Object^  sender, Syst
 						 DataGridViewRowCollection^ rows = this->dataListeEmprunteur->Rows;
 						rows->Add( row0 );
 						nouv = false;
-			   }
+			   
 
 			   
 			   this->date_Naissance->CustomFormat = "dd/MM/yyyy";
@@ -2264,6 +2784,7 @@ private: System::Void dataListeEmprunteur_CellClick(System::Object^  sender, Sys
 			 chargement();
 			 //this->textBox_Nom->Text = modifchamp1;
 			 //this->dataListeEmprunteur->CurrentRow;
+			 this->Label_NouvelEmprunteur->Text = L"Modifier un Emprunteur";
 			this->TabPage->SelectedIndex = 0;	
 		 }
 private: System::Void dateTimePicker6_ValueChanged(System::Object^  sender, System::EventArgs^  e) {
@@ -2369,6 +2890,7 @@ private: System::Void button_precedent_Click(System::Object^  sender, System::Ev
 			 emp->chargementprec();
 			 emp->chargementcour();
 			 chargement();
+			 this->Label_NouvelEmprunteur->Text = L"Modifier un Emprunteur";
 
 		 }
 private: System::Void button_suivant_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -2376,6 +2898,121 @@ private: System::Void button_suivant_Click(System::Object^  sender, System::Even
 			 emp->chargementsuiv();
 			 emp->chargementcour();
 			 chargement();
+			 this->Label_NouvelEmprunteur->Text = L"Modifier un Emprunteur";
+		 }		
+
+private: System::Void tabPage4_Click(System::Object^  sender, System::EventArgs^  e) {
+		 }
+private: System::Void comboBox_type_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
+		 }
+private: System::Void label53_Click(System::Object^  sender, System::EventArgs^  e) {
+		 }
+
+/* GESTION DES EXEMPLAIRES */
+
+private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {		// Boutton nouveau
+			 static bool nouvexemp;
+			 nouvexemp = true;
+			 GestionVehicule::getinstance()->nouveau();
+			 chargementExemplaire();
+			 this->label_titreexemplaire->Text = L"Ajouter un Exemplaire";
+			 this->TabPage->SelectedIndex = 2;
+		 }
+
+private: System::Void chargementExemplaire(){
+			 GestionVehicule* exp = GestionVehicule::getinstance();
+				String^ S;
+				static bool nouvexemp;
+
+				S =  gcnew String (exp->Exemplairecourrent->get(7 ).c_str());
+				this->textBox_consomation->Text = S;
+				S =  gcnew String (exp->Exemplairecourrent->get(5 ).c_str());
+				this->textBox_Marque->Text = S;
+				S =  gcnew String (exp->Exemplairecourrent->get(6 ).c_str());
+				this->textBox_modele->Text = S;
+				S =  gcnew String (exp->Exemplairecourrent->get(8 ).c_str());
+				this->textBox_nombreplace->Text = S;
+				S =  gcnew String (exp->Exemplairecourrent->get(9 ).c_str());
+				this->textBox_puissance->Text = S;
+				S =  gcnew String (exp->Exemplairecourrent->get(4 ).c_str());
+				this->textBox_referencevehicule->Text = S;
+				S =  gcnew String (exp->Exemplairecourrent->get(12 ).c_str());
+				this->comboBox_carburant->Text = S;
+				S =  gcnew String (exp->Exemplairecourrent->get(3 ).c_str());
+				this->comboBox_Etat->Text = S;
+				S =  gcnew String (exp->Exemplairecourrent->get(1 ).c_str());
+				this->comboBox_niveauessence->Text = S;
+				S =  gcnew String (exp->Exemplairecourrent->get(13 ).c_str());
+				this->comboBox_type->Text = S;
+				
+		 }
+
+
+private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {	  // boutton précedent 
+			   GestionVehicule* exp = GestionVehicule::getinstance();
+			 exp->chargementprec();
+			 exp->chargementcour();
+			 chargementExemplaire();
+			 this->Label_NouvelEmprunteur->Text = L"Modifier un Exemplaire";
+		 }
+private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {   // boutton suivant
+			 GestionVehicule* exp = GestionVehicule::getinstance();
+			 exp->chargementsuiv();
+			 exp->chargementcour();
+			 chargementExemplaire();
+			 this->Label_NouvelEmprunteur->Text = L"Modifier un Exemplaire";
+		 }
+
+private: System::Void enregistrementExemplaire(){
+			 GestionVehicule* exp = GestionVehicule::getinstance();
+				String^ S;
+				static bool nouvexemp;
+
+				exp->Exemplairecourrent->set( 7  , ConvertString(this->textBox_consomation->Text));
+				exp->Exemplairecourrent->set( 5  , ConvertString(this->textBox_Marque->Text));
+				exp->Exemplairecourrent->set( 6 , ConvertString(this->textBox_modele->Text));
+				exp->Exemplairecourrent->set( 8  , ConvertString(this->textBox_nombreplace->Text));
+				exp->Exemplairecourrent->set( 9  , ConvertString(this->textBox_puissance->Text));
+				exp->Exemplairecourrent->set( 4  , ConvertString(this->textBox_referencevehicule->Text));
+				exp->Exemplairecourrent->set( 13 , ConvertString(this->comboBox_type->Text));
+				exp->Exemplairecourrent->set( 3  , ConvertString(this->comboBox_Etat->Text));
+				exp->Exemplairecourrent->set( 1  , ConvertString(this->comboBox_niveauessence->Text));
+				exp->Exemplairecourrent->set(  12 , ConvertString(this->comboBox_carburant->Text));
+
+				//if (nouvexemp == true)
+				//{
+					exp->ajout();
+					array<String^>^row0 = {this->textBox_Marque->Text,this->textBox_modele->Text,this->comboBox_type->Text,this->textBox_referencevehicule->Text,this->textBox_prix->Text,this->textBox_nombreplace->Text,this->comboBox_carburant->Text};
+					DataGridViewRowCollection^ rows = this->dataGridView_ListesExemplaires->Rows;
+						rows->Add( row0 );
+						nouvexemp = false;
+
+				//}
+
+				/*S =  gcnew String (exp->Exemplairecourrent->get(7 ).c_str());
+				this->textBox_consomation->Text = S;
+				S =  gcnew String (exp->Exemplairecourrent->get(5 ).c_str());
+				this->textBox_Marque->Text = S;
+				S =  gcnew String (exp->Exemplairecourrent->get(6 ).c_str());
+				this->textBox_modele->Text = S;
+				S =  gcnew String (exp->Exemplairecourrent->get(8 ).c_str());
+				this->textBox_nombreplace->Text = S;
+				S =  gcnew String (exp->Exemplairecourrent->get(9 ).c_str());
+				this->textBox_puissance->Text = S;
+				S =  gcnew String (exp->Exemplairecourrent->get(4 ).c_str());
+				this->textBox_referencevehicule->Text = S;	*/
+		 }
+private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
+			 enregistrementExemplaire();
+
+		 }
+private: System::Void listeDesVéhiculesToolStripMenuItem1_Click(System::Object^  sender, System::EventArgs^  e) {
+				button1_Click(sender, e);
+				this->TabPage->SelectedIndex = 2;
+		 }
+private: System::Void listeDesVéhiculesToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+			 button4_Click(sender, e);
+			 this->TabPage->SelectedIndex = 2;
 		 }
 };
 }

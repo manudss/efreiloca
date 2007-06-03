@@ -101,6 +101,8 @@ for ( hash_iter = tabFlotte.begin( ); hash_iter != tabFlotte.end( ); hash_iter++
 	outfile << endl ;
 	}
 
+	iter_cour =	 tabFlotte.begin( );
+
 }
 
 else
@@ -109,4 +111,37 @@ cout << "erreur ouverture";
 }
 
 return 1;
+}
+
+
+
+Exemplaire* Flotte::returnExemplairecour()
+{
+	return this->iter_cour->second;
+}
+void Flotte::flottebegin()
+{
+	iter_cour = tabFlotte.begin( ); 
+}
+void Flotte::flottesuiv()
+{
+	iter_cour ++;
+	if (iter_cour  == tabFlotte.end( )  )
+	{	
+		iter_cour =	 tabFlotte.end( );
+		iter_cour --;
+	}
+	//else iter_cour ++;
+}
+void Flotte::flotteprec()
+{
+	if (iter_cour == tabFlotte.begin( )	 )
+	    iter_cour =	 tabFlotte.begin( );
+	else iter_cour --;
+}
+
+
+int Flotte::nbrExemplaire()
+{
+	return tabFlotte.size();
 }

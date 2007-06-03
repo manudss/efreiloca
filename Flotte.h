@@ -32,13 +32,20 @@ public:
 	static Flotte* getinstance();
 	int num_vehicule; // ?
 	int chargement();
+
+	Exemplaire* returnExemplairecour();
+	void flottebegin();
+	void flottesuiv();
+	int nbrExemplaire();
+	void flotteprec();
+
 	void ajout(Exemplaire* nouvelExemplaire);
 	int enregistrement();
 	
 private:
 
 stdext::hash_map< std::string , Exemplaire* > tabFlotte;
-stdext::hash_map< std::string , Exemplaire* >:: iterator hash_iter;
+stdext::hash_map< std::string , Exemplaire* >:: iterator hash_iter, iter_cour;
 typedef pair <std::string , Exemplaire* > Int_Pair;
 
 	

@@ -8,6 +8,13 @@
 
 Exemplaire::Exemplaire(void)
 {
+	this->disponible = 0;
+	this->etat = "";
+	this->nb_kilometres = 0;
+	this->niveau_essence = 0;
+	this->ref = "";
+	this->type = "";
+	
 }
 
 Exemplaire::~Exemplaire(void)

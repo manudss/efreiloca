@@ -3,6 +3,14 @@
 
 vehicule::vehicule(void)
 {
+	this->carburant = "";
+	this->consommation = 0;
+	this->couleur = "";
+	this->marque_vehicule = "";
+	this->modele_vehicule = "";
+	this->place_assises = 0;
+	this->prix_j = 0;
+	this->puissance = 0;
 }
 vehicule::~vehicule(void)
 {

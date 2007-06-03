@@ -65,7 +65,7 @@ int ListeEmprunteur::chargement ()
 
 ifstream infile("client.txt");
 
-cout << "chargement !!!\a\a\a" ;
+
 	
 
 if (infile) // test de succès d'ouverture
