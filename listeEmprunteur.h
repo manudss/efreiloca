@@ -29,6 +29,7 @@ public:
 	void emprumteurbegin();
 	void emprumteursuiv();
 	int nbrEmprunteur();
+	void emprumteurprec();
 	
 
 private:

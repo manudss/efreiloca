@@ -23,6 +23,7 @@ public:
 	void chargementcour();
 	void chargementbegin();
 	void chargementsuiv();
+	void chargementprec();
 	int NbrEmprunteur();
 	void ajout();
 	void chargement(int i);

@@ -28,6 +28,7 @@ public:
 
 
 private:
+	static int compt_id;
 	int id;
 	std::string nom;
 	std::string prenom;

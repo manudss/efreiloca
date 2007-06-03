@@ -33,14 +33,27 @@ Emprunteur* ListeEmprunteur::returnEmprunteurscour()
 	
 	return this->iter_cour->second;
 }
-void ListeEmprunteur::emprumteursuiv()
-{
-	iter_cour ++;
-}
 void ListeEmprunteur::emprumteurbegin()
 {
 	iter_cour = TabEmprunteurs.begin( ); 
 }
+void ListeEmprunteur::emprumteursuiv()
+{
+	iter_cour ++;
+	if (iter_cour  == TabEmprunteurs.end( )  )
+	{	
+		iter_cour =	 TabEmprunteurs.end( );
+		iter_cour --;
+	}
+	//else iter_cour ++;
+}
+void ListeEmprunteur::emprumteurprec()
+{
+	if (iter_cour == TabEmprunteurs.begin( )	 )
+	    iter_cour =	 TabEmprunteurs.begin( );
+	else iter_cour --;
+}
+
 
 int ListeEmprunteur::nbrEmprunteur()
 {

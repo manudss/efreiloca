@@ -2,6 +2,8 @@
 #include "StdAfx.h"
 #include "Emprunteur.h"
 
+class Emprunteur ;
+
 class Location
 {
 public:
@@ -9,10 +11,10 @@ public:
 public:
 	~Location(void);
 
-private:
-	//Emprunteur* myEmprunteur;
-	//Exemplaire* myExemplaire;
 
+	//Emprunteur::Emprunteur* Emprunteur;
+	//Exemplaire* myExemplaire;
+private:
 	int numero;
     Date date_debut;
     Date date_fin;

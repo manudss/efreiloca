@@ -1,6 +1,8 @@
 #include "stdafx.h"
 #include "Emprunteur.h"
 
+int Emprunteur::compt_id = 0;
+
 Emprunteur::Emprunteur(void)
 {
 	this->nom = "";
@@ -15,6 +17,8 @@ Emprunteur::Emprunteur(void)
 			{
 				autre_conducteur[i]=new Conducteur;
 			}
+	this->compt_id++;
+	this->id = this->compt_id;
 
 
 	
@@ -53,7 +57,8 @@ void Emprunteur::set (int a, std::string chain)
 	switch (a) 
 	{
 		case 0 :
-			id= atoi(chain.c_str()); break;
+			//id= atoi(chain.c_str());
+			break;
 		case 1 :
 			nom = chain; break;
 		case 2 :

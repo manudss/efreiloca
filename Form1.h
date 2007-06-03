@@ -99,9 +99,10 @@ namespace efreiloca {
 	private: System::Windows::Forms::Label^  label_New_DateNaissance;
 	private: System::Windows::Forms::TextBox^  textBox_Prenom;
 	private: System::Windows::Forms::TextBox^  textBox_Nom;
+	private: System::Windows::Forms::GroupBox^  Groupebox_Adresse;
 
 
-	private: System::Windows::Forms::GroupBox^  Adresse;
+
 	private: System::Windows::Forms::MaskedTextBox^  TextBox_Num;
 
 	private: System::Windows::Forms::Label^  label_New_Num;
@@ -124,12 +125,15 @@ namespace efreiloca {
 
 
 	private: System::Windows::Forms::CheckBox^  checkBox_permisvoiture;
+	private: System::Windows::Forms::GroupBox^  groupBox_permisvoiture;
 
-	private: System::Windows::Forms::GroupBox^  groupBox1;
+
 	private: System::Windows::Forms::TextBox^  textBox_permisdeconduire;
 	private: System::Windows::Forms::Label^  Numpermisdeconduire;
-	private: System::Windows::Forms::GroupBox^  groupBox3;
-	private: System::Windows::Forms::GroupBox^  groupBox2;
+private: System::Windows::Forms::GroupBox^  groupBox_locationeffectue;
+private: System::Windows::Forms::GroupBox^  groupBox_locationencours;
+
+
 	private: System::Windows::Forms::Label^  label1;
 private: System::Windows::Forms::DateTimePicker^  dateTimePicker_expirepermisvoiture;
 
@@ -138,13 +142,15 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker_delivrepermisvo
 	private: System::Windows::Forms::Label^  label2;
 	private: System::Windows::Forms::ToolStripMenuItem^  configurationToolStripMenuItem;
 	private: System::Windows::Forms::Label^  label3;
-	private: System::Windows::Forms::GroupBox^  groupBox4;
+private: System::Windows::Forms::GroupBox^  groupBox_permismoto;
+
 	private: System::Windows::Forms::Label^  label4;
 	private: System::Windows::Forms::Label^  label5;
 	private: System::Windows::Forms::Label^  label6;
 private: System::Windows::Forms::DateTimePicker^  dateTimePicker_expirepermismoto;
+private: System::Windows::Forms::DateTimePicker^  dateTimePicker_delivrepermismoto;
 
-private: System::Windows::Forms::DateTimePicker^  dateTimePicker_permisvoiture;
+
 
 	private: System::Windows::Forms::Label^  label7;
 private: System::Windows::Forms::TextBox^  textBox_numpermismoto;
@@ -184,19 +190,25 @@ private: System::Windows::Forms::CheckBox^  checkBox_conduteur1_permismoto;
 
 
 private: System::Windows::Forms::GroupBox^  groupBox6;
-private: System::Windows::Forms::CheckBox^  checkBox5;
+private: System::Windows::Forms::CheckBox^  checkBox_conducteur2_permismoto;
+
 private: System::Windows::Forms::Label^  label16;
 private: System::Windows::Forms::Label^  label17;
 private: System::Windows::Forms::Label^  label18;
-private: System::Windows::Forms::DateTimePicker^  dateTimePicker9;
-private: System::Windows::Forms::DateTimePicker^  dateTimePicker10;
+private: System::Windows::Forms::DateTimePicker^  dateTimePicker_conducteur2_expirepermis;
+
+private: System::Windows::Forms::DateTimePicker^  dateTimePicker_conducteur2_delivrepermis;
+
 private: System::Windows::Forms::Label^  label19;
-private: System::Windows::Forms::TextBox^  textBox6;
-private: System::Windows::Forms::CheckBox^  checkBox6;
+private: System::Windows::Forms::TextBox^  textBox_conducteur2_numpermis;
+
+private: System::Windows::Forms::CheckBox^  checkBox_conducteur2_permisvoiture;
+
 private: System::Windows::Forms::TextBox^  textBox_conducteur2_prenom;
 
 private: System::Windows::Forms::Label^  label20;
-private: System::Windows::Forms::DateTimePicker^  dateTimePicker11;
+private: System::Windows::Forms::DateTimePicker^  dateTimePicker_conducteur2_naissance;
+
 private: System::Windows::Forms::Label^  label21;
 private: System::Windows::Forms::TextBox^  textBox_conducteur2_nom;
 
@@ -204,45 +216,63 @@ private: System::Windows::Forms::Label^  label22;
 private: System::Windows::Forms::TabPage^  conducteur3;
 
 private: System::Windows::Forms::GroupBox^  groupBox7;
-private: System::Windows::Forms::CheckBox^  checkBox7;
+private: System::Windows::Forms::CheckBox^  checkBox_conducteur3_permismoto;
+
 private: System::Windows::Forms::Label^  label23;
 private: System::Windows::Forms::Label^  label24;
 private: System::Windows::Forms::Label^  label25;
-private: System::Windows::Forms::DateTimePicker^  dateTimePicker12;
-private: System::Windows::Forms::DateTimePicker^  dateTimePicker13;
+private: System::Windows::Forms::DateTimePicker^  dateTimePicker_conducteur3_expirepermis;
+
+private: System::Windows::Forms::DateTimePicker^  dateTimePicker_conducteur3_delivrepermis;
+
 private: System::Windows::Forms::Label^  label26;
-private: System::Windows::Forms::TextBox^  textBox9;
-private: System::Windows::Forms::CheckBox^  checkBox8;
-private: System::Windows::Forms::TextBox^  textBox10;
+private: System::Windows::Forms::TextBox^  textBox_conducteur3_numpermis;
+
+private: System::Windows::Forms::CheckBox^  checkBox_conducteur3_permisvoiture;
+
+private: System::Windows::Forms::TextBox^  textBox_conducteur3_prenom;
+
 private: System::Windows::Forms::Label^  label27;
-private: System::Windows::Forms::DateTimePicker^  dateTimePicker14;
+private: System::Windows::Forms::DateTimePicker^  dateTimePicker_conducteur3_naissance;
+
 private: System::Windows::Forms::Label^  label28;
-private: System::Windows::Forms::TextBox^  textBox11;
+private: System::Windows::Forms::TextBox^  textBox_conducteur3_nom;
+
 private: System::Windows::Forms::Label^  label29;
 private: System::Windows::Forms::TabPage^  conducteur4;
 
 private: System::Windows::Forms::GroupBox^  groupBox8;
-private: System::Windows::Forms::CheckBox^  checkBox9;
+private: System::Windows::Forms::CheckBox^  checkBox_conducteur4_permismoto;
+
 private: System::Windows::Forms::Label^  label30;
 private: System::Windows::Forms::Label^  label31;
 private: System::Windows::Forms::Label^  label32;
-private: System::Windows::Forms::DateTimePicker^  dateTimePicker15;
-private: System::Windows::Forms::DateTimePicker^  dateTimePicker16;
+private: System::Windows::Forms::DateTimePicker^  dateTimePicker_conducteur4_expirepermis;
+
+private: System::Windows::Forms::DateTimePicker^  dateTimePicker_conducteur4_delivrepermis;
+
 private: System::Windows::Forms::Label^  label33;
-private: System::Windows::Forms::TextBox^  textBox12;
-private: System::Windows::Forms::CheckBox^  checkBox10;
-private: System::Windows::Forms::TextBox^  textBox13;
+private: System::Windows::Forms::TextBox^  textBox_conducteur4_numpermis;
+
+private: System::Windows::Forms::CheckBox^  checkBox_conducteur4_permisvoiture;
+
+private: System::Windows::Forms::TextBox^  textBox_conducteur4_prenom;
+
 private: System::Windows::Forms::Label^  label34;
-private: System::Windows::Forms::DateTimePicker^  dateTimePicker17;
+private: System::Windows::Forms::DateTimePicker^  dateTimePicker_conducteur4_naissance;
+
 private: System::Windows::Forms::Label^  label35;
-private: System::Windows::Forms::TextBox^  textBox14;
+private: System::Windows::Forms::TextBox^  textBox_conducteur4_nom;
+
 private: System::Windows::Forms::Label^  label36;
 private: System::Windows::Forms::Button^  validationEmprunteur;
-private: System::Windows::Forms::DataGridView^  dataGridView2;
+private: System::Windows::Forms::DataGridView^  dataGridView_locationeffetue;
+
 
 private: System::Windows::Forms::BindingSource^  adresseBindingSource1;
 private: System::Windows::Forms::BindingSource^  adresseBindingSource;
-private: System::Windows::Forms::DataGridView^  dataGridView3;
+private: System::Windows::Forms::DataGridView^  dataGridView_locationencours;
+
 private: System::Windows::Forms::TextBox^  textBox_numero_carte_didentite;
 
 private: System::Windows::Forms::Label^  label_numero_carte_didentite;
@@ -253,6 +283,8 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^  Naissance;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^  Location;
 private: System::Windows::Forms::BindingSource^  emprunteurBindingSource;
 private: System::Windows::Forms::DataGridView^  dataGridView1;
+private: System::Windows::Forms::Button^  button_precedent;
+private: System::Windows::Forms::Button^  button_suivant;
 
 
 
@@ -323,6 +355,8 @@ private: System::ComponentModel::IContainer^  components;
 			this->aideToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->TabPage = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
+			this->button_precedent = (gcnew System::Windows::Forms::Button());
+			this->button_suivant = (gcnew System::Windows::Forms::Button());
 			this->textBox_numero_carte_didentite = (gcnew System::Windows::Forms::TextBox());
 			this->label_numero_carte_didentite = (gcnew System::Windows::Forms::Label());
 			this->validationEmprunteur = (gcnew System::Windows::Forms::Button());
@@ -348,69 +382,69 @@ private: System::ComponentModel::IContainer^  components;
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->conducteur2 = (gcnew System::Windows::Forms::TabPage());
 			this->groupBox6 = (gcnew System::Windows::Forms::GroupBox());
-			this->checkBox5 = (gcnew System::Windows::Forms::CheckBox());
+			this->checkBox_conducteur2_permismoto = (gcnew System::Windows::Forms::CheckBox());
 			this->label16 = (gcnew System::Windows::Forms::Label());
 			this->label17 = (gcnew System::Windows::Forms::Label());
 			this->label18 = (gcnew System::Windows::Forms::Label());
-			this->dateTimePicker9 = (gcnew System::Windows::Forms::DateTimePicker());
-			this->dateTimePicker10 = (gcnew System::Windows::Forms::DateTimePicker());
+			this->dateTimePicker_conducteur2_expirepermis = (gcnew System::Windows::Forms::DateTimePicker());
+			this->dateTimePicker_conducteur2_delivrepermis = (gcnew System::Windows::Forms::DateTimePicker());
 			this->label19 = (gcnew System::Windows::Forms::Label());
-			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
-			this->checkBox6 = (gcnew System::Windows::Forms::CheckBox());
+			this->textBox_conducteur2_numpermis = (gcnew System::Windows::Forms::TextBox());
+			this->checkBox_conducteur2_permisvoiture = (gcnew System::Windows::Forms::CheckBox());
 			this->textBox_conducteur2_prenom = (gcnew System::Windows::Forms::TextBox());
 			this->label20 = (gcnew System::Windows::Forms::Label());
-			this->dateTimePicker11 = (gcnew System::Windows::Forms::DateTimePicker());
+			this->dateTimePicker_conducteur2_naissance = (gcnew System::Windows::Forms::DateTimePicker());
 			this->label21 = (gcnew System::Windows::Forms::Label());
 			this->textBox_conducteur2_nom = (gcnew System::Windows::Forms::TextBox());
 			this->label22 = (gcnew System::Windows::Forms::Label());
 			this->conducteur3 = (gcnew System::Windows::Forms::TabPage());
 			this->groupBox7 = (gcnew System::Windows::Forms::GroupBox());
-			this->checkBox7 = (gcnew System::Windows::Forms::CheckBox());
+			this->checkBox_conducteur3_permismoto = (gcnew System::Windows::Forms::CheckBox());
 			this->label23 = (gcnew System::Windows::Forms::Label());
 			this->label24 = (gcnew System::Windows::Forms::Label());
 			this->label25 = (gcnew System::Windows::Forms::Label());
-			this->dateTimePicker12 = (gcnew System::Windows::Forms::DateTimePicker());
-			this->dateTimePicker13 = (gcnew System::Windows::Forms::DateTimePicker());
+			this->dateTimePicker_conducteur3_expirepermis = (gcnew System::Windows::Forms::DateTimePicker());
+			this->dateTimePicker_conducteur3_delivrepermis = (gcnew System::Windows::Forms::DateTimePicker());
 			this->label26 = (gcnew System::Windows::Forms::Label());
-			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
-			this->checkBox8 = (gcnew System::Windows::Forms::CheckBox());
-			this->textBox10 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox_conducteur3_numpermis = (gcnew System::Windows::Forms::TextBox());
+			this->checkBox_conducteur3_permisvoiture = (gcnew System::Windows::Forms::CheckBox());
+			this->textBox_conducteur3_prenom = (gcnew System::Windows::Forms::TextBox());
 			this->label27 = (gcnew System::Windows::Forms::Label());
-			this->dateTimePicker14 = (gcnew System::Windows::Forms::DateTimePicker());
+			this->dateTimePicker_conducteur3_naissance = (gcnew System::Windows::Forms::DateTimePicker());
 			this->label28 = (gcnew System::Windows::Forms::Label());
-			this->textBox11 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox_conducteur3_nom = (gcnew System::Windows::Forms::TextBox());
 			this->label29 = (gcnew System::Windows::Forms::Label());
 			this->conducteur4 = (gcnew System::Windows::Forms::TabPage());
 			this->groupBox8 = (gcnew System::Windows::Forms::GroupBox());
-			this->checkBox9 = (gcnew System::Windows::Forms::CheckBox());
+			this->checkBox_conducteur4_permismoto = (gcnew System::Windows::Forms::CheckBox());
 			this->label30 = (gcnew System::Windows::Forms::Label());
 			this->label31 = (gcnew System::Windows::Forms::Label());
 			this->label32 = (gcnew System::Windows::Forms::Label());
-			this->dateTimePicker15 = (gcnew System::Windows::Forms::DateTimePicker());
-			this->dateTimePicker16 = (gcnew System::Windows::Forms::DateTimePicker());
+			this->dateTimePicker_conducteur4_expirepermis = (gcnew System::Windows::Forms::DateTimePicker());
+			this->dateTimePicker_conducteur4_delivrepermis = (gcnew System::Windows::Forms::DateTimePicker());
 			this->label33 = (gcnew System::Windows::Forms::Label());
-			this->textBox12 = (gcnew System::Windows::Forms::TextBox());
-			this->checkBox10 = (gcnew System::Windows::Forms::CheckBox());
-			this->textBox13 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox_conducteur4_numpermis = (gcnew System::Windows::Forms::TextBox());
+			this->checkBox_conducteur4_permisvoiture = (gcnew System::Windows::Forms::CheckBox());
+			this->textBox_conducteur4_prenom = (gcnew System::Windows::Forms::TextBox());
 			this->label34 = (gcnew System::Windows::Forms::Label());
-			this->dateTimePicker17 = (gcnew System::Windows::Forms::DateTimePicker());
+			this->dateTimePicker_conducteur4_naissance = (gcnew System::Windows::Forms::DateTimePicker());
 			this->label35 = (gcnew System::Windows::Forms::Label());
-			this->textBox14 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox_conducteur4_nom = (gcnew System::Windows::Forms::TextBox());
 			this->label36 = (gcnew System::Windows::Forms::Label());
-			this->groupBox4 = (gcnew System::Windows::Forms::GroupBox());
+			this->groupBox_permismoto = (gcnew System::Windows::Forms::GroupBox());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->dateTimePicker_expirepermismoto = (gcnew System::Windows::Forms::DateTimePicker());
-			this->dateTimePicker_permisvoiture = (gcnew System::Windows::Forms::DateTimePicker());
+			this->dateTimePicker_delivrepermismoto = (gcnew System::Windows::Forms::DateTimePicker());
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->checkBox_permismoto = (gcnew System::Windows::Forms::CheckBox());
 			this->textBox_numpermismoto = (gcnew System::Windows::Forms::TextBox());
-			this->groupBox3 = (gcnew System::Windows::Forms::GroupBox());
-			this->dataGridView2 = (gcnew System::Windows::Forms::DataGridView());
-			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
-			this->dataGridView3 = (gcnew System::Windows::Forms::DataGridView());
-			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
+			this->groupBox_locationeffectue = (gcnew System::Windows::Forms::GroupBox());
+			this->dataGridView_locationeffetue = (gcnew System::Windows::Forms::DataGridView());
+			this->groupBox_locationencours = (gcnew System::Windows::Forms::GroupBox());
+			this->dataGridView_locationencours = (gcnew System::Windows::Forms::DataGridView());
+			this->groupBox_permisvoiture = (gcnew System::Windows::Forms::GroupBox());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
@@ -419,7 +453,7 @@ private: System::ComponentModel::IContainer^  components;
 			this->Numpermisdeconduire = (gcnew System::Windows::Forms::Label());
 			this->textBox_permisdeconduire = (gcnew System::Windows::Forms::TextBox());
 			this->checkBox_permisvoiture = (gcnew System::Windows::Forms::CheckBox());
-			this->Adresse = (gcnew System::Windows::Forms::GroupBox());
+			this->Groupebox_Adresse = (gcnew System::Windows::Forms::GroupBox());
 			this->textBox_Ville = (gcnew System::Windows::Forms::TextBox());
 			this->label_New_Ville = (gcnew System::Windows::Forms::Label());
 			this->TextBox_CodePostal = (gcnew System::Windows::Forms::MaskedTextBox());
@@ -463,13 +497,13 @@ private: System::ComponentModel::IContainer^  components;
 			this->groupBox7->SuspendLayout();
 			this->conducteur4->SuspendLayout();
 			this->groupBox8->SuspendLayout();
-			this->groupBox4->SuspendLayout();
-			this->groupBox3->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataGridView2))->BeginInit();
-			this->groupBox2->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataGridView3))->BeginInit();
-			this->groupBox1->SuspendLayout();
-			this->Adresse->SuspendLayout();
+			this->groupBox_permismoto->SuspendLayout();
+			this->groupBox_locationeffectue->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataGridView_locationeffetue))->BeginInit();
+			this->groupBox_locationencours->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataGridView_locationencours))->BeginInit();
+			this->groupBox_permisvoiture->SuspendLayout();
+			this->Groupebox_Adresse->SuspendLayout();
 			this->tabPage3->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataListeEmprunteur))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->emprunteurBindingSource))->BeginInit();
@@ -681,15 +715,17 @@ private: System::ComponentModel::IContainer^  components;
 			// tabPage2
 			// 
 			this->tabPage2->AutoScroll = true;
+			this->tabPage2->Controls->Add(this->button_precedent);
+			this->tabPage2->Controls->Add(this->button_suivant);
 			this->tabPage2->Controls->Add(this->textBox_numero_carte_didentite);
 			this->tabPage2->Controls->Add(this->label_numero_carte_didentite);
 			this->tabPage2->Controls->Add(this->validationEmprunteur);
 			this->tabPage2->Controls->Add(this->conducteuraditionnel);
-			this->tabPage2->Controls->Add(this->groupBox4);
-			this->tabPage2->Controls->Add(this->groupBox3);
-			this->tabPage2->Controls->Add(this->groupBox2);
-			this->tabPage2->Controls->Add(this->groupBox1);
-			this->tabPage2->Controls->Add(this->Adresse);
+			this->tabPage2->Controls->Add(this->groupBox_permismoto);
+			this->tabPage2->Controls->Add(this->groupBox_locationeffectue);
+			this->tabPage2->Controls->Add(this->groupBox_locationencours);
+			this->tabPage2->Controls->Add(this->groupBox_permisvoiture);
+			this->tabPage2->Controls->Add(this->Groupebox_Adresse);
 			this->tabPage2->Controls->Add(this->date_Naissance);
 			this->tabPage2->Controls->Add(this->label_New_DateNaissance);
 			this->tabPage2->Controls->Add(this->textBox_Prenom);
@@ -704,6 +740,26 @@ private: System::ComponentModel::IContainer^  components;
 			this->tabPage2->TabIndex = 1;
 			this->tabPage2->Text = L"tabPage2";
 			this->tabPage2->UseVisualStyleBackColor = true;
+			// 
+			// button_precedent
+			// 
+			this->button_precedent->Location = System::Drawing::Point(39, 591);
+			this->button_precedent->Name = L"button_precedent";
+			this->button_precedent->Size = System::Drawing::Size(67, 22);
+			this->button_precedent->TabIndex = 22;
+			this->button_precedent->Text = L"Precedent";
+			this->button_precedent->UseVisualStyleBackColor = true;
+			this->button_precedent->Click += gcnew System::EventHandler(this, &Form1::button_precedent_Click);
+			// 
+			// button_suivant
+			// 
+			this->button_suivant->Location = System::Drawing::Point(112, 591);
+			this->button_suivant->Name = L"button_suivant";
+			this->button_suivant->Size = System::Drawing::Size(62, 22);
+			this->button_suivant->TabIndex = 21;
+			this->button_suivant->Text = L"Suivant";
+			this->button_suivant->UseVisualStyleBackColor = true;
+			this->button_suivant->Click += gcnew System::EventHandler(this, &Form1::button_suivant_Click);
 			// 
 			// textBox_numero_carte_didentite
 			// 
@@ -940,7 +996,7 @@ private: System::ComponentModel::IContainer^  components;
 			this->conducteur2->Controls->Add(this->groupBox6);
 			this->conducteur2->Controls->Add(this->textBox_conducteur2_prenom);
 			this->conducteur2->Controls->Add(this->label20);
-			this->conducteur2->Controls->Add(this->dateTimePicker11);
+			this->conducteur2->Controls->Add(this->dateTimePicker_conducteur2_naissance);
 			this->conducteur2->Controls->Add(this->label21);
 			this->conducteur2->Controls->Add(this->textBox_conducteur2_nom);
 			this->conducteur2->Controls->Add(this->label22);
@@ -954,15 +1010,15 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// groupBox6
 			// 
-			this->groupBox6->Controls->Add(this->checkBox5);
+			this->groupBox6->Controls->Add(this->checkBox_conducteur2_permismoto);
 			this->groupBox6->Controls->Add(this->label16);
 			this->groupBox6->Controls->Add(this->label17);
 			this->groupBox6->Controls->Add(this->label18);
-			this->groupBox6->Controls->Add(this->dateTimePicker9);
-			this->groupBox6->Controls->Add(this->dateTimePicker10);
+			this->groupBox6->Controls->Add(this->dateTimePicker_conducteur2_expirepermis);
+			this->groupBox6->Controls->Add(this->dateTimePicker_conducteur2_delivrepermis);
 			this->groupBox6->Controls->Add(this->label19);
-			this->groupBox6->Controls->Add(this->textBox6);
-			this->groupBox6->Controls->Add(this->checkBox6);
+			this->groupBox6->Controls->Add(this->textBox_conducteur2_numpermis);
+			this->groupBox6->Controls->Add(this->checkBox_conducteur2_permisvoiture);
 			this->groupBox6->Location = System::Drawing::Point(16, 108);
 			this->groupBox6->Name = L"groupBox6";
 			this->groupBox6->Size = System::Drawing::Size(257, 145);
@@ -970,15 +1026,15 @@ private: System::ComponentModel::IContainer^  components;
 			this->groupBox6->TabStop = false;
 			this->groupBox6->Text = L"Permis";
 			// 
-			// checkBox5
+			// checkBox_conducteur2_permismoto
 			// 
-			this->checkBox5->AutoSize = true;
-			this->checkBox5->Location = System::Drawing::Point(107, 27);
-			this->checkBox5->Name = L"checkBox5";
-			this->checkBox5->Size = System::Drawing::Size(84, 17);
-			this->checkBox5->TabIndex = 18;
-			this->checkBox5->Text = L"Permis Moto";
-			this->checkBox5->UseVisualStyleBackColor = true;
+			this->checkBox_conducteur2_permismoto->AutoSize = true;
+			this->checkBox_conducteur2_permismoto->Location = System::Drawing::Point(107, 27);
+			this->checkBox_conducteur2_permismoto->Name = L"checkBox_conducteur2_permismoto";
+			this->checkBox_conducteur2_permismoto->Size = System::Drawing::Size(84, 17);
+			this->checkBox_conducteur2_permismoto->TabIndex = 18;
+			this->checkBox_conducteur2_permismoto->Text = L"Permis Moto";
+			this->checkBox_conducteur2_permismoto->UseVisualStyleBackColor = true;
 			// 
 			// label16
 			// 
@@ -1006,21 +1062,21 @@ private: System::ComponentModel::IContainer^  components;
 			this->label18->Size = System::Drawing::Size(0, 13);
 			this->label18->TabIndex = 15;
 			// 
-			// dateTimePicker9
+			// dateTimePicker_conducteur2_expirepermis
 			// 
-			this->dateTimePicker9->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
-			this->dateTimePicker9->Location = System::Drawing::Point(144, 117);
-			this->dateTimePicker9->Name = L"dateTimePicker9";
-			this->dateTimePicker9->Size = System::Drawing::Size(86, 20);
-			this->dateTimePicker9->TabIndex = 14;
+			this->dateTimePicker_conducteur2_expirepermis->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
+			this->dateTimePicker_conducteur2_expirepermis->Location = System::Drawing::Point(144, 117);
+			this->dateTimePicker_conducteur2_expirepermis->Name = L"dateTimePicker_conducteur2_expirepermis";
+			this->dateTimePicker_conducteur2_expirepermis->Size = System::Drawing::Size(86, 20);
+			this->dateTimePicker_conducteur2_expirepermis->TabIndex = 14;
 			// 
-			// dateTimePicker10
+			// dateTimePicker_conducteur2_delivrepermis
 			// 
-			this->dateTimePicker10->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
-			this->dateTimePicker10->Location = System::Drawing::Point(144, 92);
-			this->dateTimePicker10->Name = L"dateTimePicker10";
-			this->dateTimePicker10->Size = System::Drawing::Size(86, 20);
-			this->dateTimePicker10->TabIndex = 13;
+			this->dateTimePicker_conducteur2_delivrepermis->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
+			this->dateTimePicker_conducteur2_delivrepermis->Location = System::Drawing::Point(144, 92);
+			this->dateTimePicker_conducteur2_delivrepermis->Name = L"dateTimePicker_conducteur2_delivrepermis";
+			this->dateTimePicker_conducteur2_delivrepermis->Size = System::Drawing::Size(86, 20);
+			this->dateTimePicker_conducteur2_delivrepermis->TabIndex = 13;
 			// 
 			// label19
 			// 
@@ -1031,22 +1087,22 @@ private: System::ComponentModel::IContainer^  components;
 			this->label19->TabIndex = 12;
 			this->label19->Text = L" Numéro de permis de conduire : ";
 			// 
-			// textBox6
+			// textBox_conducteur2_numpermis
 			// 
-			this->textBox6->Location = System::Drawing::Point(15, 66);
-			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(224, 20);
-			this->textBox6->TabIndex = 11;
+			this->textBox_conducteur2_numpermis->Location = System::Drawing::Point(15, 66);
+			this->textBox_conducteur2_numpermis->Name = L"textBox_conducteur2_numpermis";
+			this->textBox_conducteur2_numpermis->Size = System::Drawing::Size(224, 20);
+			this->textBox_conducteur2_numpermis->TabIndex = 11;
 			// 
-			// checkBox6
+			// checkBox_conducteur2_permisvoiture
 			// 
-			this->checkBox6->AutoSize = true;
-			this->checkBox6->Location = System::Drawing::Point(8, 27);
-			this->checkBox6->Name = L"checkBox6";
-			this->checkBox6->Size = System::Drawing::Size(93, 17);
-			this->checkBox6->TabIndex = 10;
-			this->checkBox6->Text = L"Permis Voiture";
-			this->checkBox6->UseVisualStyleBackColor = true;
+			this->checkBox_conducteur2_permisvoiture->AutoSize = true;
+			this->checkBox_conducteur2_permisvoiture->Location = System::Drawing::Point(8, 27);
+			this->checkBox_conducteur2_permisvoiture->Name = L"checkBox_conducteur2_permisvoiture";
+			this->checkBox_conducteur2_permisvoiture->Size = System::Drawing::Size(93, 17);
+			this->checkBox_conducteur2_permisvoiture->TabIndex = 10;
+			this->checkBox_conducteur2_permisvoiture->Text = L"Permis Voiture";
+			this->checkBox_conducteur2_permisvoiture->UseVisualStyleBackColor = true;
 			// 
 			// textBox_conducteur2_prenom
 			// 
@@ -1066,14 +1122,14 @@ private: System::ComponentModel::IContainer^  components;
 			this->label20->TabIndex = 20;
 			this->label20->Text = L"Prénom :";
 			// 
-			// dateTimePicker11
+			// dateTimePicker_conducteur2_naissance
 			// 
-			this->dateTimePicker11->CalendarTitleBackColor = System::Drawing::SystemColors::HotTrack;
-			this->dateTimePicker11->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
-			this->dateTimePicker11->Location = System::Drawing::Point(160, 70);
-			this->dateTimePicker11->Name = L"dateTimePicker11";
-			this->dateTimePicker11->Size = System::Drawing::Size(86, 20);
-			this->dateTimePicker11->TabIndex = 19;
+			this->dateTimePicker_conducteur2_naissance->CalendarTitleBackColor = System::Drawing::SystemColors::HotTrack;
+			this->dateTimePicker_conducteur2_naissance->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
+			this->dateTimePicker_conducteur2_naissance->Location = System::Drawing::Point(160, 70);
+			this->dateTimePicker_conducteur2_naissance->Name = L"dateTimePicker_conducteur2_naissance";
+			this->dateTimePicker_conducteur2_naissance->Size = System::Drawing::Size(86, 20);
+			this->dateTimePicker_conducteur2_naissance->TabIndex = 19;
 			// 
 			// label21
 			// 
@@ -1107,11 +1163,11 @@ private: System::ComponentModel::IContainer^  components;
 			// conducteur3
 			// 
 			this->conducteur3->Controls->Add(this->groupBox7);
-			this->conducteur3->Controls->Add(this->textBox10);
+			this->conducteur3->Controls->Add(this->textBox_conducteur3_prenom);
 			this->conducteur3->Controls->Add(this->label27);
-			this->conducteur3->Controls->Add(this->dateTimePicker14);
+			this->conducteur3->Controls->Add(this->dateTimePicker_conducteur3_naissance);
 			this->conducteur3->Controls->Add(this->label28);
-			this->conducteur3->Controls->Add(this->textBox11);
+			this->conducteur3->Controls->Add(this->textBox_conducteur3_nom);
 			this->conducteur3->Controls->Add(this->label29);
 			this->conducteur3->Location = System::Drawing::Point(4, 22);
 			this->conducteur3->Name = L"conducteur3";
@@ -1123,15 +1179,15 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// groupBox7
 			// 
-			this->groupBox7->Controls->Add(this->checkBox7);
+			this->groupBox7->Controls->Add(this->checkBox_conducteur3_permismoto);
 			this->groupBox7->Controls->Add(this->label23);
 			this->groupBox7->Controls->Add(this->label24);
 			this->groupBox7->Controls->Add(this->label25);
-			this->groupBox7->Controls->Add(this->dateTimePicker12);
-			this->groupBox7->Controls->Add(this->dateTimePicker13);
+			this->groupBox7->Controls->Add(this->dateTimePicker_conducteur3_expirepermis);
+			this->groupBox7->Controls->Add(this->dateTimePicker_conducteur3_delivrepermis);
 			this->groupBox7->Controls->Add(this->label26);
-			this->groupBox7->Controls->Add(this->textBox9);
-			this->groupBox7->Controls->Add(this->checkBox8);
+			this->groupBox7->Controls->Add(this->textBox_conducteur3_numpermis);
+			this->groupBox7->Controls->Add(this->checkBox_conducteur3_permisvoiture);
 			this->groupBox7->Location = System::Drawing::Point(16, 108);
 			this->groupBox7->Name = L"groupBox7";
 			this->groupBox7->Size = System::Drawing::Size(257, 145);
@@ -1139,15 +1195,15 @@ private: System::ComponentModel::IContainer^  components;
 			this->groupBox7->TabStop = false;
 			this->groupBox7->Text = L"Permis";
 			// 
-			// checkBox7
+			// checkBox_conducteur3_permismoto
 			// 
-			this->checkBox7->AutoSize = true;
-			this->checkBox7->Location = System::Drawing::Point(107, 27);
-			this->checkBox7->Name = L"checkBox7";
-			this->checkBox7->Size = System::Drawing::Size(84, 17);
-			this->checkBox7->TabIndex = 18;
-			this->checkBox7->Text = L"Permis Moto";
-			this->checkBox7->UseVisualStyleBackColor = true;
+			this->checkBox_conducteur3_permismoto->AutoSize = true;
+			this->checkBox_conducteur3_permismoto->Location = System::Drawing::Point(107, 27);
+			this->checkBox_conducteur3_permismoto->Name = L"checkBox_conducteur3_permismoto";
+			this->checkBox_conducteur3_permismoto->Size = System::Drawing::Size(84, 17);
+			this->checkBox_conducteur3_permismoto->TabIndex = 18;
+			this->checkBox_conducteur3_permismoto->Text = L"Permis Moto";
+			this->checkBox_conducteur3_permismoto->UseVisualStyleBackColor = true;
 			// 
 			// label23
 			// 
@@ -1175,21 +1231,21 @@ private: System::ComponentModel::IContainer^  components;
 			this->label25->Size = System::Drawing::Size(0, 13);
 			this->label25->TabIndex = 15;
 			// 
-			// dateTimePicker12
+			// dateTimePicker_conducteur3_expirepermis
 			// 
-			this->dateTimePicker12->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
-			this->dateTimePicker12->Location = System::Drawing::Point(144, 117);
-			this->dateTimePicker12->Name = L"dateTimePicker12";
-			this->dateTimePicker12->Size = System::Drawing::Size(86, 20);
-			this->dateTimePicker12->TabIndex = 14;
+			this->dateTimePicker_conducteur3_expirepermis->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
+			this->dateTimePicker_conducteur3_expirepermis->Location = System::Drawing::Point(144, 117);
+			this->dateTimePicker_conducteur3_expirepermis->Name = L"dateTimePicker_conducteur3_expirepermis";
+			this->dateTimePicker_conducteur3_expirepermis->Size = System::Drawing::Size(86, 20);
+			this->dateTimePicker_conducteur3_expirepermis->TabIndex = 14;
 			// 
-			// dateTimePicker13
+			// dateTimePicker_conducteur3_delivrepermis
 			// 
-			this->dateTimePicker13->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
-			this->dateTimePicker13->Location = System::Drawing::Point(144, 92);
-			this->dateTimePicker13->Name = L"dateTimePicker13";
-			this->dateTimePicker13->Size = System::Drawing::Size(86, 20);
-			this->dateTimePicker13->TabIndex = 13;
+			this->dateTimePicker_conducteur3_delivrepermis->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
+			this->dateTimePicker_conducteur3_delivrepermis->Location = System::Drawing::Point(144, 92);
+			this->dateTimePicker_conducteur3_delivrepermis->Name = L"dateTimePicker_conducteur3_delivrepermis";
+			this->dateTimePicker_conducteur3_delivrepermis->Size = System::Drawing::Size(86, 20);
+			this->dateTimePicker_conducteur3_delivrepermis->TabIndex = 13;
 			// 
 			// label26
 			// 
@@ -1200,29 +1256,29 @@ private: System::ComponentModel::IContainer^  components;
 			this->label26->TabIndex = 12;
 			this->label26->Text = L" Numéro de permis de conduire : ";
 			// 
-			// textBox9
+			// textBox_conducteur3_numpermis
 			// 
-			this->textBox9->Location = System::Drawing::Point(15, 66);
-			this->textBox9->Name = L"textBox9";
-			this->textBox9->Size = System::Drawing::Size(224, 20);
-			this->textBox9->TabIndex = 11;
+			this->textBox_conducteur3_numpermis->Location = System::Drawing::Point(15, 66);
+			this->textBox_conducteur3_numpermis->Name = L"textBox_conducteur3_numpermis";
+			this->textBox_conducteur3_numpermis->Size = System::Drawing::Size(224, 20);
+			this->textBox_conducteur3_numpermis->TabIndex = 11;
 			// 
-			// checkBox8
+			// checkBox_conducteur3_permisvoiture
 			// 
-			this->checkBox8->AutoSize = true;
-			this->checkBox8->Location = System::Drawing::Point(8, 27);
-			this->checkBox8->Name = L"checkBox8";
-			this->checkBox8->Size = System::Drawing::Size(93, 17);
-			this->checkBox8->TabIndex = 10;
-			this->checkBox8->Text = L"Permis Voiture";
-			this->checkBox8->UseVisualStyleBackColor = true;
+			this->checkBox_conducteur3_permisvoiture->AutoSize = true;
+			this->checkBox_conducteur3_permisvoiture->Location = System::Drawing::Point(8, 27);
+			this->checkBox_conducteur3_permisvoiture->Name = L"checkBox_conducteur3_permisvoiture";
+			this->checkBox_conducteur3_permisvoiture->Size = System::Drawing::Size(93, 17);
+			this->checkBox_conducteur3_permisvoiture->TabIndex = 10;
+			this->checkBox_conducteur3_permisvoiture->Text = L"Permis Voiture";
+			this->checkBox_conducteur3_permisvoiture->UseVisualStyleBackColor = true;
 			// 
-			// textBox10
+			// textBox_conducteur3_prenom
 			// 
-			this->textBox10->Location = System::Drawing::Point(88, 41);
-			this->textBox10->Name = L"textBox10";
-			this->textBox10->Size = System::Drawing::Size(196, 20);
-			this->textBox10->TabIndex = 21;
+			this->textBox_conducteur3_prenom->Location = System::Drawing::Point(88, 41);
+			this->textBox_conducteur3_prenom->Name = L"textBox_conducteur3_prenom";
+			this->textBox_conducteur3_prenom->Size = System::Drawing::Size(196, 20);
+			this->textBox_conducteur3_prenom->TabIndex = 21;
 			// 
 			// label27
 			// 
@@ -1235,14 +1291,14 @@ private: System::ComponentModel::IContainer^  components;
 			this->label27->TabIndex = 20;
 			this->label27->Text = L"Prénom :";
 			// 
-			// dateTimePicker14
+			// dateTimePicker_conducteur3_naissance
 			// 
-			this->dateTimePicker14->CalendarTitleBackColor = System::Drawing::SystemColors::HotTrack;
-			this->dateTimePicker14->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
-			this->dateTimePicker14->Location = System::Drawing::Point(160, 70);
-			this->dateTimePicker14->Name = L"dateTimePicker14";
-			this->dateTimePicker14->Size = System::Drawing::Size(86, 20);
-			this->dateTimePicker14->TabIndex = 19;
+			this->dateTimePicker_conducteur3_naissance->CalendarTitleBackColor = System::Drawing::SystemColors::HotTrack;
+			this->dateTimePicker_conducteur3_naissance->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
+			this->dateTimePicker_conducteur3_naissance->Location = System::Drawing::Point(160, 70);
+			this->dateTimePicker_conducteur3_naissance->Name = L"dateTimePicker_conducteur3_naissance";
+			this->dateTimePicker_conducteur3_naissance->Size = System::Drawing::Size(86, 20);
+			this->dateTimePicker_conducteur3_naissance->TabIndex = 19;
 			// 
 			// label28
 			// 
@@ -1255,12 +1311,12 @@ private: System::ComponentModel::IContainer^  components;
 			this->label28->TabIndex = 18;
 			this->label28->Text = L"Date de Naissance :";
 			// 
-			// textBox11
+			// textBox_conducteur3_nom
 			// 
-			this->textBox11->Location = System::Drawing::Point(88, 15);
-			this->textBox11->Name = L"textBox11";
-			this->textBox11->Size = System::Drawing::Size(196, 20);
-			this->textBox11->TabIndex = 17;
+			this->textBox_conducteur3_nom->Location = System::Drawing::Point(88, 15);
+			this->textBox_conducteur3_nom->Name = L"textBox_conducteur3_nom";
+			this->textBox_conducteur3_nom->Size = System::Drawing::Size(196, 20);
+			this->textBox_conducteur3_nom->TabIndex = 17;
 			// 
 			// label29
 			// 
@@ -1276,11 +1332,11 @@ private: System::ComponentModel::IContainer^  components;
 			// conducteur4
 			// 
 			this->conducteur4->Controls->Add(this->groupBox8);
-			this->conducteur4->Controls->Add(this->textBox13);
+			this->conducteur4->Controls->Add(this->textBox_conducteur4_prenom);
 			this->conducteur4->Controls->Add(this->label34);
-			this->conducteur4->Controls->Add(this->dateTimePicker17);
+			this->conducteur4->Controls->Add(this->dateTimePicker_conducteur4_naissance);
 			this->conducteur4->Controls->Add(this->label35);
-			this->conducteur4->Controls->Add(this->textBox14);
+			this->conducteur4->Controls->Add(this->textBox_conducteur4_nom);
 			this->conducteur4->Controls->Add(this->label36);
 			this->conducteur4->Location = System::Drawing::Point(4, 22);
 			this->conducteur4->Name = L"conducteur4";
@@ -1292,15 +1348,15 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// groupBox8
 			// 
-			this->groupBox8->Controls->Add(this->checkBox9);
+			this->groupBox8->Controls->Add(this->checkBox_conducteur4_permismoto);
 			this->groupBox8->Controls->Add(this->label30);
 			this->groupBox8->Controls->Add(this->label31);
 			this->groupBox8->Controls->Add(this->label32);
-			this->groupBox8->Controls->Add(this->dateTimePicker15);
-			this->groupBox8->Controls->Add(this->dateTimePicker16);
+			this->groupBox8->Controls->Add(this->dateTimePicker_conducteur4_expirepermis);
+			this->groupBox8->Controls->Add(this->dateTimePicker_conducteur4_delivrepermis);
 			this->groupBox8->Controls->Add(this->label33);
-			this->groupBox8->Controls->Add(this->textBox12);
-			this->groupBox8->Controls->Add(this->checkBox10);
+			this->groupBox8->Controls->Add(this->textBox_conducteur4_numpermis);
+			this->groupBox8->Controls->Add(this->checkBox_conducteur4_permisvoiture);
 			this->groupBox8->Location = System::Drawing::Point(16, 108);
 			this->groupBox8->Name = L"groupBox8";
 			this->groupBox8->Size = System::Drawing::Size(257, 145);
@@ -1308,15 +1364,15 @@ private: System::ComponentModel::IContainer^  components;
 			this->groupBox8->TabStop = false;
 			this->groupBox8->Text = L"Permis";
 			// 
-			// checkBox9
+			// checkBox_conducteur4_permismoto
 			// 
-			this->checkBox9->AutoSize = true;
-			this->checkBox9->Location = System::Drawing::Point(107, 27);
-			this->checkBox9->Name = L"checkBox9";
-			this->checkBox9->Size = System::Drawing::Size(84, 17);
-			this->checkBox9->TabIndex = 18;
-			this->checkBox9->Text = L"Permis Moto";
-			this->checkBox9->UseVisualStyleBackColor = true;
+			this->checkBox_conducteur4_permismoto->AutoSize = true;
+			this->checkBox_conducteur4_permismoto->Location = System::Drawing::Point(107, 27);
+			this->checkBox_conducteur4_permismoto->Name = L"checkBox_conducteur4_permismoto";
+			this->checkBox_conducteur4_permismoto->Size = System::Drawing::Size(84, 17);
+			this->checkBox_conducteur4_permismoto->TabIndex = 18;
+			this->checkBox_conducteur4_permismoto->Text = L"Permis Moto";
+			this->checkBox_conducteur4_permismoto->UseVisualStyleBackColor = true;
 			// 
 			// label30
 			// 
@@ -1344,21 +1400,21 @@ private: System::ComponentModel::IContainer^  components;
 			this->label32->Size = System::Drawing::Size(0, 13);
 			this->label32->TabIndex = 15;
 			// 
-			// dateTimePicker15
+			// dateTimePicker_conducteur4_expirepermis
 			// 
-			this->dateTimePicker15->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
-			this->dateTimePicker15->Location = System::Drawing::Point(144, 117);
-			this->dateTimePicker15->Name = L"dateTimePicker15";
-			this->dateTimePicker15->Size = System::Drawing::Size(86, 20);
-			this->dateTimePicker15->TabIndex = 14;
+			this->dateTimePicker_conducteur4_expirepermis->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
+			this->dateTimePicker_conducteur4_expirepermis->Location = System::Drawing::Point(144, 117);
+			this->dateTimePicker_conducteur4_expirepermis->Name = L"dateTimePicker_conducteur4_expirepermis";
+			this->dateTimePicker_conducteur4_expirepermis->Size = System::Drawing::Size(86, 20);
+			this->dateTimePicker_conducteur4_expirepermis->TabIndex = 14;
 			// 
-			// dateTimePicker16
+			// dateTimePicker_conducteur4_delivrepermis
 			// 
-			this->dateTimePicker16->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
-			this->dateTimePicker16->Location = System::Drawing::Point(144, 92);
-			this->dateTimePicker16->Name = L"dateTimePicker16";
-			this->dateTimePicker16->Size = System::Drawing::Size(86, 20);
-			this->dateTimePicker16->TabIndex = 13;
+			this->dateTimePicker_conducteur4_delivrepermis->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
+			this->dateTimePicker_conducteur4_delivrepermis->Location = System::Drawing::Point(144, 92);
+			this->dateTimePicker_conducteur4_delivrepermis->Name = L"dateTimePicker_conducteur4_delivrepermis";
+			this->dateTimePicker_conducteur4_delivrepermis->Size = System::Drawing::Size(86, 20);
+			this->dateTimePicker_conducteur4_delivrepermis->TabIndex = 13;
 			// 
 			// label33
 			// 
@@ -1369,29 +1425,29 @@ private: System::ComponentModel::IContainer^  components;
 			this->label33->TabIndex = 12;
 			this->label33->Text = L" Numéro de permis de conduire : ";
 			// 
-			// textBox12
+			// textBox_conducteur4_numpermis
 			// 
-			this->textBox12->Location = System::Drawing::Point(15, 66);
-			this->textBox12->Name = L"textBox12";
-			this->textBox12->Size = System::Drawing::Size(224, 20);
-			this->textBox12->TabIndex = 11;
+			this->textBox_conducteur4_numpermis->Location = System::Drawing::Point(15, 66);
+			this->textBox_conducteur4_numpermis->Name = L"textBox_conducteur4_numpermis";
+			this->textBox_conducteur4_numpermis->Size = System::Drawing::Size(224, 20);
+			this->textBox_conducteur4_numpermis->TabIndex = 11;
 			// 
-			// checkBox10
+			// checkBox_conducteur4_permisvoiture
 			// 
-			this->checkBox10->AutoSize = true;
-			this->checkBox10->Location = System::Drawing::Point(8, 27);
-			this->checkBox10->Name = L"checkBox10";
-			this->checkBox10->Size = System::Drawing::Size(93, 17);
-			this->checkBox10->TabIndex = 10;
-			this->checkBox10->Text = L"Permis Voiture";
-			this->checkBox10->UseVisualStyleBackColor = true;
+			this->checkBox_conducteur4_permisvoiture->AutoSize = true;
+			this->checkBox_conducteur4_permisvoiture->Location = System::Drawing::Point(8, 27);
+			this->checkBox_conducteur4_permisvoiture->Name = L"checkBox_conducteur4_permisvoiture";
+			this->checkBox_conducteur4_permisvoiture->Size = System::Drawing::Size(93, 17);
+			this->checkBox_conducteur4_permisvoiture->TabIndex = 10;
+			this->checkBox_conducteur4_permisvoiture->Text = L"Permis Voiture";
+			this->checkBox_conducteur4_permisvoiture->UseVisualStyleBackColor = true;
 			// 
-			// textBox13
+			// textBox_conducteur4_prenom
 			// 
-			this->textBox13->Location = System::Drawing::Point(88, 41);
-			this->textBox13->Name = L"textBox13";
-			this->textBox13->Size = System::Drawing::Size(196, 20);
-			this->textBox13->TabIndex = 21;
+			this->textBox_conducteur4_prenom->Location = System::Drawing::Point(88, 41);
+			this->textBox_conducteur4_prenom->Name = L"textBox_conducteur4_prenom";
+			this->textBox_conducteur4_prenom->Size = System::Drawing::Size(196, 20);
+			this->textBox_conducteur4_prenom->TabIndex = 21;
 			// 
 			// label34
 			// 
@@ -1404,14 +1460,14 @@ private: System::ComponentModel::IContainer^  components;
 			this->label34->TabIndex = 20;
 			this->label34->Text = L"Prénom :";
 			// 
-			// dateTimePicker17
+			// dateTimePicker_conducteur4_naissance
 			// 
-			this->dateTimePicker17->CalendarTitleBackColor = System::Drawing::SystemColors::HotTrack;
-			this->dateTimePicker17->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
-			this->dateTimePicker17->Location = System::Drawing::Point(160, 70);
-			this->dateTimePicker17->Name = L"dateTimePicker17";
-			this->dateTimePicker17->Size = System::Drawing::Size(86, 20);
-			this->dateTimePicker17->TabIndex = 19;
+			this->dateTimePicker_conducteur4_naissance->CalendarTitleBackColor = System::Drawing::SystemColors::HotTrack;
+			this->dateTimePicker_conducteur4_naissance->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
+			this->dateTimePicker_conducteur4_naissance->Location = System::Drawing::Point(160, 70);
+			this->dateTimePicker_conducteur4_naissance->Name = L"dateTimePicker_conducteur4_naissance";
+			this->dateTimePicker_conducteur4_naissance->Size = System::Drawing::Size(86, 20);
+			this->dateTimePicker_conducteur4_naissance->TabIndex = 19;
 			// 
 			// label35
 			// 
@@ -1424,12 +1480,12 @@ private: System::ComponentModel::IContainer^  components;
 			this->label35->TabIndex = 18;
 			this->label35->Text = L"Date de Naissance :";
 			// 
-			// textBox14
+			// textBox_conducteur4_nom
 			// 
-			this->textBox14->Location = System::Drawing::Point(88, 15);
-			this->textBox14->Name = L"textBox14";
-			this->textBox14->Size = System::Drawing::Size(196, 20);
-			this->textBox14->TabIndex = 17;
+			this->textBox_conducteur4_nom->Location = System::Drawing::Point(88, 15);
+			this->textBox_conducteur4_nom->Name = L"textBox_conducteur4_nom";
+			this->textBox_conducteur4_nom->Size = System::Drawing::Size(196, 20);
+			this->textBox_conducteur4_nom->TabIndex = 17;
 			// 
 			// label36
 			// 
@@ -1442,22 +1498,22 @@ private: System::ComponentModel::IContainer^  components;
 			this->label36->TabIndex = 16;
 			this->label36->Text = L"Nom :";
 			// 
-			// groupBox4
+			// groupBox_permismoto
 			// 
-			this->groupBox4->Controls->Add(this->label4);
-			this->groupBox4->Controls->Add(this->label5);
-			this->groupBox4->Controls->Add(this->label6);
-			this->groupBox4->Controls->Add(this->dateTimePicker_expirepermismoto);
-			this->groupBox4->Controls->Add(this->dateTimePicker_permisvoiture);
-			this->groupBox4->Controls->Add(this->label7);
-			this->groupBox4->Controls->Add(this->checkBox_permismoto);
-			this->groupBox4->Controls->Add(this->textBox_numpermismoto);
-			this->groupBox4->Location = System::Drawing::Point(49, 452);
-			this->groupBox4->Name = L"groupBox4";
-			this->groupBox4->Size = System::Drawing::Size(591, 93);
-			this->groupBox4->TabIndex = 16;
-			this->groupBox4->TabStop = false;
-			this->groupBox4->Text = L"Permis Moto";
+			this->groupBox_permismoto->Controls->Add(this->label4);
+			this->groupBox_permismoto->Controls->Add(this->label5);
+			this->groupBox_permismoto->Controls->Add(this->label6);
+			this->groupBox_permismoto->Controls->Add(this->dateTimePicker_expirepermismoto);
+			this->groupBox_permismoto->Controls->Add(this->dateTimePicker_delivrepermismoto);
+			this->groupBox_permismoto->Controls->Add(this->label7);
+			this->groupBox_permismoto->Controls->Add(this->checkBox_permismoto);
+			this->groupBox_permismoto->Controls->Add(this->textBox_numpermismoto);
+			this->groupBox_permismoto->Location = System::Drawing::Point(49, 452);
+			this->groupBox_permismoto->Name = L"groupBox_permismoto";
+			this->groupBox_permismoto->Size = System::Drawing::Size(591, 93);
+			this->groupBox_permismoto->TabIndex = 16;
+			this->groupBox_permismoto->TabStop = false;
+			this->groupBox_permismoto->Text = L"Permis Moto";
 			// 
 			// label4
 			// 
@@ -1493,13 +1549,13 @@ private: System::ComponentModel::IContainer^  components;
 			this->dateTimePicker_expirepermismoto->Size = System::Drawing::Size(86, 20);
 			this->dateTimePicker_expirepermismoto->TabIndex = 14;
 			// 
-			// dateTimePicker_permisvoiture
+			// dateTimePicker_delivrepermismoto
 			// 
-			this->dateTimePicker_permisvoiture->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
-			this->dateTimePicker_permisvoiture->Location = System::Drawing::Point(283, 62);
-			this->dateTimePicker_permisvoiture->Name = L"dateTimePicker_permisvoiture";
-			this->dateTimePicker_permisvoiture->Size = System::Drawing::Size(86, 20);
-			this->dateTimePicker_permisvoiture->TabIndex = 13;
+			this->dateTimePicker_delivrepermismoto->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
+			this->dateTimePicker_delivrepermismoto->Location = System::Drawing::Point(283, 62);
+			this->dateTimePicker_delivrepermismoto->Name = L"dateTimePicker_delivrepermismoto";
+			this->dateTimePicker_delivrepermismoto->Size = System::Drawing::Size(86, 20);
+			this->dateTimePicker_delivrepermismoto->TabIndex = 13;
 			// 
 			// label7
 			// 
@@ -1527,58 +1583,58 @@ private: System::ComponentModel::IContainer^  components;
 			this->textBox_numpermismoto->Size = System::Drawing::Size(258, 20);
 			this->textBox_numpermismoto->TabIndex = 11;
 			// 
-			// groupBox3
+			// groupBox_locationeffectue
 			// 
-			this->groupBox3->Controls->Add(this->dataGridView2);
-			this->groupBox3->Location = System::Drawing::Point(674, 165);
-			this->groupBox3->Name = L"groupBox3";
-			this->groupBox3->Size = System::Drawing::Size(306, 161);
-			this->groupBox3->TabIndex = 14;
-			this->groupBox3->TabStop = false;
-			this->groupBox3->Text = L"Locations effectuées";
+			this->groupBox_locationeffectue->Controls->Add(this->dataGridView_locationeffetue);
+			this->groupBox_locationeffectue->Location = System::Drawing::Point(674, 165);
+			this->groupBox_locationeffectue->Name = L"groupBox_locationeffectue";
+			this->groupBox_locationeffectue->Size = System::Drawing::Size(306, 161);
+			this->groupBox_locationeffectue->TabIndex = 14;
+			this->groupBox_locationeffectue->TabStop = false;
+			this->groupBox_locationeffectue->Text = L"Locations effectuées";
 			// 
-			// dataGridView2
+			// dataGridView_locationeffetue
 			// 
-			this->dataGridView2->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView2->Location = System::Drawing::Point(9, 20);
-			this->dataGridView2->Name = L"dataGridView2";
-			this->dataGridView2->Size = System::Drawing::Size(291, 130);
-			this->dataGridView2->TabIndex = 0;
+			this->dataGridView_locationeffetue->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView_locationeffetue->Location = System::Drawing::Point(9, 20);
+			this->dataGridView_locationeffetue->Name = L"dataGridView_locationeffetue";
+			this->dataGridView_locationeffetue->Size = System::Drawing::Size(291, 130);
+			this->dataGridView_locationeffetue->TabIndex = 0;
 			// 
-			// groupBox2
+			// groupBox_locationencours
 			// 
-			this->groupBox2->Controls->Add(this->dataGridView3);
-			this->groupBox2->Location = System::Drawing::Point(674, 1);
-			this->groupBox2->Name = L"groupBox2";
-			this->groupBox2->Size = System::Drawing::Size(306, 161);
-			this->groupBox2->TabIndex = 13;
-			this->groupBox2->TabStop = false;
-			this->groupBox2->Text = L"Locations en cours";
+			this->groupBox_locationencours->Controls->Add(this->dataGridView_locationencours);
+			this->groupBox_locationencours->Location = System::Drawing::Point(674, 1);
+			this->groupBox_locationencours->Name = L"groupBox_locationencours";
+			this->groupBox_locationencours->Size = System::Drawing::Size(306, 161);
+			this->groupBox_locationencours->TabIndex = 13;
+			this->groupBox_locationencours->TabStop = false;
+			this->groupBox_locationencours->Text = L"Locations en cours";
 			// 
-			// dataGridView3
+			// dataGridView_locationencours
 			// 
-			this->dataGridView3->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView3->Location = System::Drawing::Point(8, 17);
-			this->dataGridView3->Name = L"dataGridView3";
-			this->dataGridView3->Size = System::Drawing::Size(291, 130);
-			this->dataGridView3->TabIndex = 1;
+			this->dataGridView_locationencours->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView_locationencours->Location = System::Drawing::Point(8, 17);
+			this->dataGridView_locationencours->Name = L"dataGridView_locationencours";
+			this->dataGridView_locationencours->Size = System::Drawing::Size(291, 130);
+			this->dataGridView_locationencours->TabIndex = 1;
 			// 
-			// groupBox1
+			// groupBox_permisvoiture
 			// 
-			this->groupBox1->Controls->Add(this->label3);
-			this->groupBox1->Controls->Add(this->label2);
-			this->groupBox1->Controls->Add(this->label1);
-			this->groupBox1->Controls->Add(this->dateTimePicker_expirepermisvoiture);
-			this->groupBox1->Controls->Add(this->dateTimePicker_delivrepermisvoiture);
-			this->groupBox1->Controls->Add(this->Numpermisdeconduire);
-			this->groupBox1->Controls->Add(this->textBox_permisdeconduire);
-			this->groupBox1->Controls->Add(this->checkBox_permisvoiture);
-			this->groupBox1->Location = System::Drawing::Point(51, 348);
-			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(591, 93);
-			this->groupBox1->TabIndex = 12;
-			this->groupBox1->TabStop = false;
-			this->groupBox1->Text = L"Permis Voiture";
+			this->groupBox_permisvoiture->Controls->Add(this->label3);
+			this->groupBox_permisvoiture->Controls->Add(this->label2);
+			this->groupBox_permisvoiture->Controls->Add(this->label1);
+			this->groupBox_permisvoiture->Controls->Add(this->dateTimePicker_expirepermisvoiture);
+			this->groupBox_permisvoiture->Controls->Add(this->dateTimePicker_delivrepermisvoiture);
+			this->groupBox_permisvoiture->Controls->Add(this->Numpermisdeconduire);
+			this->groupBox_permisvoiture->Controls->Add(this->textBox_permisdeconduire);
+			this->groupBox_permisvoiture->Controls->Add(this->checkBox_permisvoiture);
+			this->groupBox_permisvoiture->Location = System::Drawing::Point(51, 348);
+			this->groupBox_permisvoiture->Name = L"groupBox_permisvoiture";
+			this->groupBox_permisvoiture->Size = System::Drawing::Size(591, 93);
+			this->groupBox_permisvoiture->TabIndex = 12;
+			this->groupBox_permisvoiture->TabStop = false;
+			this->groupBox_permisvoiture->Text = L"Permis Voiture";
 			// 
 			// label3
 			// 
@@ -1648,22 +1704,22 @@ private: System::ComponentModel::IContainer^  components;
 			this->checkBox_permisvoiture->Text = L"Permis Voiture";
 			this->checkBox_permisvoiture->UseVisualStyleBackColor = true;
 			// 
-			// Adresse
+			// Groupebox_Adresse
 			// 
-			this->Adresse->Controls->Add(this->textBox_Ville);
-			this->Adresse->Controls->Add(this->label_New_Ville);
-			this->Adresse->Controls->Add(this->TextBox_CodePostal);
-			this->Adresse->Controls->Add(this->label_New_Codepostal);
-			this->Adresse->Controls->Add(this->label_New_Rue);
-			this->Adresse->Controls->Add(this->textBox_rue);
-			this->Adresse->Controls->Add(this->TextBox_Num);
-			this->Adresse->Controls->Add(this->label_New_Num);
-			this->Adresse->Location = System::Drawing::Point(51, 210);
-			this->Adresse->Name = L"Adresse";
-			this->Adresse->Size = System::Drawing::Size(593, 116);
-			this->Adresse->TabIndex = 8;
-			this->Adresse->TabStop = false;
-			this->Adresse->Text = L"Adresse :";
+			this->Groupebox_Adresse->Controls->Add(this->textBox_Ville);
+			this->Groupebox_Adresse->Controls->Add(this->label_New_Ville);
+			this->Groupebox_Adresse->Controls->Add(this->TextBox_CodePostal);
+			this->Groupebox_Adresse->Controls->Add(this->label_New_Codepostal);
+			this->Groupebox_Adresse->Controls->Add(this->label_New_Rue);
+			this->Groupebox_Adresse->Controls->Add(this->textBox_rue);
+			this->Groupebox_Adresse->Controls->Add(this->TextBox_Num);
+			this->Groupebox_Adresse->Controls->Add(this->label_New_Num);
+			this->Groupebox_Adresse->Location = System::Drawing::Point(51, 210);
+			this->Groupebox_Adresse->Name = L"Groupebox_Adresse";
+			this->Groupebox_Adresse->Size = System::Drawing::Size(593, 116);
+			this->Groupebox_Adresse->TabIndex = 8;
+			this->Groupebox_Adresse->TabStop = false;
+			this->Groupebox_Adresse->Text = L"Adresse :";
 			// 
 			// textBox_Ville
 			// 
@@ -1974,16 +2030,16 @@ private: System::ComponentModel::IContainer^  components;
 			this->conducteur4->PerformLayout();
 			this->groupBox8->ResumeLayout(false);
 			this->groupBox8->PerformLayout();
-			this->groupBox4->ResumeLayout(false);
-			this->groupBox4->PerformLayout();
-			this->groupBox3->ResumeLayout(false);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataGridView2))->EndInit();
-			this->groupBox2->ResumeLayout(false);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataGridView3))->EndInit();
-			this->groupBox1->ResumeLayout(false);
-			this->groupBox1->PerformLayout();
-			this->Adresse->ResumeLayout(false);
-			this->Adresse->PerformLayout();
+			this->groupBox_permismoto->ResumeLayout(false);
+			this->groupBox_permismoto->PerformLayout();
+			this->groupBox_locationeffectue->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataGridView_locationeffetue))->EndInit();
+			this->groupBox_locationencours->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataGridView_locationencours))->EndInit();
+			this->groupBox_permisvoiture->ResumeLayout(false);
+			this->groupBox_permisvoiture->PerformLayout();
+			this->Groupebox_Adresse->ResumeLayout(false);
+			this->Groupebox_Adresse->PerformLayout();
 			this->tabPage3->ResumeLayout(false);
 			this->tabPage3->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataListeEmprunteur))->EndInit();
@@ -2004,7 +2060,10 @@ private: System::Void listeDesEmprunteursToolStripMenuItem_Click(System::Object^
 			 
 		 }
 private: System::Void nouvelEmprunteurToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+			 static bool nouv;
+			 nouv = true;
 			 gestionEmprunteurs::getinstance()->nouveau();
+			 chargement();
 			 this->TabPage->SelectedIndex = 0;
 		 }
 
@@ -2044,28 +2103,142 @@ private: System::Void AfficherListeDesEmprunteurs(System::Void)
 
 protected: System::Void validationEmprunteur_Click(System::Object^  sender, System::EventArgs^  e) {
 			 
+			   static bool trouve;
+			   // mettre au format pour l'enregistrement 
+			   date_Naissance->CustomFormat = "ddMMyyyy";
+			   this->dateTimePicker_conducteur1_delivrepermis->CustomFormat = "ddMMyyyy";
+			   this->dateTimePicker_conducteur1_expirepermis->CustomFormat = "ddMMyyyy";
+			   this->dateTimePicker_conducteur1_naissance->CustomFormat = "ddMMyyyy";
+			   this->dateTimePicker_conducteur2_delivrepermis->CustomFormat = "ddMMyyyy";
+			   this->dateTimePicker_conducteur2_expirepermis->CustomFormat = "ddMMyyyy";
+			   this->dateTimePicker_conducteur2_naissance->CustomFormat = "ddMMyyyy";
+			   this->dateTimePicker_conducteur3_delivrepermis->CustomFormat = "ddMMyyyy";
+			   this->dateTimePicker_conducteur3_expirepermis->CustomFormat = "ddMMyyyy";
+			   this->dateTimePicker_conducteur3_naissance->CustomFormat = "ddMMyyyy";
+			   this->dateTimePicker_conducteur4_delivrepermis->CustomFormat = "ddMMyyyy";
+			   this->dateTimePicker_conducteur4_expirepermis->CustomFormat = "ddMMyyyy";
+			   this->dateTimePicker_conducteur4_naissance->CustomFormat = "ddMMyyyy";
+			   this->dateTimePicker_conducteur4_naissance->CustomFormat = "ddMMyyyy";
+			   this->dateTimePicker_delivrepermismoto->CustomFormat = "ddMMyyyy";
+			   this->dateTimePicker_delivrepermisvoiture->CustomFormat = "ddMMyyyy";
+			   this->dateTimePicker_expirepermismoto->CustomFormat = "ddMMyyyy";
+			   this->dateTimePicker_expirepermisvoiture->CustomFormat = "ddMMyyyy";	 
+			   
+		//   Enregistrement dans les fichiers 
 			   gestionEmprunteurs* emp = gestionEmprunteurs::getinstance();	
 			   
 			   emp->Emprunteurcourrent->set(1 , ConvertString (this->textBox_Nom->Text) );
-
 			   emp->Emprunteurcourrent->set(2 , ConvertString (this->textBox_Prenom->Text) );
+			   //date_Naissance->Format = DateTimePickerFormat::Custom;
+				
+				emp->Emprunteurcourrent->set(3 , ConvertString (this->date_Naissance->Text));
 			   emp->Emprunteurcourrent->set(4 ,ConvertString (this->textBox_numero_carte_didentite->Text) );
 			   emp->Emprunteurcourrent->set(5 ,ConvertString (this->TextBox_Num->Text) );
 			   emp->Emprunteurcourrent->set(6 ,ConvertString (this->textBox_rue->Text) );
 			   emp->Emprunteurcourrent->set(7 ,ConvertString (this->TextBox_CodePostal->Text) );
 			   emp->Emprunteurcourrent->set(8 ,ConvertString (this->textBox_Ville->Text) );
-			   emp->Emprunteurcourrent->set(11 ,ConvertString (this->textBox_permisdeconduire->Text) );
-			   //emp->Emprunteurcourrent->set( ,ConvertString (this->textBox_->Text) );
+			   
+			   if (this->checkBox_permisvoiture->Enabled == true)
+				   emp->Emprunteurcourrent->set(9 , "1" );
+			   else emp->Emprunteurcourrent->set(9 , "0" );
+			   emp->Emprunteurcourrent->set(10,ConvertString (this->textBox_permisdeconduire->Text) );
+			   
+			   emp->Emprunteurcourrent->set(11 , ConvertString (this->dateTimePicker_delivrepermisvoiture->ToString()));
+			   emp->Emprunteurcourrent->set(12 , ConvertString (this->dateTimePicker_expirepermisvoiture->ToString()));
+			   if (this->checkBox_permismoto->Enabled == true)
+				   emp->Emprunteurcourrent->set(13 , "1" );
+			   else emp->Emprunteurcourrent->set(13 , "0" );
+			   emp->Emprunteurcourrent->set(14 , ConvertString (this->dateTimePicker_delivrepermismoto->ToString()));
+			   emp->Emprunteurcourrent->set(15 , ConvertString (this->dateTimePicker_expirepermisvoiture->ToString()));
+			   emp->Emprunteurcourrent->set( 16, ConvertString (this->textBox_numpermismoto->Text));
 
-			   emp->ajout();
 
+			   // Les conducteurs 
+				   //conducteur 1
+				   emp->Emprunteurcourrent->set(18 ,ConvertString (this->textBox_conducteur1_nom->Text ));
+			   emp->Emprunteurcourrent->set(19 ,ConvertString (this->textBox_conducteur1_prenom->Text ));
+					//date naissance	20
+			   if (this->checkBox_conducteur1_permisvoiture->Enabled == true)
+				   emp->Emprunteurcourrent->set(21 , "1" );
+			   else emp->Emprunteurcourrent->set(21 , "0" );
+   			   emp->Emprunteurcourrent->set(22 ,ConvertString (this->textBox_conducteur1_numpermis->Text ));
+			   // Dates Permis   23 24
+			   if (this->checkBox_conduteur1_permismoto->Enabled == true)
+				   emp->Emprunteurcourrent->set(25 , "1" );
+			   else emp->Emprunteurcourrent->set(25 , "0" );
+			   
+			    //conducteur 2
+			   emp->Emprunteurcourrent->set(26 ,ConvertString (this->textBox_conducteur2_nom->Text ));
+			   emp->Emprunteurcourrent->set(27 ,ConvertString (this->textBox_conducteur2_prenom->Text ));
+					//date naissance	28
+			   if (this->checkBox_conducteur2_permisvoiture->Enabled == true)
+				   emp->Emprunteurcourrent->set(29 , "1" );
+			   else emp->Emprunteurcourrent->set(29 , "0" );
+			   emp->Emprunteurcourrent->set(30 ,ConvertString (this->textBox_conducteur2_numpermis->Text ));
+			   // Dates Permis   31 32
+			   if (this->checkBox_conducteur2_permisvoiture->Enabled == true)
+				   emp->Emprunteurcourrent->set(33 , "1" );
+			   else emp->Emprunteurcourrent->set(33 , "0" );
 
-			  
-				 
-				 array<String^>^row0 = {"",this->textBox_Nom->Text,this->textBox_Prenom->Text,"",""};
-					 DataGridViewRowCollection^ rows = this->dataListeEmprunteur->Rows;
-					rows->Add( row0 );
+			   
+			    //conducteur 3
+			   emp->Emprunteurcourrent->set(34 ,ConvertString (this->textBox_conducteur3_nom->Text ));
+			   emp->Emprunteurcourrent->set(35 ,ConvertString (this->textBox_conducteur3_prenom->Text ));
+					 //date naissance	36
+			   if (this->checkBox_conducteur3_permisvoiture->Enabled == true)
+				   emp->Emprunteurcourrent->set(37 , "1" );
+			   else emp->Emprunteurcourrent->set(37 , "0" );
+			   emp->Emprunteurcourrent->set(38 ,ConvertString (this->textBox_conducteur3_numpermis->Text ));
+			   // Dates Permis   39 40
+			   if (this->checkBox_conducteur3_permisvoiture->Enabled == true)
+				   emp->Emprunteurcourrent->set(41 , "1" );
+			   else emp->Emprunteurcourrent->set(41 , "0" );
+			   
+			    //conducteur 4
+			   emp->Emprunteurcourrent->set(42 ,ConvertString (this->textBox_conducteur4_nom->Text ));
+			   emp->Emprunteurcourrent->set(43 ,ConvertString (this->textBox_conducteur4_prenom->Text ));
+					//date naissance	44
+			   if (this->checkBox_conducteur4_permisvoiture->Enabled == true)
+				   emp->Emprunteurcourrent->set(45 , "1" );
+			   else emp->Emprunteurcourrent->set(45 , "0" );
+			   emp->Emprunteurcourrent->set(46 ,ConvertString (this->textBox_conducteur4_numpermis->Text ));
+			   // Dates Permis   47 48
+			   if (this->checkBox_conducteur4_permisvoiture->Enabled == true)
+				   emp->Emprunteurcourrent->set(49 , "1" );
+			   else emp->Emprunteurcourrent->set(49 , "0" );
 
+				static bool nouv;
+			   
+			   if (nouv == true)
+			   {
+				   emp->ajout();
+				    
+					// ajout dans la liste des emprunteurs  
+				   array<String^>^row0 = {"",this->textBox_Nom->Text,this->textBox_Prenom->Text,this->date_Naissance->Text,""};
+						 DataGridViewRowCollection^ rows = this->dataListeEmprunteur->Rows;
+						rows->Add( row0 );
+						nouv = false;
+			   }
+
+			   
+			   this->date_Naissance->CustomFormat = "dd/MM/yyyy";
+			   this->dateTimePicker_conducteur1_delivrepermis->CustomFormat =  "dd/MM/yyyy";
+			   this->dateTimePicker_conducteur1_expirepermis->CustomFormat =  "dd/MM/yyyy";
+			   this->dateTimePicker_conducteur1_naissance->CustomFormat =  "dd/MM/yyyy";
+			   this->dateTimePicker_conducteur2_delivrepermis->CustomFormat =  "dd/MM/yyyy";
+			   this->dateTimePicker_conducteur2_expirepermis->CustomFormat =  "dd/MM/yyyy";
+			   this->dateTimePicker_conducteur2_naissance->CustomFormat =  "dd/MM/yyyy";
+			   this->dateTimePicker_conducteur3_delivrepermis->CustomFormat =  "dd/MM/yyyy";
+			   this->dateTimePicker_conducteur3_expirepermis->CustomFormat =  "dd/MM/yyyy";
+			   this->dateTimePicker_conducteur3_naissance->CustomFormat =  "dd/MM/yyyy";
+			   this->dateTimePicker_conducteur4_delivrepermis->CustomFormat =  "dd/MM/yyyy";
+			   this->dateTimePicker_conducteur4_expirepermis->CustomFormat =  "dd/MM/yyyy";
+			   this->dateTimePicker_conducteur4_naissance->CustomFormat =  "dd/MM/yyyy";
+			   this->dateTimePicker_conducteur4_naissance->CustomFormat =  "dd/MM/yyyy";
+			   this->dateTimePicker_delivrepermismoto->CustomFormat =  "dd/MM/yyyy";
+			   this->dateTimePicker_delivrepermisvoiture->CustomFormat =  "dd/MM/yyyy";
+			   this->dateTimePicker_expirepermismoto->CustomFormat =  "dd/MM/yyyy";
+			   this->dateTimePicker_expirepermisvoiture->CustomFormat =  "dd/MM/yyyy";
 			   AfficherListeDesEmprunteurs();
 			   
 			   
@@ -2088,11 +2261,121 @@ private: System::Void dataListeEmprunteur_CellClick(System::Object^  sender, Sys
 			 emp->chargement(ligne);
 
 			 String^ modifchamp1 = gcnew String(emp->Emprunteurcourrent->get(1).c_str());
-			 this->textBox_Nom->Text = modifchamp1;
+			 chargement();
+			 //this->textBox_Nom->Text = modifchamp1;
 			 //this->dataListeEmprunteur->CurrentRow;
 			this->TabPage->SelectedIndex = 0;	
 		 }
 private: System::Void dateTimePicker6_ValueChanged(System::Object^  sender, System::EventArgs^  e) {
+		 }
+
+
+private: System::Void chargement(){
+
+				gestionEmprunteurs* emp = gestionEmprunteurs::getinstance();
+				String^ S;
+
+				static bool nouv;
+
+				//TODO faire le chargement des Timepickers et des checkboxs:
+				/*
+				if (nouv != true) 
+				{
+					S =  gcnew String (emp->Emprunteurcourrent->get(3 ).c_str());
+					this->date_Naissance->Text = S;
+				}
+
+				
+				String^ S1;
+					S1 =  gcnew String (emp->Emprunteurcourrent->get(23 ).c_str());
+			   this->dateTimePicker_conducteur1_delivrepermis->Text = S1; 
+				   S =  gcnew String (emp->Emprunteurcourrent->get(24 ).c_str());
+			   this->dateTimePicker_conducteur1_expirepermis->Text = S; 
+				   S = gcnew String (emp->Emprunteurcourrent->get(20 ).c_str());
+			   this->dateTimePicker_conducteur1_naissance->Text = S;  
+				   S =  gcnew String (emp->Emprunteurcourrent->get(31 ).c_str());
+			   this->dateTimePicker_conducteur2_delivrepermis->Text = S;
+				   S =  gcnew String (emp->Emprunteurcourrent->get( 32).c_str());
+			   this->dateTimePicker_conducteur2_expirepermis->Text = S;
+				   S =  gcnew String (emp->Emprunteurcourrent->get( 28).c_str());
+			   this->dateTimePicker_conducteur2_naissance->Text = S; 
+				   S =  gcnew String (emp->Emprunteurcourrent->get(39 ).c_str());
+			   this->dateTimePicker_conducteur3_delivrepermis->Text = S;
+				   S =  gcnew String (emp->Emprunteurcourrent->get( 40).c_str());
+			   this->dateTimePicker_conducteur3_expirepermis->Text = S;
+				   S =  gcnew String (emp->Emprunteurcourrent->get(36 ).c_str());
+			   this->dateTimePicker_conducteur3_naissance->Text = S; 
+				   S =  gcnew String (emp->Emprunteurcourrent->get( 47).c_str());
+			   this->dateTimePicker_conducteur4_delivrepermis->Text = S;
+				   S =  gcnew String (emp->Emprunteurcourrent->get( 48).c_str());
+			   this->dateTimePicker_conducteur4_expirepermis->Text = S;
+				   S =  gcnew String (emp->Emprunteurcourrent->get( 44).c_str());
+			   this->dateTimePicker_conducteur4_naissance->Text = S;
+				   S =  gcnew String (emp->Emprunteurcourrent->get(14 ).c_str());
+			   this->dateTimePicker_delivrepermismoto->Text = S; 
+				   S =  gcnew String (emp->Emprunteurcourrent->get(11 ).c_str());
+			   this->dateTimePicker_delivrepermisvoiture->Text = S;
+				   S =  gcnew String (emp->Emprunteurcourrent->get(15 ).c_str());
+			   this->dateTimePicker_expirepermismoto->Text = S; 
+				   S =  gcnew String (emp->Emprunteurcourrent->get(12 ).c_str());
+			   this->dateTimePicker_expirepermisvoiture->Text = S; 
+				  */
+				   S =  gcnew String (emp->Emprunteurcourrent->get( 7).c_str());
+			   this->TextBox_CodePostal->Text = S; 
+				   S =  gcnew String (emp->Emprunteurcourrent->get(18 ).c_str());
+			   this->textBox_conducteur1_nom->Text = S; 
+				   S =  gcnew String (emp->Emprunteurcourrent->get( 22).c_str());
+			   this->textBox_conducteur1_numpermis->Text = S;
+				   S =  gcnew String (emp->Emprunteurcourrent->get(19 ).c_str());
+			   this->textBox_conducteur1_prenom->Text = S;
+				   S =  gcnew String (emp->Emprunteurcourrent->get(26 ).c_str());
+			   this->textBox_conducteur2_nom->Text = S; 
+				   S =  gcnew String (emp->Emprunteurcourrent->get( 30).c_str());
+			   this->textBox_conducteur2_numpermis->Text = S;
+				   S =  gcnew String (emp->Emprunteurcourrent->get(27 ).c_str());
+			   this->textBox_conducteur2_prenom->Text = S;
+				   S =  gcnew String (emp->Emprunteurcourrent->get( 34).c_str());
+			   this->textBox_conducteur3_nom->Text = S; 
+				   S =  gcnew String (emp->Emprunteurcourrent->get(38 ).c_str());
+			   this->textBox_conducteur3_numpermis->Text = S;
+				   S =  gcnew String (emp->Emprunteurcourrent->get(35 ).c_str());
+			   this->textBox_conducteur3_prenom->Text = S;
+				   S =  gcnew String (emp->Emprunteurcourrent->get( 42).c_str());
+			   this->textBox_conducteur4_nom->Text = S; 
+				   S =  gcnew String (emp->Emprunteurcourrent->get(43 ).c_str());
+			   this->textBox_conducteur4_numpermis->Text = S;
+				   S =  gcnew String (emp->Emprunteurcourrent->get( 46).c_str());
+			   this->textBox_conducteur4_prenom->Text = S; 
+				   S =  gcnew String (emp->Emprunteurcourrent->get(1 ).c_str());
+			   this->textBox_Nom->Text = S; 
+				   S =  gcnew String (emp->Emprunteurcourrent->get( 5).c_str());
+			   this->TextBox_Num->Text = S; 
+				   S =  gcnew String (emp->Emprunteurcourrent->get( 4).c_str());
+			   this->textBox_numero_carte_didentite->Text = S; 
+				   S =  gcnew String (emp->Emprunteurcourrent->get( 16).c_str());
+			   this->textBox_numpermismoto->Text = S; 
+				   S =  gcnew String (emp->Emprunteurcourrent->get( 10).c_str());
+			   this->textBox_permisdeconduire->Text = S; 
+				   S =  gcnew String (emp->Emprunteurcourrent->get(2 ).c_str());
+			   this->textBox_Prenom->Text = S;
+				   S =  gcnew String (emp->Emprunteurcourrent->get(8 ).c_str());
+			   this->textBox_Ville->Text = S;
+				   S =  gcnew String (emp->Emprunteurcourrent->get(6 ).c_str());
+			   this->textBox_rue->Text = S; 
+		 }
+
+private: System::Void button_precedent_Click(System::Object^  sender, System::EventArgs^  e) {
+			 gestionEmprunteurs* emp = gestionEmprunteurs::getinstance();
+			 emp->chargementprec();
+			 emp->chargementcour();
+			 chargement();
+
+		 }
+private: System::Void button_suivant_Click(System::Object^  sender, System::EventArgs^  e) {
+			gestionEmprunteurs* emp = gestionEmprunteurs::getinstance();
+			 emp->chargementsuiv();
+			 emp->chargementcour();
+			 chargement();
 		 }
 };
 }

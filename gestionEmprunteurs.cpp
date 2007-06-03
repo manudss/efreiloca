@@ -59,6 +59,11 @@ void gestionEmprunteurs::chargementsuiv()
 	this->ListeEmp->emprumteursuiv();
 }
 
+void gestionEmprunteurs::chargementprec()
+{
+	this->ListeEmp->emprumteurprec();
+}
+
 int gestionEmprunteurs::NbrEmprunteur()
 {
 	int retour = this->ListeEmp->nbrEmprunteur();
