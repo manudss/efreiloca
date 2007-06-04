@@ -14,7 +14,7 @@ public:
 
 //getteur :
 	std::string get(int);// !
-	stdext::hash_map< std::string, Location* > TabLocation;
+	stdext::hash_map< static int, Location* > TabLocation;
 	
 
 

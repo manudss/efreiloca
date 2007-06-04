@@ -20,12 +20,12 @@ public:
 	
 	//setteur
 	void set (int , std::string) ;
-	void set_hash_TabLocation_insert(std::string date,Location* loc);
+	void set_hash_TabLocation_insert(static int i_loc,Location* loc);
 
 	//Getter:
 
 	std::string get (int);
-	
+	Date getnaissance();
 
 private:
 	static int compt_id;
@@ -45,9 +45,9 @@ private:
     std::string numero_permismoto;
 	Conducteur* autre_conducteur[4];
 	
-	stdext::hash_map< std::string, Location* > TabLocation;
-	stdext::hash_map< std::string , Location* >:: iterator hash_iter;
-	typedef pair <std::string , Location* > Int_Pair;
+	stdext::hash_map< static int, Location* > TabLocation;
+	stdext::hash_map< static int , Location* >:: iterator hash_iter;
+	typedef pair <static int , Location* > Int_Pair;
 	
 	
 	

@@ -6,9 +6,11 @@
 
 
 ListeLocation* ListeLocation::instance = 0;
+static int i_loc=0;
 
 ListeLocation::ListeLocation(void)
 {
+	this->Locationbegin();
 }
 
 ListeLocation::~ListeLocation(void)
@@ -56,6 +58,8 @@ void ListeLocation::devis (Location * loc)
 
 
 
+
+
 			
 		}
 
@@ -69,8 +73,14 @@ void ListeLocation::devis (Location * loc)
 ///////////
 Location* ListeLocation::returnLocationCour()
 {
-	
-	return this->iter_cour->second;
+	if (iter_cour != tabLocation.end( ))
+		return this->iter_cour->second;
+	else
+	{
+		this->Locationbegin();
+		return	this->iter_cour->second;
+	}
+		
 }
 void ListeLocation::Locationbegin()
 {
@@ -78,10 +88,10 @@ void ListeLocation::Locationbegin()
 }
 void ListeLocation::Locationsuiv()
 {
-	iter_cour ++;
-	if (iter_cour  == tabLocation.end( )  )
+	//iter_cour ++;
+	if (iter_cour  != tabLocation.end( )  )
 	{	
-		iter_cour --;
+		iter_cour ++;
 	}
 	//else iter_cour ++;
 }
@@ -98,17 +108,17 @@ int ListeLocation::nbrLocation()
 }
 //////////////
 
-int ListeLocation::ajout_tab(string s, Location * loc)
+int ListeLocation::ajout_tab(static int i_loc, Location * loc)
 {
  Emprunteur* Emp;
  Emp=loc->get_myEmprunteur();
  if (Emp != 0)
-	Emp->set_hash_TabLocation_insert(s,loc); // accede tab de hash ..
+	Emp->set_hash_TabLocation_insert(i_loc,loc); // insert dans tab de hash Emprunteur
 
- Exemplaire* Ex;
+ Exemplaire* Ex; 
  Ex=loc->get_myExemplaire();
  if (Ex != 0)
-	Ex->TabLocation.insert(Int_Pair(s,loc));
+	Ex->TabLocation.insert(Int_Pair(i_loc,loc));
 
  return 1;
 }
@@ -141,7 +151,13 @@ int ListeLocation::ajout(Location* nouvelle_loc)
 	
 int mois=0;
 
+//
+tabLocation.insert(Int_Pair(i_loc,nouvelle_loc));
+this->ajout_tab(i_loc,nouvelle_loc);
+i_loc++;
+//
 
+/*
 	
 		do
 		{
@@ -167,7 +183,7 @@ int mois=0;
 		
 		
 		} while (jd != jf && md == mf || md < mf);
-			
+*/			
 
 return 1;
 }

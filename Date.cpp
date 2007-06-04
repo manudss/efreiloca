@@ -3,9 +3,9 @@
 
 Date::Date(void)
 {
-	this->aaaa = 0;
-	this->jj = 0;
-	this->mm = 0;
+	this->aaaa = 2007;
+	this->jj = 5;
+	this->mm = 6;
 }
 
 Date::~Date(void)
@@ -42,11 +42,15 @@ void Date::set(std::string chaine)
 		s2 = chaine[1];
 		s = s1 + s2;
 		jj = atoi ( s.c_str() );
+		if ( jj > 31 )
+		   jj = jj % 31;
 
 		s1 = chaine[2];
 		s2 = chaine[3];
 		s = s1 + s2;
 		mm= atoi ( s.c_str() );
+		if (mm > 12)
+			mm = mm %12; 
 
 		s1 = chaine[4];
 		s2 = chaine[5];
@@ -55,6 +59,9 @@ void Date::set(std::string chaine)
 		s = s1 + s2 + s3 + s4;
 		
 		aaaa= atoi ( s.c_str() );
+
+		if (aaaa < 1900)
+			aaaa = aaaa % 100 + 1900;
 	}
 	
 }
@@ -70,8 +77,8 @@ std::string Date::get ()
 	s3=itoa(aaaa,bidon,10);
 
 	//s= s1 + '/'+ s2 + '/'  + s3;
-	if(s1.size() < 2 ) s1= '0'+ s1;
-	if(s2.size() < 2 ) s2= '0'+ s2;
+	if(jj < 10 ) s1= '0'+ s1;
+	if(mm < 10 ) s2= '0'+ s2;
 	
 	s= s1 + s2 + s3;
 

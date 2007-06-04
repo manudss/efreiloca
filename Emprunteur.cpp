@@ -36,9 +36,9 @@ Emprunteur::Emprunteur(std::string lenom, std::string leprenom, Date ladate_nais
 }
 
 
-void Emprunteur::set_hash_TabLocation_insert(std::string date,Location* loc)
+void Emprunteur::set_hash_TabLocation_insert(static int i_loc,Location* loc)
 {
- TabLocation.insert(Int_Pair(date,loc));
+ TabLocation.insert(Int_Pair(i_loc,loc));
 }
 
 void Emprunteur::setpermisauto(std::string le_num_permisauto, Date la_delivrance_permis_voiture,	Date l_expiration_permis_voiture)
@@ -181,6 +181,11 @@ void Emprunteur::set (int a, std::string chain)
 }
 	
 //GET Emprunteur :
+
+Date Emprunteur::getnaissance()
+{
+	return this->date_naissance;
+}
 	
 std::string Emprunteur::get (int a)
 {

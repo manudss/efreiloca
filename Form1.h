@@ -3,6 +3,7 @@
 #include "listeEmprunteur.h"
 #include "GestionEmprunteurs.h"
 #include "GestionVehicule.h"
+#include "GestionLocation.h"
 #include "Adresse.h"
 #include "Date.h"
 
@@ -76,8 +77,8 @@ namespace efreiloca {
 	private: System::Windows::Forms::ToolStripMenuItem^  locationsEnCoursToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  outilsToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  editionDevisToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^  facturesToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^  aideToolStripMenuItem;
+
+
 	public: System::Windows::Forms::TabControl^  TabPage;
 	private: 
 
@@ -132,8 +133,8 @@ namespace efreiloca {
 
 	private: System::Windows::Forms::TextBox^  textBox_permisdeconduire;
 	private: System::Windows::Forms::Label^  Numpermisdeconduire;
-private: System::Windows::Forms::GroupBox^  groupBox_locationeffectue;
-private: System::Windows::Forms::GroupBox^  groupBox_locationencours;
+
+
 
 
 	private: System::Windows::Forms::Label^  label1;
@@ -142,7 +143,7 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker_expirepermisvoi
 private: System::Windows::Forms::DateTimePicker^  dateTimePicker_delivrepermisvoiture;
 
 	private: System::Windows::Forms::Label^  label2;
-	private: System::Windows::Forms::ToolStripMenuItem^  configurationToolStripMenuItem;
+
 	private: System::Windows::Forms::Label^  label3;
 private: System::Windows::Forms::GroupBox^  groupBox_permismoto;
 
@@ -268,21 +269,21 @@ private: System::Windows::Forms::TextBox^  textBox_conducteur4_nom;
 
 private: System::Windows::Forms::Label^  label36;
 private: System::Windows::Forms::Button^  validationEmprunteur;
-private: System::Windows::Forms::DataGridView^  dataGridView_locationeffetue;
+
 
 
 private: System::Windows::Forms::BindingSource^  adresseBindingSource1;
 private: System::Windows::Forms::BindingSource^  adresseBindingSource;
-private: System::Windows::Forms::DataGridView^  dataGridView_locationencours;
+
 
 private: System::Windows::Forms::TextBox^  textBox_numero_carte_didentite;
 
 private: System::Windows::Forms::Label^  label_numero_carte_didentite;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^  ID;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^  Nom;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^  Prénom;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^  Naissance;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^  Location;
+
+
+
+
+
 private: System::Windows::Forms::BindingSource^  emprunteurBindingSource;
 private: System::Windows::Forms::DataGridView^  dataGridView1;
 private: System::Windows::Forms::Button^  button_precedent;
@@ -344,6 +345,96 @@ private: System::Windows::Forms::Button^  button3;
 private: System::Windows::Forms::Button^  button1;
 private: System::Windows::Forms::Button^  button2;
 private: System::Windows::Forms::Button^  button_nouveau;
+private: System::Windows::Forms::ContextMenuStrip^  contextMenuStripEmprunteurs;
+private: System::Windows::Forms::ToolStripMenuItem^  modifierToolStripMenuItem;
+private: System::Windows::Forms::Label^  label54;
+private: System::Windows::Forms::GroupBox^  groupBox1;
+private: System::Windows::Forms::DateTimePicker^  dateTimePicker_loc_datedebut;
+
+private: System::Windows::Forms::Label^  label55;
+private: System::Windows::Forms::TextBox^  textBox_commentaire;
+
+private: System::Windows::Forms::DateTimePicker^  dateTimePicker_loc_datefin;
+
+private: System::Windows::Forms::Label^  label56;
+private: System::Windows::Forms::Label^  label58;
+private: System::Windows::Forms::Label^  label57;
+private: System::Windows::Forms::Label^  label59;
+private: System::Windows::Forms::ComboBox^  comboBox_loc_heureretour;
+private: System::Windows::Forms::CheckBox^  checkBox_termine;
+
+private: System::Windows::Forms::GroupBox^  groupBox2;
+private: System::Windows::Forms::Label^  label61;
+private: System::Windows::Forms::TextBox^  textBox_loc_nomemprunteur;
+private: System::Windows::Forms::Label^  label60;
+private: System::Windows::Forms::TextBox^  textBox_loc_numcarteidentite;
+
+private: System::Windows::Forms::GroupBox^  groupBox3;
+private: System::Windows::Forms::DataGridView^  dataGridView_loc_listevehicule;
+
+
+
+
+private: System::Windows::Forms::Label^  label62;
+private: System::Windows::Forms::TextBox^  textBox6;
+private: System::Windows::Forms::Label^  label63;
+private: System::Windows::Forms::TextBox^  textBox_loc_referencevehicule;
+
+private: System::Windows::Forms::DataGridView^  dataGridView_loc_listeemprunteur;
+
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column_loc_nomemprunteur;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column_loc_premomemprunteur;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column_loc_carteidentite;
+private: System::Windows::Forms::Label^  label65;
+private: System::Windows::Forms::ComboBox^  comboBox1;
+private: System::Windows::Forms::Label^  label64;
+private: System::Windows::Forms::TextBox^  textBox8;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column_loc_marque;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column_loc_modele;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column_loc_réf;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column_loc_type;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column_loc_prix;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column_loc_place;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column_loc_carburant;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column_loc_puissance;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Nom;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Prénom;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column_carteidentite;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column_ville;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Naissance;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column_permisauto;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column_permismoto;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Location;
+private: System::Windows::Forms::Label^  label_titredevis;
+private: System::Windows::Forms::RichTextBox^  richTextBox1;
+private: System::Windows::Forms::Button^  button4;
+private: System::Windows::Forms::Button^  button5;
+private: System::Windows::Forms::Button^  button6;
+private: System::Windows::Forms::TextBox^  textBox_loc_prix;
+private: System::Windows::Forms::Label^  label67;
+private: System::Windows::Forms::Label^  label66;
+private: System::Windows::Forms::Button^  button_loc_nouveau;
+private: System::Windows::Forms::Label^  label69;
+private: System::Windows::Forms::Label^  label68;
+private: System::Windows::Forms::PictureBox^  pictureBox1;
+private: System::Windows::Forms::Label^  label70;
+private: System::Windows::Forms::DataGridView^  dataGridView_listeloc;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column_listeLocation;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column_listeloc;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column_listeloc_datedebut;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column_listloc_datefin;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column_listeloc_numemp;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column_listeloc_numexempl;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column_listloc_commentaire;
+
+
+
+
+
+
+
+
+
 
 
 
@@ -406,9 +497,6 @@ private: System::ComponentModel::IContainer^  components;
 			this->locationsEnCoursToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->outilsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->editionDevisToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->facturesToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->configurationToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->aideToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->TabPage = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
 			this->button_precedent = (gcnew System::Windows::Forms::Button());
@@ -496,10 +584,6 @@ private: System::ComponentModel::IContainer^  components;
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->checkBox_permismoto = (gcnew System::Windows::Forms::CheckBox());
 			this->textBox_numpermismoto = (gcnew System::Windows::Forms::TextBox());
-			this->groupBox_locationeffectue = (gcnew System::Windows::Forms::GroupBox());
-			this->dataGridView_locationeffetue = (gcnew System::Windows::Forms::DataGridView());
-			this->groupBox_locationencours = (gcnew System::Windows::Forms::GroupBox());
-			this->dataGridView_locationencours = (gcnew System::Windows::Forms::DataGridView());
 			this->groupBox_permisvoiture = (gcnew System::Windows::Forms::GroupBox());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
@@ -527,11 +611,16 @@ private: System::ComponentModel::IContainer^  components;
 			this->Label_NouvelEmprunteur = (gcnew System::Windows::Forms::Label());
 			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
 			this->dataListeEmprunteur = (gcnew System::Windows::Forms::DataGridView());
-			this->ID = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Nom = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Prénom = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column_carteidentite = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column_ville = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Naissance = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column_permisauto = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column_permismoto = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Location = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->contextMenuStripEmprunteurs = (gcnew System::Windows::Forms::ContextMenuStrip(this->components));
+			this->modifierToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->label_listeE_ListeEmprunteur = (gcnew System::Windows::Forms::Label());
 			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
 			this->button_nouveau = (gcnew System::Windows::Forms::Button());
@@ -582,12 +671,72 @@ private: System::ComponentModel::IContainer^  components;
 			this->label38 = (gcnew System::Windows::Forms::Label());
 			this->label_titreexemplaire = (gcnew System::Windows::Forms::Label());
 			this->tabPage5 = (gcnew System::Windows::Forms::TabPage());
+			this->button_loc_nouveau = (gcnew System::Windows::Forms::Button());
+			this->button4 = (gcnew System::Windows::Forms::Button());
+			this->button5 = (gcnew System::Windows::Forms::Button());
+			this->button6 = (gcnew System::Windows::Forms::Button());
+			this->groupBox3 = (gcnew System::Windows::Forms::GroupBox());
+			this->label65 = (gcnew System::Windows::Forms::Label());
+			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
+			this->label64 = (gcnew System::Windows::Forms::Label());
+			this->textBox8 = (gcnew System::Windows::Forms::TextBox());
+			this->dataGridView_loc_listevehicule = (gcnew System::Windows::Forms::DataGridView());
+			this->Column_loc_marque = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column_loc_modele = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column_loc_réf = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column_loc_type = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column_loc_prix = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column_loc_place = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column_loc_carburant = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column_loc_puissance = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->label62 = (gcnew System::Windows::Forms::Label());
+			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
+			this->label63 = (gcnew System::Windows::Forms::Label());
+			this->textBox_loc_referencevehicule = (gcnew System::Windows::Forms::TextBox());
+			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
+			this->dataGridView_loc_listeemprunteur = (gcnew System::Windows::Forms::DataGridView());
+			this->Column_loc_nomemprunteur = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column_loc_premomemprunteur = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column_loc_carteidentite = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->label61 = (gcnew System::Windows::Forms::Label());
+			this->textBox_loc_nomemprunteur = (gcnew System::Windows::Forms::TextBox());
+			this->label60 = (gcnew System::Windows::Forms::Label());
+			this->textBox_loc_numcarteidentite = (gcnew System::Windows::Forms::TextBox());
+			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
+			this->label67 = (gcnew System::Windows::Forms::Label());
+			this->label66 = (gcnew System::Windows::Forms::Label());
+			this->textBox_loc_prix = (gcnew System::Windows::Forms::TextBox());
+			this->checkBox_termine = (gcnew System::Windows::Forms::CheckBox());
+			this->label59 = (gcnew System::Windows::Forms::Label());
+			this->comboBox_loc_heureretour = (gcnew System::Windows::Forms::ComboBox());
+			this->label58 = (gcnew System::Windows::Forms::Label());
+			this->label57 = (gcnew System::Windows::Forms::Label());
+			this->textBox_commentaire = (gcnew System::Windows::Forms::TextBox());
+			this->dateTimePicker_loc_datefin = (gcnew System::Windows::Forms::DateTimePicker());
+			this->label56 = (gcnew System::Windows::Forms::Label());
+			this->dateTimePicker_loc_datedebut = (gcnew System::Windows::Forms::DateTimePicker());
+			this->label55 = (gcnew System::Windows::Forms::Label());
+			this->label54 = (gcnew System::Windows::Forms::Label());
 			this->tabPage6 = (gcnew System::Windows::Forms::TabPage());
+			this->dataGridView_listeloc = (gcnew System::Windows::Forms::DataGridView());
+			this->label70 = (gcnew System::Windows::Forms::Label());
 			this->tabPage7 = (gcnew System::Windows::Forms::TabPage());
+			this->label_titredevis = (gcnew System::Windows::Forms::Label());
+			this->richTextBox1 = (gcnew System::Windows::Forms::RichTextBox());
 			this->tabPage8 = (gcnew System::Windows::Forms::TabPage());
+			this->label69 = (gcnew System::Windows::Forms::Label());
+			this->label68 = (gcnew System::Windows::Forms::Label());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->emprunteurBindingSource = (gcnew System::Windows::Forms::BindingSource(this->components));
 			this->adresseBindingSource = (gcnew System::Windows::Forms::BindingSource(this->components));
 			this->adresseBindingSource1 = (gcnew System::Windows::Forms::BindingSource(this->components));
+			this->Column_listeLocation = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column_listeloc = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column_listeloc_datedebut = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column_listloc_datefin = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column_listeloc_numemp = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column_listeloc_numexempl = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column_listloc_commentaire = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->menuhaut->SuspendLayout();
 			this->TabPage->SuspendLayout();
 			this->tabPage2->SuspendLayout();
@@ -601,18 +750,26 @@ private: System::ComponentModel::IContainer^  components;
 			this->conducteur4->SuspendLayout();
 			this->groupBox8->SuspendLayout();
 			this->groupBox_permismoto->SuspendLayout();
-			this->groupBox_locationeffectue->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataGridView_locationeffetue))->BeginInit();
-			this->groupBox_locationencours->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataGridView_locationencours))->BeginInit();
 			this->groupBox_permisvoiture->SuspendLayout();
 			this->Groupebox_Adresse->SuspendLayout();
 			this->tabPage3->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataListeEmprunteur))->BeginInit();
+			this->contextMenuStripEmprunteurs->SuspendLayout();
 			this->tabPage4->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataGridView_ListesExemplaires))->BeginInit();
 			this->groupBox_refexemplaire->SuspendLayout();
 			this->groupBox_etatvoiture->SuspendLayout();
+			this->tabPage5->SuspendLayout();
+			this->groupBox3->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataGridView_loc_listevehicule))->BeginInit();
+			this->groupBox2->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataGridView_loc_listeemprunteur))->BeginInit();
+			this->groupBox1->SuspendLayout();
+			this->tabPage6->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataGridView_listeloc))->BeginInit();
+			this->tabPage7->SuspendLayout();
+			this->tabPage8->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->emprunteurBindingSource))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->adresseBindingSource))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->adresseBindingSource1))->BeginInit();
@@ -623,8 +780,8 @@ private: System::ComponentModel::IContainer^  components;
 			this->menuhaut->BackColor = System::Drawing::SystemColors::HotTrack;
 			this->menuhaut->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"menuhaut.BackgroundImage")));
 			this->menuhaut->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->menuhaut->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(5) {this->emprunteurToolStripMenuItem, 
-				this->vehiculeToolStripMenuItem, this->locationEnCoursToolStripMenuItem, this->outilsToolStripMenuItem, this->aideToolStripMenuItem});
+			this->menuhaut->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {this->emprunteurToolStripMenuItem, 
+				this->vehiculeToolStripMenuItem, this->locationEnCoursToolStripMenuItem, this->outilsToolStripMenuItem});
 			this->menuhaut->Location = System::Drawing::Point(0, 0);
 			this->menuhaut->Name = L"menuhaut";
 			this->menuhaut->Size = System::Drawing::Size(1009, 24);
@@ -702,6 +859,7 @@ private: System::ComponentModel::IContainer^  components;
 			this->nouveauToolStripMenuItem->ShortcutKeys = System::Windows::Forms::Keys::F5;
 			this->nouveauToolStripMenuItem->Size = System::Drawing::Size(193, 22);
 			this->nouveauToolStripMenuItem->Text = L"Nouvel Location";
+			this->nouveauToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::nouveauToolStripMenuItem_Click);
 			// 
 			// retourLocationToolStripMenuItem
 			// 
@@ -710,6 +868,7 @@ private: System::ComponentModel::IContainer^  components;
 			this->retourLocationToolStripMenuItem->ShortcutKeys = System::Windows::Forms::Keys::F6;
 			this->retourLocationToolStripMenuItem->Size = System::Drawing::Size(193, 22);
 			this->retourLocationToolStripMenuItem->Text = L"Retour Location";
+			this->retourLocationToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::retourLocationToolStripMenuItem_Click);
 			// 
 			// locationsEnCoursToolStripMenuItem
 			// 
@@ -718,11 +877,11 @@ private: System::ComponentModel::IContainer^  components;
 			this->locationsEnCoursToolStripMenuItem->ShortcutKeys = System::Windows::Forms::Keys::F7;
 			this->locationsEnCoursToolStripMenuItem->Size = System::Drawing::Size(193, 22);
 			this->locationsEnCoursToolStripMenuItem->Text = L"Locations en cours";
+			this->locationsEnCoursToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::locationsEnCoursToolStripMenuItem_Click);
 			// 
 			// outilsToolStripMenuItem
 			// 
-			this->outilsToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {this->editionDevisToolStripMenuItem, 
-				this->facturesToolStripMenuItem, this->configurationToolStripMenuItem});
+			this->outilsToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) {this->editionDevisToolStripMenuItem});
 			this->outilsToolStripMenuItem->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"outilsToolStripMenuItem.Image")));
 			this->outilsToolStripMenuItem->Name = L"outilsToolStripMenuItem";
 			this->outilsToolStripMenuItem->Size = System::Drawing::Size(62, 20);
@@ -735,28 +894,6 @@ private: System::ComponentModel::IContainer^  components;
 			this->editionDevisToolStripMenuItem->ShortcutKeys = System::Windows::Forms::Keys::F3;
 			this->editionDevisToolStripMenuItem->Size = System::Drawing::Size(210, 22);
 			this->editionDevisToolStripMenuItem->Text = L"Edition devis/Factures";
-			// 
-			// facturesToolStripMenuItem
-			// 
-			this->facturesToolStripMenuItem->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"facturesToolStripMenuItem.Image")));
-			this->facturesToolStripMenuItem->Name = L"facturesToolStripMenuItem";
-			this->facturesToolStripMenuItem->ShortcutKeys = System::Windows::Forms::Keys::F8;
-			this->facturesToolStripMenuItem->Size = System::Drawing::Size(210, 22);
-			this->facturesToolStripMenuItem->Text = L"Statistiques";
-			// 
-			// configurationToolStripMenuItem
-			// 
-			this->configurationToolStripMenuItem->Name = L"configurationToolStripMenuItem";
-			this->configurationToolStripMenuItem->Size = System::Drawing::Size(210, 22);
-			this->configurationToolStripMenuItem->Text = L"Configuration";
-			// 
-			// aideToolStripMenuItem
-			// 
-			this->aideToolStripMenuItem->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"aideToolStripMenuItem.Image")));
-			this->aideToolStripMenuItem->Name = L"aideToolStripMenuItem";
-			this->aideToolStripMenuItem->ShortcutKeys = System::Windows::Forms::Keys::F10;
-			this->aideToolStripMenuItem->Size = System::Drawing::Size(59, 20);
-			this->aideToolStripMenuItem->Text = L"Aide ";
 			// 
 			// TabPage
 			// 
@@ -776,7 +913,7 @@ private: System::ComponentModel::IContainer^  components;
 			this->TabPage->Location = System::Drawing::Point(3, 27);
 			this->TabPage->Multiline = true;
 			this->TabPage->Name = L"TabPage";
-			this->TabPage->SelectedIndex = 1;
+			this->TabPage->SelectedIndex = 6;
 			this->TabPage->Size = System::Drawing::Size(1006, 661);
 			this->TabPage->TabIndex = 2;
 			// 
@@ -790,8 +927,6 @@ private: System::ComponentModel::IContainer^  components;
 			this->tabPage2->Controls->Add(this->validationEmprunteur);
 			this->tabPage2->Controls->Add(this->conducteuraditionnel);
 			this->tabPage2->Controls->Add(this->groupBox_permismoto);
-			this->tabPage2->Controls->Add(this->groupBox_locationeffectue);
-			this->tabPage2->Controls->Add(this->groupBox_locationencours);
 			this->tabPage2->Controls->Add(this->groupBox_permisvoiture);
 			this->tabPage2->Controls->Add(this->Groupebox_Adresse);
 			this->tabPage2->Controls->Add(this->date_Naissance);
@@ -863,7 +998,7 @@ private: System::ComponentModel::IContainer^  components;
 			this->conducteuraditionnel->Controls->Add(this->conducteur2);
 			this->conducteuraditionnel->Controls->Add(this->conducteur3);
 			this->conducteuraditionnel->Controls->Add(this->conducteur4);
-			this->conducteuraditionnel->Location = System::Drawing::Point(674, 338);
+			this->conducteuraditionnel->Location = System::Drawing::Point(678, 165);
 			this->conducteuraditionnel->Name = L"conducteuraditionnel";
 			this->conducteuraditionnel->SelectedIndex = 0;
 			this->conducteuraditionnel->Size = System::Drawing::Size(304, 295);
@@ -1568,7 +1703,6 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// groupBox_permismoto
 			// 
-
 			this->groupBox_permismoto->Controls->Add(this->label4);
 			this->groupBox_permismoto->Controls->Add(this->label5);
 			this->groupBox_permismoto->Controls->Add(this->label6);
@@ -1583,7 +1717,6 @@ private: System::ComponentModel::IContainer^  components;
 			this->groupBox_permismoto->TabIndex = 16;
 			this->groupBox_permismoto->TabStop = false;
 			this->groupBox_permismoto->Text = L"Permis Moto";
-
 			// 
 			// label4
 			// 
@@ -1652,42 +1785,6 @@ private: System::ComponentModel::IContainer^  components;
 			this->textBox_numpermismoto->Name = L"textBox_numpermismoto";
 			this->textBox_numpermismoto->Size = System::Drawing::Size(258, 20);
 			this->textBox_numpermismoto->TabIndex = 11;
-			// 
-			// groupBox_locationeffectue
-			// 
-			this->groupBox_locationeffectue->Controls->Add(this->dataGridView_locationeffetue);
-			this->groupBox_locationeffectue->Location = System::Drawing::Point(674, 165);
-			this->groupBox_locationeffectue->Name = L"groupBox_locationeffectue";
-			this->groupBox_locationeffectue->Size = System::Drawing::Size(306, 161);
-			this->groupBox_locationeffectue->TabIndex = 14;
-			this->groupBox_locationeffectue->TabStop = false;
-			this->groupBox_locationeffectue->Text = L"Locations effectuées";
-			// 
-			// dataGridView_locationeffetue
-			// 
-			this->dataGridView_locationeffetue->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView_locationeffetue->Location = System::Drawing::Point(9, 20);
-			this->dataGridView_locationeffetue->Name = L"dataGridView_locationeffetue";
-			this->dataGridView_locationeffetue->Size = System::Drawing::Size(291, 130);
-			this->dataGridView_locationeffetue->TabIndex = 0;
-			// 
-			// groupBox_locationencours
-			// 
-			this->groupBox_locationencours->Controls->Add(this->dataGridView_locationencours);
-			this->groupBox_locationencours->Location = System::Drawing::Point(674, 1);
-			this->groupBox_locationencours->Name = L"groupBox_locationencours";
-			this->groupBox_locationencours->Size = System::Drawing::Size(306, 161);
-			this->groupBox_locationencours->TabIndex = 13;
-			this->groupBox_locationencours->TabStop = false;
-			this->groupBox_locationencours->Text = L"Locations en cours";
-			// 
-			// dataGridView_locationencours
-			// 
-			this->dataGridView_locationencours->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView_locationencours->Location = System::Drawing::Point(8, 17);
-			this->dataGridView_locationencours->Name = L"dataGridView_locationencours";
-			this->dataGridView_locationencours->Size = System::Drawing::Size(291, 130);
-			this->dataGridView_locationencours->TabIndex = 1;
 			// 
 			// groupBox_permisvoiture
 			// 
@@ -1954,8 +2051,10 @@ private: System::ComponentModel::IContainer^  components;
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->dataListeEmprunteur->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->dataListeEmprunteur->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataListeEmprunteur->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(5) {this->ID, 
-				this->Nom, this->Prénom, this->Naissance, this->Location});
+			this->dataListeEmprunteur->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(8) {this->Nom, 
+				this->Prénom, this->Column_carteidentite, this->Column_ville, this->Naissance, this->Column_permisauto, this->Column_permismoto, 
+				this->Location});
+			this->dataListeEmprunteur->ContextMenuStrip = this->contextMenuStripEmprunteurs;
 			this->dataListeEmprunteur->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->dataListeEmprunteur->Location = System::Drawing::Point(13, 102);
 			this->dataListeEmprunteur->MultiSelect = false;
@@ -1969,14 +2068,6 @@ private: System::ComponentModel::IContainer^  components;
 			this->dataListeEmprunteur->TabIndex = 3;
 			this->dataListeEmprunteur->RowValidating += gcnew System::Windows::Forms::DataGridViewCellCancelEventHandler(this, &Form1::dataListeEmprunteur_RowValidating);
 			this->dataListeEmprunteur->CellClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &Form1::dataListeEmprunteur_CellClick);
-			// 
-			// ID
-			// 
-			this->ID->DataPropertyName = L"id";
-			this->ID->HeaderText = L"ID";
-			this->ID->Name = L"ID";
-			this->ID->ReadOnly = true;
-			this->ID->Width = 10;
 			// 
 			// Nom
 			// 
@@ -1992,17 +2083,55 @@ private: System::ComponentModel::IContainer^  components;
 			this->Prénom->Name = L"Prénom";
 			this->Prénom->ReadOnly = true;
 			// 
+			// Column_carteidentite
+			// 
+			this->Column_carteidentite->HeaderText = L"Numéro de la Carte d\'identité";
+			this->Column_carteidentite->Name = L"Column_carteidentite";
+			this->Column_carteidentite->ReadOnly = true;
+			// 
+			// Column_ville
+			// 
+			this->Column_ville->HeaderText = L"Ville";
+			this->Column_ville->Name = L"Column_ville";
+			this->Column_ville->ReadOnly = true;
+			// 
 			// Naissance
 			// 
 			this->Naissance->HeaderText = L"Date de Naissance";
 			this->Naissance->Name = L"Naissance";
 			this->Naissance->ReadOnly = true;
 			// 
+			// Column_permisauto
+			// 
+			this->Column_permisauto->HeaderText = L"Permis A";
+			this->Column_permisauto->Name = L"Column_permisauto";
+			this->Column_permisauto->ReadOnly = true;
+			// 
+			// Column_permismoto
+			// 
+			this->Column_permismoto->HeaderText = L"Permis moto";
+			this->Column_permismoto->Name = L"Column_permismoto";
+			this->Column_permismoto->ReadOnly = true;
+			// 
 			// Location
 			// 
 			this->Location->HeaderText = L"Location";
 			this->Location->Name = L"Location";
 			this->Location->ReadOnly = true;
+			// 
+			// contextMenuStripEmprunteurs
+			// 
+			this->contextMenuStripEmprunteurs->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) {this->modifierToolStripMenuItem});
+			this->contextMenuStripEmprunteurs->Name = L"contextMenuStripEmprunteurs";
+			this->contextMenuStripEmprunteurs->Size = System::Drawing::Size(124, 26);
+			this->contextMenuStripEmprunteurs->Opening += gcnew System::ComponentModel::CancelEventHandler(this, &Form1::contextMenuStripEmprunteurs_Opening);
+			// 
+			// modifierToolStripMenuItem
+			// 
+			this->modifierToolStripMenuItem->Name = L"modifierToolStripMenuItem";
+			this->modifierToolStripMenuItem->Size = System::Drawing::Size(123, 22);
+			this->modifierToolStripMenuItem->Text = L"Modifier";
+			this->modifierToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::modifierToolStripMenuItem_Click);
 			// 
 			// label_listeE_ListeEmprunteur
 			// 
@@ -2470,6 +2599,14 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// tabPage5
 			// 
+			this->tabPage5->Controls->Add(this->button_loc_nouveau);
+			this->tabPage5->Controls->Add(this->button4);
+			this->tabPage5->Controls->Add(this->button5);
+			this->tabPage5->Controls->Add(this->button6);
+			this->tabPage5->Controls->Add(this->groupBox3);
+			this->tabPage5->Controls->Add(this->groupBox2);
+			this->tabPage5->Controls->Add(this->groupBox1);
+			this->tabPage5->Controls->Add(this->label54);
 			this->tabPage5->Location = System::Drawing::Point(14, 4);
 			this->tabPage5->Name = L"tabPage5";
 			this->tabPage5->Padding = System::Windows::Forms::Padding(3);
@@ -2477,9 +2614,421 @@ private: System::ComponentModel::IContainer^  components;
 			this->tabPage5->TabIndex = 4;
 			this->tabPage5->Text = L"tabPage5";
 			this->tabPage5->UseVisualStyleBackColor = true;
+			this->tabPage5->Click += gcnew System::EventHandler(this, &Form1::tabPage5_Click);
+			// 
+			// button_loc_nouveau
+			// 
+			this->button_loc_nouveau->Location = System::Drawing::Point(850, 31);
+			this->button_loc_nouveau->Name = L"button_loc_nouveau";
+			this->button_loc_nouveau->Size = System::Drawing::Size(75, 23);
+			this->button_loc_nouveau->TabIndex = 26;
+			this->button_loc_nouveau->Text = L"Nouveau";
+			this->button_loc_nouveau->UseVisualStyleBackColor = true;
+			this->button_loc_nouveau->Click += gcnew System::EventHandler(this, &Form1::button_loc_nouveau_Click);
+			// 
+			// button4
+			// 
+			this->button4->Location = System::Drawing::Point(69, 606);
+			this->button4->Name = L"button4";
+			this->button4->Size = System::Drawing::Size(67, 22);
+			this->button4->TabIndex = 25;
+			this->button4->Text = L"Precedent";
+			this->button4->UseVisualStyleBackColor = true;
+			this->button4->Click += gcnew System::EventHandler(this, &Form1::button4_Click_1);
+			// 
+			// button5
+			// 
+			this->button5->Location = System::Drawing::Point(142, 606);
+			this->button5->Name = L"button5";
+			this->button5->Size = System::Drawing::Size(62, 22);
+			this->button5->TabIndex = 24;
+			this->button5->Text = L"Suivant";
+			this->button5->UseVisualStyleBackColor = true;
+			this->button5->Click += gcnew System::EventHandler(this, &Form1::button5_Click);
+			// 
+			// button6
+			// 
+			this->button6->Location = System::Drawing::Point(527, 588);
+			this->button6->Name = L"button6";
+			this->button6->Size = System::Drawing::Size(143, 40);
+			this->button6->TabIndex = 23;
+			this->button6->Text = L"Valider";
+			this->button6->UseVisualStyleBackColor = true;
+			this->button6->Click += gcnew System::EventHandler(this, &Form1::button6_Click);
+			// 
+			// groupBox3
+			// 
+			this->groupBox3->Controls->Add(this->label65);
+			this->groupBox3->Controls->Add(this->comboBox1);
+			this->groupBox3->Controls->Add(this->label64);
+			this->groupBox3->Controls->Add(this->textBox8);
+			this->groupBox3->Controls->Add(this->dataGridView_loc_listevehicule);
+			this->groupBox3->Controls->Add(this->label62);
+			this->groupBox3->Controls->Add(this->textBox6);
+			this->groupBox3->Controls->Add(this->label63);
+			this->groupBox3->Controls->Add(this->textBox_loc_referencevehicule);
+			this->groupBox3->Location = System::Drawing::Point(42, 225);
+			this->groupBox3->Name = L"groupBox3";
+			this->groupBox3->Size = System::Drawing::Size(564, 357);
+			this->groupBox3->TabIndex = 3;
+			this->groupBox3->TabStop = false;
+			this->groupBox3->Text = L"Selectionner un vehicule :";
+			// 
+			// label65
+			// 
+			this->label65->AutoSize = true;
+			this->label65->Location = System::Drawing::Point(366, 16);
+			this->label65->Name = L"label65";
+			this->label65->Size = System::Drawing::Size(95, 13);
+			this->label65->TabIndex = 9;
+			this->label65->Text = L"Type du véhicule :";
+			// 
+			// comboBox1
+			// 
+			this->comboBox1->FormattingEnabled = true;
+			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(10) {L"Moto - Grosse Cylindrée", L"Moto - Petite Cylindrée", 
+				L"Moto - Scooter", L"Voiture - Compacte", L"Voiture - Luxe", L"Voiture - Familliale", L"Voiture - Sports", L"Voiture - Utilitaire", 
+				L"Voiture - Economique", L"Autre"});
+			this->comboBox1->Location = System::Drawing::Point(366, 24);
+			this->comboBox1->Name = L"comboBox1";
+			this->comboBox1->Size = System::Drawing::Size(192, 21);
+			this->comboBox1->TabIndex = 8;
+			// 
+			// label64
+			// 
+			this->label64->AutoSize = true;
+			this->label64->Location = System::Drawing::Point(112, 16);
+			this->label64->Name = L"label64";
+			this->label64->Size = System::Drawing::Size(48, 13);
+			this->label64->TabIndex = 6;
+			this->label64->Text = L"Modèle :";
+			// 
+			// textBox8
+			// 
+			this->textBox8->Location = System::Drawing::Point(112, 25);
+			this->textBox8->Name = L"textBox8";
+			this->textBox8->Size = System::Drawing::Size(100, 20);
+			this->textBox8->TabIndex = 5;
+			// 
+			// dataGridView_loc_listevehicule
+			// 
+			this->dataGridView_loc_listevehicule->AllowUserToAddRows = false;
+			this->dataGridView_loc_listevehicule->AllowUserToDeleteRows = false;
+			this->dataGridView_loc_listevehicule->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView_loc_listevehicule->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(8) {this->Column_loc_marque, 
+				this->Column_loc_modele, this->Column_loc_réf, this->Column_loc_type, this->Column_loc_prix, this->Column_loc_place, this->Column_loc_carburant, 
+				this->Column_loc_puissance});
+			this->dataGridView_loc_listevehicule->Location = System::Drawing::Point(6, 51);
+			this->dataGridView_loc_listevehicule->MultiSelect = false;
+			this->dataGridView_loc_listevehicule->Name = L"dataGridView_loc_listevehicule";
+			this->dataGridView_loc_listevehicule->SelectionMode = System::Windows::Forms::DataGridViewSelectionMode::FullRowSelect;
+			this->dataGridView_loc_listevehicule->Size = System::Drawing::Size(552, 296);
+			this->dataGridView_loc_listevehicule->TabIndex = 4;
+			// 
+			// Column_loc_marque
+			// 
+			this->Column_loc_marque->HeaderText = L"Marque";
+			this->Column_loc_marque->Name = L"Column_loc_marque";
+			// 
+			// Column_loc_modele
+			// 
+			this->Column_loc_modele->HeaderText = L"Modèle";
+			this->Column_loc_modele->Name = L"Column_loc_modele";
+			// 
+			// Column_loc_réf
+			// 
+			this->Column_loc_réf->HeaderText = L"Référence";
+			this->Column_loc_réf->Name = L"Column_loc_réf";
+			// 
+			// Column_loc_type
+			// 
+			this->Column_loc_type->HeaderText = L"type";
+			this->Column_loc_type->Name = L"Column_loc_type";
+			// 
+			// Column_loc_prix
+			// 
+			this->Column_loc_prix->HeaderText = L"Prix";
+			this->Column_loc_prix->Name = L"Column_loc_prix";
+			// 
+			// Column_loc_place
+			// 
+			this->Column_loc_place->HeaderText = L"Place";
+			this->Column_loc_place->Name = L"Column_loc_place";
+			// 
+			// Column_loc_carburant
+			// 
+			this->Column_loc_carburant->HeaderText = L"Carburant";
+			this->Column_loc_carburant->Name = L"Column_loc_carburant";
+			// 
+			// Column_loc_puissance
+			// 
+			this->Column_loc_puissance->HeaderText = L"Puissance";
+			this->Column_loc_puissance->Name = L"Column_loc_puissance";
+			// 
+			// label62
+			// 
+			this->label62->AutoSize = true;
+			this->label62->Location = System::Drawing::Point(6, 16);
+			this->label62->Name = L"label62";
+			this->label62->Size = System::Drawing::Size(49, 13);
+			this->label62->TabIndex = 3;
+			this->label62->Text = L"Marque :";
+			// 
+			// textBox6
+			// 
+			this->textBox6->Location = System::Drawing::Point(6, 25);
+			this->textBox6->Name = L"textBox6";
+			this->textBox6->Size = System::Drawing::Size(100, 20);
+			this->textBox6->TabIndex = 2;
+			// 
+			// label63
+			// 
+			this->label63->AutoSize = true;
+			this->label63->Location = System::Drawing::Point(215, 16);
+			this->label63->Name = L"label63";
+			this->label63->Size = System::Drawing::Size(88, 13);
+			this->label63->TabIndex = 1;
+			this->label63->Text = L"Réf du véhicule :";
+			// 
+			// textBox_loc_referencevehicule
+			// 
+			this->textBox_loc_referencevehicule->Location = System::Drawing::Point(218, 25);
+			this->textBox_loc_referencevehicule->Name = L"textBox_loc_referencevehicule";
+			this->textBox_loc_referencevehicule->Size = System::Drawing::Size(142, 20);
+			this->textBox_loc_referencevehicule->TabIndex = 0;
+			// 
+			// groupBox2
+			// 
+			this->groupBox2->Controls->Add(this->dataGridView_loc_listeemprunteur);
+			this->groupBox2->Controls->Add(this->label61);
+			this->groupBox2->Controls->Add(this->textBox_loc_nomemprunteur);
+			this->groupBox2->Controls->Add(this->label60);
+			this->groupBox2->Controls->Add(this->textBox_loc_numcarteidentite);
+			this->groupBox2->Location = System::Drawing::Point(612, 84);
+			this->groupBox2->Name = L"groupBox2";
+			this->groupBox2->Size = System::Drawing::Size(368, 498);
+			this->groupBox2->TabIndex = 2;
+			this->groupBox2->TabStop = false;
+			this->groupBox2->Text = L"Selectionner un emprunteur";
+			// 
+			// dataGridView_loc_listeemprunteur
+			// 
+			this->dataGridView_loc_listeemprunteur->AllowUserToAddRows = false;
+			this->dataGridView_loc_listeemprunteur->AllowUserToDeleteRows = false;
+			this->dataGridView_loc_listeemprunteur->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView_loc_listeemprunteur->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(3) {this->Column_loc_nomemprunteur, 
+				this->Column_loc_premomemprunteur, this->Column_loc_carteidentite});
+			this->dataGridView_loc_listeemprunteur->Location = System::Drawing::Point(6, 51);
+			this->dataGridView_loc_listeemprunteur->MultiSelect = false;
+			this->dataGridView_loc_listeemprunteur->Name = L"dataGridView_loc_listeemprunteur";
+			this->dataGridView_loc_listeemprunteur->SelectionMode = System::Windows::Forms::DataGridViewSelectionMode::FullRowSelect;
+			this->dataGridView_loc_listeemprunteur->Size = System::Drawing::Size(356, 437);
+			this->dataGridView_loc_listeemprunteur->TabIndex = 4;
+			// 
+			// Column_loc_nomemprunteur
+			// 
+			this->Column_loc_nomemprunteur->HeaderText = L"Nom";
+			this->Column_loc_nomemprunteur->Name = L"Column_loc_nomemprunteur";
+			// 
+			// Column_loc_premomemprunteur
+			// 
+			this->Column_loc_premomemprunteur->HeaderText = L"prenom";
+			this->Column_loc_premomemprunteur->Name = L"Column_loc_premomemprunteur";
+			// 
+			// Column_loc_carteidentite
+			// 
+			this->Column_loc_carteidentite->HeaderText = L"Identité";
+			this->Column_loc_carteidentite->Name = L"Column_loc_carteidentite";
+			// 
+			// label61
+			// 
+			this->label61->AutoSize = true;
+			this->label61->Location = System::Drawing::Point(6, 16);
+			this->label61->Name = L"label61";
+			this->label61->Size = System::Drawing::Size(104, 13);
+			this->label61->TabIndex = 3;
+			this->label61->Text = L"Nom de l\'emprunteur";
+			// 
+			// textBox_loc_nomemprunteur
+			// 
+			this->textBox_loc_nomemprunteur->Location = System::Drawing::Point(6, 25);
+			this->textBox_loc_nomemprunteur->Name = L"textBox_loc_nomemprunteur";
+			this->textBox_loc_nomemprunteur->Size = System::Drawing::Size(178, 20);
+			this->textBox_loc_nomemprunteur->TabIndex = 2;
+			// 
+			// label60
+			// 
+			this->label60->AutoSize = true;
+			this->label60->Location = System::Drawing::Point(190, 16);
+			this->label60->Name = L"label60";
+			this->label60->Size = System::Drawing::Size(137, 13);
+			this->label60->TabIndex = 1;
+			this->label60->Text = L"Numero de carte d\'identité :";
+			// 
+			// textBox_loc_numcarteidentite
+			// 
+			this->textBox_loc_numcarteidentite->Location = System::Drawing::Point(193, 25);
+			this->textBox_loc_numcarteidentite->Name = L"textBox_loc_numcarteidentite";
+			this->textBox_loc_numcarteidentite->Size = System::Drawing::Size(166, 20);
+			this->textBox_loc_numcarteidentite->TabIndex = 0;
+			// 
+			// groupBox1
+			// 
+			this->groupBox1->Controls->Add(this->label67);
+			this->groupBox1->Controls->Add(this->label66);
+			this->groupBox1->Controls->Add(this->textBox_loc_prix);
+			this->groupBox1->Controls->Add(this->checkBox_termine);
+			this->groupBox1->Controls->Add(this->label59);
+			this->groupBox1->Controls->Add(this->comboBox_loc_heureretour);
+			this->groupBox1->Controls->Add(this->label58);
+			this->groupBox1->Controls->Add(this->label57);
+			this->groupBox1->Controls->Add(this->textBox_commentaire);
+			this->groupBox1->Controls->Add(this->dateTimePicker_loc_datefin);
+			this->groupBox1->Controls->Add(this->label56);
+			this->groupBox1->Controls->Add(this->dateTimePicker_loc_datedebut);
+			this->groupBox1->Controls->Add(this->label55);
+			this->groupBox1->Location = System::Drawing::Point(42, 84);
+			this->groupBox1->Name = L"groupBox1";
+			this->groupBox1->Size = System::Drawing::Size(564, 135);
+			this->groupBox1->TabIndex = 1;
+			this->groupBox1->TabStop = false;
+			this->groupBox1->Text = L"Location :";
+			// 
+			// label67
+			// 
+			this->label67->AutoSize = true;
+			this->label67->Location = System::Drawing::Point(539, 104);
+			this->label67->Name = L"label67";
+			this->label67->Size = System::Drawing::Size(13, 13);
+			this->label67->TabIndex = 12;
+			this->label67->Text = L"€";
+			// 
+			// label66
+			// 
+			this->label66->AutoSize = true;
+			this->label66->Location = System::Drawing::Point(429, 103);
+			this->label66->Name = L"label66";
+			this->label66->Size = System::Drawing::Size(57, 13);
+			this->label66->TabIndex = 11;
+			this->label66->Text = L"Prix Total :";
+			// 
+			// textBox_loc_prix
+			// 
+			this->textBox_loc_prix->Location = System::Drawing::Point(485, 100);
+			this->textBox_loc_prix->Name = L"textBox_loc_prix";
+			this->textBox_loc_prix->Size = System::Drawing::Size(56, 20);
+			this->textBox_loc_prix->TabIndex = 10;
+			// 
+			// checkBox_termine
+			// 
+			this->checkBox_termine->AutoSize = true;
+			this->checkBox_termine->Location = System::Drawing::Point(454, 62);
+			this->checkBox_termine->Name = L"checkBox_termine";
+			this->checkBox_termine->Size = System::Drawing::Size(64, 17);
+			this->checkBox_termine->TabIndex = 9;
+			this->checkBox_termine->Text = L"Terminé";
+			this->checkBox_termine->UseVisualStyleBackColor = true;
+			// 
+			// label59
+			// 
+			this->label59->AutoSize = true;
+			this->label59->Location = System::Drawing::Point(547, 29);
+			this->label59->Name = L"label59";
+			this->label59->Size = System::Drawing::Size(13, 13);
+			this->label59->TabIndex = 8;
+			this->label59->Text = L"h";
+			// 
+			// comboBox_loc_heureretour
+			// 
+			this->comboBox_loc_heureretour->FormattingEnabled = true;
+			this->comboBox_loc_heureretour->Items->AddRange(gcnew cli::array< System::Object^  >(13) {L"7", L"8", L"9", L"10", L"11", 
+				L"12", L"13", L"14", L"15", L"16", L"17", L"18", L"19"});
+			this->comboBox_loc_heureretour->Location = System::Drawing::Point(485, 24);
+			this->comboBox_loc_heureretour->Name = L"comboBox_loc_heureretour";
+			this->comboBox_loc_heureretour->Size = System::Drawing::Size(56, 21);
+			this->comboBox_loc_heureretour->TabIndex = 7;
+			// 
+			// label58
+			// 
+			this->label58->AutoSize = true;
+			this->label58->Location = System::Drawing::Point(392, 29);
+			this->label58->Name = L"label58";
+			this->label58->Size = System::Drawing::Size(87, 13);
+			this->label58->TabIndex = 6;
+			this->label58->Text = L"Heure de rendu :";
+			// 
+			// label57
+			// 
+			this->label57->AutoSize = true;
+			this->label57->Location = System::Drawing::Point(23, 68);
+			this->label57->Name = L"label57";
+			this->label57->Size = System::Drawing::Size(74, 13);
+			this->label57->TabIndex = 5;
+			this->label57->Text = L"Commentaire :";
+			// 
+			// textBox_commentaire
+			// 
+			this->textBox_commentaire->Location = System::Drawing::Point(115, 62);
+			this->textBox_commentaire->Multiline = true;
+			this->textBox_commentaire->Name = L"textBox_commentaire";
+			this->textBox_commentaire->Size = System::Drawing::Size(311, 58);
+			this->textBox_commentaire->TabIndex = 4;
+			// 
+			// dateTimePicker_loc_datefin
+			// 
+			this->dateTimePicker_loc_datefin->CustomFormat = L"dd/MM/yyyy";
+			this->dateTimePicker_loc_datefin->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
+			this->dateTimePicker_loc_datefin->Location = System::Drawing::Point(288, 25);
+			this->dateTimePicker_loc_datefin->MaxDate = System::DateTime(2010, 12, 12, 0, 0, 0, 0);
+			this->dateTimePicker_loc_datefin->MinDate = System::DateTime(1900, 1, 1, 0, 0, 0, 0);
+			this->dateTimePicker_loc_datefin->Name = L"dateTimePicker_loc_datefin";
+			this->dateTimePicker_loc_datefin->Size = System::Drawing::Size(87, 20);
+			this->dateTimePicker_loc_datefin->TabIndex = 3;
+			// 
+			// label56
+			// 
+			this->label56->AutoSize = true;
+			this->label56->Location = System::Drawing::Point(214, 29);
+			this->label56->Name = L"label56";
+			this->label56->Size = System::Drawing::Size(68, 13);
+			this->label56->TabIndex = 2;
+			this->label56->Text = L"Date de Fin :";
+			// 
+			// dateTimePicker_loc_datedebut
+			// 
+			this->dateTimePicker_loc_datedebut->CustomFormat = L"dd/MM/yyyy";
+			this->dateTimePicker_loc_datedebut->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
+			this->dateTimePicker_loc_datedebut->Location = System::Drawing::Point(112, 25);
+			this->dateTimePicker_loc_datedebut->MaxDate = System::DateTime(2010, 12, 12, 0, 0, 0, 0);
+			this->dateTimePicker_loc_datedebut->MinDate = System::DateTime(1900, 1, 1, 0, 0, 0, 0);
+			this->dateTimePicker_loc_datedebut->Name = L"dateTimePicker_loc_datedebut";
+			this->dateTimePicker_loc_datedebut->Size = System::Drawing::Size(87, 20);
+			this->dateTimePicker_loc_datedebut->TabIndex = 1;
+			// 
+			// label55
+			// 
+			this->label55->AutoSize = true;
+			this->label55->Location = System::Drawing::Point(23, 29);
+			this->label55->Name = L"label55";
+			this->label55->Size = System::Drawing::Size(83, 13);
+			this->label55->TabIndex = 0;
+			this->label55->Text = L"Date de Début :";
+			// 
+			// label54
+			// 
+			this->label54->AutoSize = true;
+			this->label54->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 27.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label54->Location = System::Drawing::Point(188, 22);
+			this->label54->Name = L"label54";
+			this->label54->Size = System::Drawing::Size(386, 42);
+			this->label54->TabIndex = 0;
+			this->label54->Text = L"Gestion des locations ";
 			// 
 			// tabPage6
 			// 
+			this->tabPage6->Controls->Add(this->dataGridView_listeloc);
+			this->tabPage6->Controls->Add(this->label70);
 			this->tabPage6->Location = System::Drawing::Point(14, 4);
 			this->tabPage6->Name = L"tabPage6";
 			this->tabPage6->Padding = System::Windows::Forms::Padding(3);
@@ -2488,8 +3037,33 @@ private: System::ComponentModel::IContainer^  components;
 			this->tabPage6->Text = L"tabPage6";
 			this->tabPage6->UseVisualStyleBackColor = true;
 			// 
+			// dataGridView_listeloc
+			// 
+			this->dataGridView_listeloc->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView_listeloc->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(7) {this->Column_listeLocation, 
+				this->Column_listeloc, this->Column_listeloc_datedebut, this->Column_listloc_datefin, this->Column_listeloc_numemp, this->Column_listeloc_numexempl, 
+				this->Column_listloc_commentaire});
+			this->dataGridView_listeloc->Location = System::Drawing::Point(21, 77);
+			this->dataGridView_listeloc->Name = L"dataGridView_listeloc";
+			this->dataGridView_listeloc->Size = System::Drawing::Size(957, 566);
+			this->dataGridView_listeloc->TabIndex = 1;
+			this->dataGridView_listeloc->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &Form1::dataGridView_listeloc_CellContentClick);
+			// 
+			// label70
+			// 
+			this->label70->AutoSize = true;
+			this->label70->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label70->Location = System::Drawing::Point(208, 19);
+			this->label70->Name = L"label70";
+			this->label70->Size = System::Drawing::Size(309, 37);
+			this->label70->TabIndex = 0;
+			this->label70->Text = L"Liste des Locations :";
+			// 
 			// tabPage7
 			// 
+			this->tabPage7->Controls->Add(this->label_titredevis);
+			this->tabPage7->Controls->Add(this->richTextBox1);
 			this->tabPage7->Location = System::Drawing::Point(14, 4);
 			this->tabPage7->Name = L"tabPage7";
 			this->tabPage7->Padding = System::Windows::Forms::Padding(3);
@@ -2498,8 +3072,30 @@ private: System::ComponentModel::IContainer^  components;
 			this->tabPage7->Text = L"tabPage7";
 			this->tabPage7->UseVisualStyleBackColor = true;
 			// 
+			// label_titredevis
+			// 
+			this->label_titredevis->AutoSize = true;
+			this->label_titredevis->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label_titredevis->Location = System::Drawing::Point(298, 15);
+			this->label_titredevis->Name = L"label_titredevis";
+			this->label_titredevis->Size = System::Drawing::Size(285, 37);
+			this->label_titredevis->TabIndex = 1;
+			this->label_titredevis->Text = L"Edition d\'un devis :";
+			// 
+			// richTextBox1
+			// 
+			this->richTextBox1->Location = System::Drawing::Point(11, 67);
+			this->richTextBox1->Name = L"richTextBox1";
+			this->richTextBox1->Size = System::Drawing::Size(969, 564);
+			this->richTextBox1->TabIndex = 0;
+			this->richTextBox1->Text = L"";
+			// 
 			// tabPage8
 			// 
+			this->tabPage8->Controls->Add(this->label69);
+			this->tabPage8->Controls->Add(this->label68);
+			this->tabPage8->Controls->Add(this->pictureBox1);
 			this->tabPage8->Location = System::Drawing::Point(14, 4);
 			this->tabPage8->Name = L"tabPage8";
 			this->tabPage8->Padding = System::Windows::Forms::Padding(3);
@@ -2507,6 +3103,76 @@ private: System::ComponentModel::IContainer^  components;
 			this->tabPage8->TabIndex = 7;
 			this->tabPage8->Text = L"tabPage8";
 			this->tabPage8->UseVisualStyleBackColor = true;
+			// 
+			// label69
+			// 
+			this->label69->AutoSize = true;
+			this->label69->Font = (gcnew System::Drawing::Font(L"Terminator Real NFI", 27.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label69->Location = System::Drawing::Point(166, 503);
+			this->label69->Name = L"label69";
+			this->label69->Size = System::Drawing::Size(662, 40);
+			this->label69->TabIndex = 2;
+			this->label69->Text = L"tout simplement ! ";
+			// 
+			// label68
+			// 
+			this->label68->AutoSize = true;
+			this->label68->Font = (gcnew System::Drawing::Font(L"Terminator Real NFI", 27.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label68->Location = System::Drawing::Point(71, 453);
+			this->label68->Name = L"label68";
+			this->label68->Size = System::Drawing::Size(830, 40);
+			this->label68->TabIndex = 1;
+			this->label68->Text = L"EfreiLoca : La location ";
+			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox1.Image")));
+			this->pictureBox1->Location = System::Drawing::Point(21, 69);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(959, 366);
+			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::CenterImage;
+			this->pictureBox1->TabIndex = 0;
+			this->pictureBox1->TabStop = false;
+			// 
+			// Column_listeLocation
+			// 
+			this->Column_listeLocation->HeaderText = L"Numero";
+			this->Column_listeLocation->Name = L"Column_listeLocation";
+			this->Column_listeLocation->Width = 70;
+			// 
+			// Column_listeloc
+			// 
+			this->Column_listeloc->HeaderText = L"Terminé ";
+			this->Column_listeloc->Name = L"Column_listeloc";
+			this->Column_listeloc->Width = 50;
+			// 
+			// Column_listeloc_datedebut
+			// 
+			this->Column_listeloc_datedebut->HeaderText = L"Date du début";
+			this->Column_listeloc_datedebut->Name = L"Column_listeloc_datedebut";
+			// 
+			// Column_listloc_datefin
+			// 
+			this->Column_listloc_datefin->HeaderText = L"Date de la fin ";
+			this->Column_listloc_datefin->Name = L"Column_listloc_datefin";
+			// 
+			// Column_listeloc_numemp
+			// 
+			this->Column_listeloc_numemp->HeaderText = L"Numero de l\'Emprunteur";
+			this->Column_listeloc_numemp->Name = L"Column_listeloc_numemp";
+			// 
+			// Column_listeloc_numexempl
+			// 
+			this->Column_listeloc_numexempl->HeaderText = L"Numéro de l\'exemplaire";
+			this->Column_listeloc_numexempl->Name = L"Column_listeloc_numexempl";
+			// 
+			// Column_listloc_commentaire
+			// 
+			this->Column_listloc_commentaire->HeaderText = L"Commentaire";
+			this->Column_listloc_commentaire->Name = L"Column_listloc_commentaire";
+			this->Column_listloc_commentaire->Width = 400;
 			// 
 			// Form1
 			// 
@@ -2545,10 +3211,6 @@ private: System::ComponentModel::IContainer^  components;
 			this->groupBox8->PerformLayout();
 			this->groupBox_permismoto->ResumeLayout(false);
 			this->groupBox_permismoto->PerformLayout();
-			this->groupBox_locationeffectue->ResumeLayout(false);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataGridView_locationeffetue))->EndInit();
-			this->groupBox_locationencours->ResumeLayout(false);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataGridView_locationencours))->EndInit();
 			this->groupBox_permisvoiture->ResumeLayout(false);
 			this->groupBox_permisvoiture->PerformLayout();
 			this->Groupebox_Adresse->ResumeLayout(false);
@@ -2556,6 +3218,7 @@ private: System::ComponentModel::IContainer^  components;
 			this->tabPage3->ResumeLayout(false);
 			this->tabPage3->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataListeEmprunteur))->EndInit();
+			this->contextMenuStripEmprunteurs->ResumeLayout(false);
 			this->tabPage4->ResumeLayout(false);
 			this->tabPage4->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataGridView_ListesExemplaires))->EndInit();
@@ -2563,6 +3226,24 @@ private: System::ComponentModel::IContainer^  components;
 			this->groupBox_refexemplaire->PerformLayout();
 			this->groupBox_etatvoiture->ResumeLayout(false);
 			this->groupBox_etatvoiture->PerformLayout();
+			this->tabPage5->ResumeLayout(false);
+			this->tabPage5->PerformLayout();
+			this->groupBox3->ResumeLayout(false);
+			this->groupBox3->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataGridView_loc_listevehicule))->EndInit();
+			this->groupBox2->ResumeLayout(false);
+			this->groupBox2->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataGridView_loc_listeemprunteur))->EndInit();
+			this->groupBox1->ResumeLayout(false);
+			this->groupBox1->PerformLayout();
+			this->tabPage6->ResumeLayout(false);
+			this->tabPage6->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataGridView_listeloc))->EndInit();
+			this->tabPage7->ResumeLayout(false);
+			this->tabPage7->PerformLayout();
+			this->tabPage8->ResumeLayout(false);
+			this->tabPage8->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->emprunteurBindingSource))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->adresseBindingSource))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->adresseBindingSource1))->EndInit();
@@ -2577,6 +3258,7 @@ private: System::ComponentModel::IContainer^  components;
 private: System::Void listeDesEmprunteursToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
 			
 			 AfficherListeDesEmprunteurs();
+			 this->TabPage->SelectedIndex = 1;
 			 
 		 }
 private: System::Void nouvelEmprunteurToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -2597,9 +3279,13 @@ private: System::Void AfficherListeDesEmprunteurs(System::Void)
 			//this->dataListeEmprunteur->Dispose();
 			static bool charger;
 
-			if ( charger != true )
-			{
-				charger = true;
+			//if ( charger != true )
+			//{
+				//charger = true;
+				// effacement des lignes :
+			this->dataGridView_loc_listeemprunteur->RowCount = 0;
+				this->dataListeEmprunteur->RowCount = 0;
+
 				gestionEmprunteurs* emp = gestionEmprunteurs::getinstance();
 				emp->chargementbegin();
 				for (int i=0; i < emp->NbrEmprunteur(); i ++)
@@ -2608,18 +3294,24 @@ private: System::Void AfficherListeDesEmprunteurs(System::Void)
 
 					String^ champ0 = gcnew String(emp->Emprunteurcourrent->get(1).c_str());
 					 String^ champ1 = gcnew String(emp->Emprunteurcourrent->get(2).c_str());
-					 String^ champ2 = gcnew String(emp->Emprunteurcourrent->get(3).c_str());
-					 String^ champ3 = gcnew String(emp->Emprunteurcourrent->get(4).c_str());
+					 String^ champ2 = gcnew String(emp->Emprunteurcourrent->get(4).c_str());
+					 String^ champ3 = gcnew String(emp->Emprunteurcourrent->get(8).c_str());
+					 String^ champ4 = gcnew String(emp->Emprunteurcourrent->get(3).c_str());
+					 String^ champ5 = gcnew String(emp->Emprunteurcourrent->get(10).c_str());
+					 String^ champ6 = gcnew String(emp->Emprunteurcourrent->get(13).c_str());
 					 
-					 array<String^>^row0 = {"",champ0,champ1,champ2,""};
+					 
+
+					 array<String^>^row0 = {champ0,champ1,champ2,champ3,champ4,champ5,champ6,""};
 						 DataGridViewRowCollection^ rows = this->dataListeEmprunteur->Rows;
 						rows->Add( row0 );
-					 //this->dataListeEmprunteur->
+						this->dataGridView_loc_listeemprunteur->Rows->Add ( row0 );
+					 
 						emp->chargementsuiv();
-				}
+				//}
 			}
 			
-			this->TabPage->SelectedIndex = 1;
+			
 		}
 
 		 
@@ -2738,9 +3430,7 @@ protected: System::Void validationEmprunteur_Click(System::Object^  sender, Syst
 				   emp->ajout();
 				    
 					// ajout dans la liste des emprunteurs  
-				   array<String^>^row0 = {"",this->textBox_Nom->Text,this->textBox_Prenom->Text,this->date_Naissance->Text,""};
-						 DataGridViewRowCollection^ rows = this->dataListeEmprunteur->Rows;
-						rows->Add( row0 );
+				   AfficherListeDesEmprunteurs();
 						nouv = false;
 			   
 
@@ -2780,6 +3470,12 @@ private: System::Void dataListeEmprunteur_RowValidating(System::Object^  sender,
 			this->TabPage->SelectedIndex = 0;	*/  
 		 }
 private: System::Void dataListeEmprunteur_CellClick(System::Object^  sender, System::Windows::Forms::DataGridViewCellEventArgs^  e) {
+			 
+		 }
+
+		 private: System::Void contextMenuStripEmprunteurs_Opening(System::Object^  sender, System::ComponentModel::CancelEventArgs^  e) {
+		 }
+private: System::Void modifierToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
 			 int ligne = this->dataListeEmprunteur->CurrentRow->Index;
 			 gestionEmprunteurs* emp = gestionEmprunteurs::getinstance();
 			 emp->chargement(ligne);
@@ -2792,6 +3488,7 @@ private: System::Void dataListeEmprunteur_CellClick(System::Object^  sender, Sys
 			this->TabPage->SelectedIndex = 0;	
 		 }
 private: System::Void dateTimePicker6_ValueChanged(System::Object^  sender, System::EventArgs^  e) {
+			
 		 }
 
 
@@ -2803,19 +3500,27 @@ private: System::Void chargement(){
 				static bool nouv;
 
 				//TODO faire le chargement des Timepickers et des checkboxs:
-				/*
-				if (nouv != true) 
-				{
-					S =  gcnew String (emp->Emprunteurcourrent->get(3 ).c_str());
-					this->date_Naissance->Text = S;
-				}
-
+				Date D;
 				
-				String^ S1;
-					S1 =  gcnew String (emp->Emprunteurcourrent->get(23 ).c_str());
-			   this->dateTimePicker_conducteur1_delivrepermis->Text = S1; 
+				//S =  gcnew String (emp->Emprunteurcourrent->get(3 ).c_str());
+				Date D1 = emp->Emprunteurcourrent->getnaissance(); 
+					//D.set(ConvertString());
+				System::DateTime sdate(D1.getaaaa(),D1.getmm(),D1.getjj());
+				this->date_Naissance->Value = sdate;
+				
+				
+				
+				
+				S =  gcnew String (emp->Emprunteurcourrent->get(23 ).c_str());
+				D.set(ConvertString(S));
+				System::DateTime sdate1(D.getaaaa(),D.getmm(),D.getjj());
+			   this->dateTimePicker_conducteur1_delivrepermis->Value = sdate1; 
+
+			   D.set(ConvertString(S));
+				System::DateTime sdate2(D.getaaaa(),D.getmm(),D.getjj());
 				   S =  gcnew String (emp->Emprunteurcourrent->get(24 ).c_str());
-			   this->dateTimePicker_conducteur1_expirepermis->Text = S; 
+			   this->dateTimePicker_conducteur1_expirepermis->Value = sdate2; 
+			   /*
 				   S = gcnew String (emp->Emprunteurcourrent->get(20 ).c_str());
 			   this->dateTimePicker_conducteur1_naissance->Text = S;  
 				   S =  gcnew String (emp->Emprunteurcourrent->get(31 ).c_str());
@@ -2836,17 +3541,31 @@ private: System::Void chargement(){
 			   this->dateTimePicker_conducteur4_expirepermis->Text = S;
 				   S =  gcnew String (emp->Emprunteurcourrent->get( 44).c_str());
 			   this->dateTimePicker_conducteur4_naissance->Text = S;
-				   S =  gcnew String (emp->Emprunteurcourrent->get(14 ).c_str());
-			   this->dateTimePicker_delivrepermismoto->Text = S; 
+			   */
+			   S =  gcnew String (emp->Emprunteurcourrent->get(14 ).c_str());
+			   D.set(ConvertString(S));
+				System::DateTime sdate4(D.getaaaa(),D.getmm(),D.getjj());				   
+			   this->dateTimePicker_delivrepermismoto->Value = sdate4;
+
+			   D.set(ConvertString(S));
+				System::DateTime sdate5(D.getaaaa(),D.getmm(),D.getjj());
 				   S =  gcnew String (emp->Emprunteurcourrent->get(11 ).c_str());
-			   this->dateTimePicker_delivrepermisvoiture->Text = S;
-				   S =  gcnew String (emp->Emprunteurcourrent->get(15 ).c_str());
-			   this->dateTimePicker_expirepermismoto->Text = S; 
-				   S =  gcnew String (emp->Emprunteurcourrent->get(12 ).c_str());
-			   this->dateTimePicker_expirepermisvoiture->Text = S; 
-				  */
+			   this->dateTimePicker_delivrepermisvoiture->Value = sdate5;
+
+			   S =  gcnew String (emp->Emprunteurcourrent->get(15 ).c_str());
+			   D.set(ConvertString(S));
+				System::DateTime sdate6(D.getaaaa(),D.getmm(),D.getjj());				   
+			   this->dateTimePicker_expirepermismoto->Value = sdate6; 
+
+				  /* S =  gcnew String (emp->Emprunteurcourrent->get(12 ).c_str());
+				   D.set(ConvertString(S));
+				System::DateTime sdate7(D.getaaaa(),D.getmm(),D.getjj());
+			   this->dateTimePicker_expirepermisvoiture->Value = sdate7; 
+					*/
+				
 				   S =  gcnew String (emp->Emprunteurcourrent->get( 7).c_str());
-			   this->TextBox_CodePostal->Text = S; 
+				   this->TextBox_CodePostal->Text = S;
+
 				   S =  gcnew String (emp->Emprunteurcourrent->get(18 ).c_str());
 			   this->textBox_conducteur1_nom->Text = S; 
 				   S =  gcnew String (emp->Emprunteurcourrent->get( 22).c_str());
@@ -2920,6 +3639,7 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 			 GestionVehicule::getinstance()->nouveau();
 			 chargementExemplaire();
 			 this->label_titreexemplaire->Text = L"Ajouter un Exemplaire";
+			 AfficherListeDesvehicule();
 			 this->TabPage->SelectedIndex = 2;
 		 }
 
@@ -2986,9 +3706,8 @@ private: System::Void enregistrementExemplaire(){
 				//if (nouvexemp == true)
 				//{
 					exp->ajout();
-					array<String^>^row0 = {this->textBox_Marque->Text,this->textBox_modele->Text,this->comboBox_type->Text,this->textBox_referencevehicule->Text,this->textBox_prix->Text,this->textBox_nombreplace->Text,this->comboBox_carburant->Text};
-					DataGridViewRowCollection^ rows = this->dataGridView_ListesExemplaires->Rows;
-						rows->Add( row0 );
+					AfficherListeDesvehicule();
+						
 						nouvexemp = false;
 
 				//}
@@ -3008,8 +3727,50 @@ private: System::Void enregistrementExemplaire(){
 		 }
 private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
 			 enregistrementExemplaire();
+			 AfficherListeDesvehicule();
 
 		 }
+private: System::Void AfficherListeDesvehicule(System::Void)
+		{
+			 
+			
+			static bool charger;
+
+			//if ( charger != true )
+			//{
+				//charger = true;
+				// effacement des lignes :
+			this->dataGridView_loc_listevehicule->RowCount = 0;
+			this->dataGridView_ListesExemplaires->RowCount = 0;
+
+				GestionVehicule* emp = GestionVehicule::getinstance();
+				emp->chargementbegin();
+				for (int i=0; i < emp->NbrEmprunteur(); i ++)
+				{
+					emp->chargementcour();
+
+					String^ champ0 = gcnew String(emp->Exemplairecourrent->get(5).c_str());
+					 String^ champ1 = gcnew String(emp->Exemplairecourrent->get(6).c_str());
+					 String^ champ2 = gcnew String(emp->Exemplairecourrent->get(13).c_str());
+					 String^ champ3 = gcnew String(emp->Exemplairecourrent->get(4).c_str());
+					 String^ champ4 = gcnew String(emp->Exemplairecourrent->get(10).c_str());
+					 String^ champ5 = gcnew String(emp->Exemplairecourrent->get(8).c_str());
+					 String^ champ6 = gcnew String(emp->Exemplairecourrent->get(12).c_str());
+					 
+					 
+
+					 array<String^>^row0 = {champ0,champ1,champ2,champ3,champ4,champ5,champ6,""};
+					 DataGridViewRowCollection^ rows = this->dataGridView_ListesExemplaires->Rows;
+						rows->Add( row0 );
+						this->dataGridView_loc_listevehicule->Rows->Add ( row0 );
+					 
+						emp->chargementsuiv();
+				}
+			//}
+			
+			
+		}
+
 private: System::Void listeDesVéhiculesToolStripMenuItem1_Click(System::Object^  sender, System::EventArgs^  e) {
 				button1_Click(sender, e);
 				this->TabPage->SelectedIndex = 2;
@@ -3017,6 +3778,161 @@ private: System::Void listeDesVéhiculesToolStripMenuItem1_Click(System::Object^ 
 private: System::Void listeDesVéhiculesToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
 			 button4_Click(sender, e);
 			 this->TabPage->SelectedIndex = 2;
+		 }
+
+private: System::Void tabPage5_Click(System::Object^  sender, System::EventArgs^  e) {
+		 }
+
+private: System::Void chargementLocation(){
+			 GestionLocation* exp = GestionLocation::getinstance();
+				String^ S;
+				static bool nouvexemp;
+				Date D;
+				S =  gcnew String (exp->LocCourante->get(3 ).c_str());	
+				D.set(ConvertString(S));
+				//this->dateTimePicker_loc_datefin->CustomFormat = "ddMMyyyy";
+				System::DateTime sdate(D.getaaaa(),D.getmm(),D.getjj());
+				//this->dateTimePicker_loc_datefin->CustomFormat = "ddMMyyyy";
+				
+				this->dateTimePicker_loc_datedebut->Value = sdate;
+				
+				S =  gcnew String (exp->LocCourante->get(4 ).c_str());
+				D.set(ConvertString(S));
+				System::DateTime sdate1(D.getaaaa(),D.getmm(),D.getjj());
+				this->dateTimePicker_loc_datefin->CustomFormat = "ddMMyyyy";
+				this->dateTimePicker_loc_datefin->Value = sdate1;
+				this->dateTimePicker_loc_datefin->CustomFormat = "dd/MM/yyyy";
+				 
+				S =  gcnew String (exp->LocCourante->get(5 ).c_str());
+				this->comboBox_loc_heureretour->Text = S;
+				S =  gcnew String (exp->LocCourante->get(6 ).c_str());
+				if (S == "1")
+					this->checkBox_termine->Checked = true;
+				else this->checkBox_termine->Checked = false;
+				S =  gcnew String (exp->LocCourante->get(0 ).c_str());
+				this->textBox_commentaire->Text = S;
+				S =  gcnew String (exp->LocCourante->get(8 ).c_str());
+				this->textBox_loc_referencevehicule->Text = S;
+				S =  gcnew String (exp->LocCourante->get(7 ).c_str());
+				this->textBox_loc_numcarteidentite->Text = S;
+				S =  gcnew String (exp->LocCourante->get(1 ).c_str());
+				this->textBox_loc_prix->Text = S;
+				
+				
+		 }
+
+private: System::Void enregistrementLocation(){
+			 GestionLocation* exp = GestionLocation::getinstance();
+			 
+				String^ S;
+				static bool nouvexemp;
+				 
+				this->dateTimePicker_loc_datedebut->CustomFormat = "ddMMyyyy";
+				exp->LocCourante->set( 3  , ConvertString(this->dateTimePicker_loc_datedebut->Text));
+				this->dateTimePicker_loc_datedebut->CustomFormat = "dd/MM/yyyy";
+				this->dateTimePicker_loc_datefin->CustomFormat = "ddMMyyyy";
+				exp->LocCourante->set( 4  , ConvertString(this->dateTimePicker_loc_datefin->Text));
+				this->dateTimePicker_loc_datefin->CustomFormat = "dd/MM/yyyy";
+				exp->LocCourante->set( 5  , ConvertString(this->comboBox_loc_heureretour->Text));
+				if (this->checkBox_termine->Checked == true)
+					exp->LocCourante->set( 6 , "1");
+				exp->LocCourante->set( 10  , ConvertString(this->textBox_commentaire->Text));
+				exp->LocCourante->set( 8  , ConvertString(this->textBox_loc_referencevehicule->Text));
+				exp->LocCourante->set( 7  , ConvertString(this->textBox_loc_numcarteidentite->Text));
+				exp->LocCourante->set( 1 , ConvertString(this->textBox_loc_prix->Text));
+				
+
+				//if (nouvexemp == true)
+				//{
+					exp->ajout();
+					AfficherListeDesvehicule();
+						
+						nouvexemp = false;
+		 }
+
+
+
+
+
+private: System::Void button_loc_nouveau_Click(System::Object^  sender, System::EventArgs^  e) {   // Boutton Nouveau 
+			 //GestionLocation::getinstance()->chargementbegin();
+			 GestionLocation::getinstance()->nouveau();
+			 //GestionLocation::getinstance()->chargementcour();
+
+			 chargementLocation();
+
+		 }
+
+private: System::Void button4_Click_1(System::Object^  sender, System::EventArgs^  e) {		  // Boutton suivant
+			 GestionLocation* exp = GestionLocation::getinstance();
+			 exp->chargementprec();
+			 exp->chargementcour();
+			 chargementLocation();
+		 }
+private: System::Void button5_Click(System::Object^  sender, System::EventArgs^  e) {		// Boutton precedent 
+			GestionLocation* exp = GestionLocation::getinstance();
+			exp->chargementsuiv();
+			exp->chargementcour();
+			chargementLocation();
+		 }
+
+
+private: System::Void button6_Click(System::Object^  sender, System::EventArgs^  e) {		   // enregistrement 
+			 enregistrementLocation();
+		 }
+
+private: System::Void nouveauToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+			 button_loc_nouveau_Click(sender,e);
+			 AfficherListeDesvehicule();
+			 chargement();
+			 this->TabPage->SelectedIndex = 3;
+
+		 }
+private: System::Void retourLocationToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+			  GestionLocation* exp = GestionLocation::getinstance();
+			 exp->chargementbegin();
+			 exp->chargementcour();
+			 chargementLocation();
+			 AfficherListeDesvehicule();
+			 chargement();
+			 this->TabPage->SelectedIndex = 3;
+		 }
+
+private: System::Void locationsEnCoursToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+			
+				GestionLocation* emp = GestionLocation::getinstance();
+				emp->chargementbegin();
+
+				 //this->dataGridView_listeloc->RowCount = 0;
+				for (int i=0; i < emp->NbrLoc(); i ++)
+				{
+					emp->chargementcour();
+
+					if ( emp->LocCourante->get(6) == "0"  )
+					{
+
+							String^ champ0 = gcnew String(emp->LocCourante->get(2).c_str());
+							 String^ champ1 = gcnew String(emp->LocCourante->get(6).c_str());
+							 String^ champ2 = gcnew String(emp->LocCourante->get(3).c_str());
+							 String^ champ3 = gcnew String(emp->LocCourante->get(4).c_str());
+							 String^ champ4 = gcnew String(emp->LocCourante->get(7).c_str());
+							 String^ champ5 = gcnew String(emp->LocCourante->get(8).c_str());
+							 String^ champ6 = gcnew String(emp->LocCourante->get(0).c_str());
+					
+					 
+
+						 array<String^>^row0 = {champ0,champ1,champ2,champ3,champ4,champ5,champ6,""};
+						 DataGridViewRowCollection^ rows = this->dataGridView_listeloc->Rows;
+							rows->Add( row0 );
+					}
+						
+					 
+						emp->chargementsuiv();
+				}
+				this->TabPage->SelectedIndex = 4;
+
+		 }
+private: System::Void dataGridView_listeloc_CellContentClick(System::Object^  sender, System::Windows::Forms::DataGridViewCellEventArgs^  e) {
 		 }
 };
 }

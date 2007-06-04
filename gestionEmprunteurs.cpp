@@ -7,6 +7,8 @@ gestionEmprunteurs* gestionEmprunteurs::instance = 0;
 gestionEmprunteurs::gestionEmprunteurs(void)
 {
 	ListeEmp = ListeEmprunteur::getinstance();
+	this->chargementbegin();
+	this->chargementcour();
 }
 
 gestionEmprunteurs::~gestionEmprunteurs(void)

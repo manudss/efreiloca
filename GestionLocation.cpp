@@ -6,7 +6,7 @@ GestionLocation* GestionLocation::instance =0;
 
 GestionLocation::GestionLocation(void)
 {
-ListeLoc = ListeLocation::getinstance();
+	ListeLoc = ListeLocation::getinstance();
 }
 
 GestionLocation::~GestionLocation(void)

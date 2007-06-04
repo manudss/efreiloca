@@ -5,6 +5,11 @@ Location::Location(void)
 {
 	this->myEmprunteur = 0;
 	this->myExemplaire = 0;
+	this->commentaires = "";
+	this->fini = false;
+	this->heure_retour = 0;
+	this->prix_tot = 0;
+	this->numero = 0;
 }
 
 Location::~Location(void)

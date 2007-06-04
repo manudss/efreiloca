@@ -19,7 +19,7 @@ public:
 	int chargement();
 	int ajout(Location* nouvelle_loc);
 	int enregistrement();
-	int ajout_tab(string s,Location * loc);
+	int ajout_tab(static int i_loc,Location * loc);
 	void devis (Location * loc);
 	
 	//fct pr interface:
@@ -31,9 +31,9 @@ public:
 
 private:
 
-stdext::hash_map< std::string , Location* > tabLocation;
-stdext::hash_map< std::string , Location* >:: iterator hash_iter,iter_cour;
-typedef pair <std::string , Location* > Int_Pair;
+stdext::hash_map< static int , Location* > tabLocation;
+stdext::hash_map< static int , Location* >:: iterator hash_iter,iter_cour;
+typedef pair < static int , Location* > Int_Pair;
 
 
 };
