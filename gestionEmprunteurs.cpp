@@ -22,6 +22,7 @@ gestionEmprunteurs* gestionEmprunteurs::getinstance()
 
 
 
+
 Emprunteur* nouveauEmprunteurs(std::string lenom, std::string leprenom, std::string lenumero, std::string larue, std::string lecodepostale, std::string laville, std::string lenumero_carte_identite="NULL")
 {
 	Emprunteur* NouvelEmprunteur;
@@ -32,6 +33,7 @@ Emprunteur* nouveauEmprunteurs(std::string lenom, std::string leprenom, std::str
 	//ListeEmprunteur::getinstance()->ajout(NouvelEmprunteur);
 	return NouvelEmprunteur;
 }   
+
 
 void gestionEmprunteurs::setname(std::string  name)
 {

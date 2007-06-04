@@ -22,6 +22,59 @@ ListeLocation* ListeLocation::getinstance()
 	return instance;
 }
 
+// devis :
+void ListeLocation::devis (Location * loc)
+{
+
+	ofstream devisfile;
+
+	if (outfile.bad()==0)
+{
+	devisfile.open("devis.rtf",  ios::out | ios::trunc);
+
+	outfile << "\t\t Devis d'EfreiLoca" ;
+	
+}
+
+
+}
+
+
+
+
+
+///////////
+Location* ListeLocation::returnLocationCour()
+{
+	
+	return this->iter_cour->second;
+}
+void ListeLocation::Locationbegin()
+{
+	iter_cour = tabLocation.begin( ); 
+}
+void ListeLocation::Locationsuiv()
+{
+	iter_cour ++;
+	if (iter_cour  == tabLocation.end( )  )
+	{	
+		iter_cour --;
+	}
+	//else iter_cour ++;
+}
+void ListeLocation::Locationprec()
+{
+	if (iter_cour != tabLocation.begin( )	 )
+     iter_cour --;
+}
+
+
+int ListeLocation::nbrLocation()
+{
+	return tabLocation.size();
+}
+//////////////
+
 int ListeLocation::ajout_tab(string s, Location * loc)
 {
  Emprunteur* Emp;
@@ -62,9 +115,6 @@ int ListeLocation::ajout(Location* nouvelle_loc)
 	int mf = dfin.getmm();
 	int af = dfin.getaaaa();
 
-	
-
-	 
 	
 int mois=0;
 
@@ -155,6 +205,8 @@ if (infile) // test de succès d'ouverture
 				nouv->set_myExemplaire(flo->recup_exemplaire (nouv->get(8)));
 				}
 				ajout (nouv);
+				//TEST DEVIS :
+				//devis (nouv);
 			
 			}
 			
@@ -181,7 +233,7 @@ if (outfile.bad()==0)
 {
 outfile.open("locations.txt",  ios::out | ios::trunc);
 
-std::cout << "pr debug" ; 
+
 
 
 for ( hash_iter = tabLocation.begin( ); hash_iter != tabLocation.end( ); hash_iter++ )
