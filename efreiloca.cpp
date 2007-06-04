@@ -4,6 +4,7 @@
 #include "Form1.h"
 #include "listeEmprunteur.h"
 #include "Flotte.h"
+#include "ListeLocation.h"
 
 using namespace efreiloca;
 
@@ -20,6 +21,7 @@ int main(array<System::String ^> ^args)
 	ListeEmprunteur::getinstance()->chargement();
 	
 	Flotte::getinstance()->chargement();
+	ListeLocation::getinstance()->chargement();
 
 
 	// Créer la fenêtre principale et l'exécuter
@@ -29,6 +31,7 @@ int main(array<System::String ^> ^args)
 	// enregistrement des fichiers 
 	ListeEmprunteur::getinstance()->enregistrement();
 	Flotte::getinstance()->enregistrement();
+	ListeLocation::getinstance()->enregistrement();
 	
 	return 0;
 }

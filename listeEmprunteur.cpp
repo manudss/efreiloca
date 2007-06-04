@@ -12,6 +12,20 @@ ListeEmprunteur::~ListeEmprunteur(void)
 {
 }
 
+Emprunteur* ListeEmprunteur::recup_emprunteur (std::string num)
+{
+	it=0;
+	Emprunteur * retour;
+	it = TabEmprunteurs.find(num);
+	if (it != TabEmprunteurs.end())
+		retour = it->second;
+	else 
+		retour=0;
+
+return retour;
+}
+
+
 void ListeEmprunteur::ajout(Emprunteur* nouveauEmprunteur)
 {
 	

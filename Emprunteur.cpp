@@ -36,6 +36,11 @@ Emprunteur::Emprunteur(std::string lenom, std::string leprenom, Date ladate_nais
 }
 
 
+void Emprunteur::set_hash_TabLocation_insert(std::string date,Location* loc)
+{
+ TabLocation.insert(Int_Pair(date,loc));
+}
+
 void Emprunteur::setpermisauto(std::string le_num_permisauto, Date la_delivrance_permis_voiture,	Date l_expiration_permis_voiture)
 {
 	permis_voiture = true;

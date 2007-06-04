@@ -12,11 +12,9 @@ using namespace stdext;
 class Flotte
 {
 
-private:
+private: 
 	
 	vehicule recherche(string);
-    
-    
     void afficherliste(void);
 
 
@@ -41,12 +39,17 @@ public:
 
 	void ajout(Exemplaire* nouvelExemplaire);
 	int enregistrement();
+
+	Exemplaire* recup_exemplaire (std::string );
 	
 private:
 
 stdext::hash_map< std::string , Exemplaire* > tabFlotte;
-stdext::hash_map< std::string , Exemplaire* >:: iterator hash_iter, iter_cour;
+
+stdext::hash_map< std::string , Exemplaire* >:: iterator hash_iter, iter_cour,it;
+
 typedef pair <std::string , Exemplaire* > Int_Pair;
+
 
 	
 };

@@ -14,6 +14,8 @@ public:
 
 //getteur :
 	std::string get(int);// !
+	stdext::hash_map< std::string, Location* > TabLocation;
+	
 
 
 private :
@@ -26,6 +28,7 @@ private :
 	std::string type;//sport, familiale,scooter ..
 	Date depart;
 	Date rendu;
+
 
 
 };

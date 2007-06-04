@@ -21,9 +21,11 @@ public:
 	static ListeEmprunteur* getinstance();
 
 	void ajout(Emprunteur* nouveauEmprunteur); 
+	Emprunteur* recup_emprunteur (std::string num) ;
 
 	int chargement () ;
 	int enregistrement() ;
+	
 
 	Emprunteur* returnEmprunteurscour();
 	void emprumteurbegin();
@@ -35,7 +37,7 @@ public:
 private:
 
 	stdext::hash_map< std::string , Emprunteur* > TabEmprunteurs;
-	stdext::hash_map< std::string , Emprunteur* >:: iterator hash_iter, iter_cour;
+	stdext::hash_map< std::string , Emprunteur* >:: iterator hash_iter, iter_cour, it;
 	typedef pair <std::string , Emprunteur* > Int_Pair;
 
 

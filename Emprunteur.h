@@ -1,8 +1,7 @@
 #pragma once
-#include "StdAfx.h"
+#include "stdafx.h"
 #include "Adresse.h"
 #include "Conducteur.h"
-#include "Location.h"
 #include "Date.h"
 #include <hash_map>
 
@@ -21,11 +20,12 @@ public:
 	
 	//setteur
 	void set (int , std::string) ;
+	void set_hash_TabLocation_insert(std::string date,Location* loc);
 
 	//Getter:
 
 	std::string get (int);
-
+	
 
 private:
 	static int compt_id;
@@ -45,8 +45,13 @@ private:
     std::string numero_permismoto;
 	Conducteur* autre_conducteur[4];
 	
+	stdext::hash_map< std::string, Location* > TabLocation;
+	stdext::hash_map< std::string , Location* >:: iterator hash_iter;
+	typedef pair <std::string , Location* > Int_Pair;
+	
+	
+	
 
-private:
-	stdext::hash_map< Date, Location > TabLocation;
+	
 
 };

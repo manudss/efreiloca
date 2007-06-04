@@ -9,15 +9,26 @@
 #include <iostream>
 #include <fstream>
 #include <stdlib.h>
-#include "Date.h"
-#include "Emprunteur.h"
-#include "Adresse.h"
-#include "Conducteur.h"
-#include "Location.h"
-
-
 #include <hash_map>
 #include <vector>
+
+
+class Emprunteur;
+class Location;
+class Date;
+class Adresse;
+class conducteur;
+class Config;
+class Exemplaire;
+class flotte;
+class GestionVehicule;
+class gestionEmprunteurs;
+class listeEmprunteur;
+class ListeLocation;
+class vehicule;
+
+
+
 
 using namespace std;
 using namespace System;

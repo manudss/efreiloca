@@ -1568,6 +1568,7 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// groupBox_permismoto
 			// 
+
 			this->groupBox_permismoto->Controls->Add(this->label4);
 			this->groupBox_permismoto->Controls->Add(this->label5);
 			this->groupBox_permismoto->Controls->Add(this->label6);
@@ -1582,6 +1583,7 @@ private: System::ComponentModel::IContainer^  components;
 			this->groupBox_permismoto->TabIndex = 16;
 			this->groupBox_permismoto->TabStop = false;
 			this->groupBox_permismoto->Text = L"Permis Moto";
+
 			// 
 			// label4
 			// 
@@ -2658,6 +2660,7 @@ protected: System::Void validationEmprunteur_Click(System::Object^  sender, Syst
 			   emp->Emprunteurcourrent->set(6 ,ConvertString (this->textBox_rue->Text) );
 			   emp->Emprunteurcourrent->set(7 ,ConvertString (this->TextBox_CodePostal->Text) );
 			   emp->Emprunteurcourrent->set(8 ,ConvertString (this->textBox_Ville->Text) );
+
 			   
 			   if (this->checkBox_permisvoiture->Enabled == true)
 				   emp->Emprunteurcourrent->set(9 , "1" );
@@ -2672,6 +2675,7 @@ protected: System::Void validationEmprunteur_Click(System::Object^  sender, Syst
 			   emp->Emprunteurcourrent->set(14 , ConvertString (this->dateTimePicker_delivrepermismoto->ToString()));
 			   emp->Emprunteurcourrent->set(15 , ConvertString (this->dateTimePicker_expirepermisvoiture->ToString()));
 			   emp->Emprunteurcourrent->set( 16, ConvertString (this->textBox_numpermismoto->Text));
+
 
 
 			   // Les conducteurs 

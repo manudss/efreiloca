@@ -9,6 +9,9 @@ public:
 	//Date ( System::String^ value);
 	void set (std::string);
 	std::string get ();
+	int getmm();
+	int getjj();
+	int getaaaa();
 private:
 	int jj;
 	int mm;

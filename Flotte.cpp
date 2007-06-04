@@ -18,6 +18,21 @@ Flotte* Flotte::getinstance()
 	return instance;
 }
 
+Exemplaire* Flotte::recup_exemplaire (std::string rech)
+{
+
+it=0;
+Exemplaire * retour;
+it = tabFlotte.find(rech);
+if (it != tabFlotte.end())
+		retour = it->second;
+	else 
+		retour=0;
+
+return retour;
+
+}
+
 void Flotte::ajout(Exemplaire* nouvelExemplaire)
 {
 	

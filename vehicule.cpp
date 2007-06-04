@@ -67,7 +67,7 @@ std::string vehicule::get_consommation()
 	
 			char buffer[50];
 			std::string s;			
-			s= itoa(consommation,buffer,10);
+			s = itoa(consommation,buffer,10);
 			return s;
 	
 }
