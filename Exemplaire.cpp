@@ -67,7 +67,7 @@ void Exemplaire::set (int a, std::string chain)
 std::string Exemplaire::get (int a)
 {
 
-
+	std::string s;
 switch (a) 
 	{
 		case 0 :
@@ -121,5 +121,5 @@ switch (a)
 		default:
 		break;
 	}
-
+return s;
 }

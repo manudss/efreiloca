@@ -1,7 +1,6 @@
 #pragma once
 
 #include "StdAfx.h";
-
 #include "Flotte.h";
 
 

@@ -18,9 +18,9 @@ Emprunteur* ListeEmprunteur::recup_emprunteur (std::string num)
 	Emprunteur * retour;
 	it = TabEmprunteurs.find(num);
 	if (it != TabEmprunteurs.end())
-		retour = it->second;
+		{retour = it->second;}
 	else 
-		retour=0;
+	{retour=0;}
 
 return retour;
 }

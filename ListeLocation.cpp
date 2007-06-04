@@ -26,17 +26,40 @@ ListeLocation* ListeLocation::getinstance()
 void ListeLocation::devis (Location * loc)
 {
 
-	ofstream devisfile;
-
-	if (outfile.bad()==0)
-{
-	devisfile.open("devis.rtf",  ios::out | ios::trunc);
-
-	outfile << "\t\t Devis d'EfreiLoca" ;
+	std::string s;
+	ofstream f;
+	//ifstream i;
 	
-}
+	if (f.bad()==0 && loc != 0)
+		{
+			f.open("devis.rtf",  ios::out | ios::trunc);
+			
+			f << "\t\t\t\t EfreiLoca Devis\n\n\n" ;
+			f << "Nom : " ;
+			s=loc->get_myEmprunteur()->get(1);
+			f << s << "\n";
+			f << "Prenom : " ;
+			f << loc->get_myEmprunteur()->get(2) << "\n\n" ;
+			f << " Adresse : \n -------- \n" ; 
+			f << loc->get_myEmprunteur()->get(5)<< " rue " << loc->get_myEmprunteur()->get(6)<< "\n";
+			f << loc->get_myEmprunteur()->get (8)<< " - " << loc->get_myEmprunteur()->get(6) << "\n\n\n";
+			f << "===================================================================== \n\n\n" ;
+			f << "Vehicule loué : " ;
+			f << "\t" <<loc->get_myExemplaire()->get(5) << "\t||\t" << loc->get_myExemplaire()->get (6) << "\t||\t" << loc->get_myExemplaire()->get(11) << "\n\n" ;
+			f << "Prix par jour :\n " ;
+			f << loc->get_myExemplaire()->get(10) << "Euros" ;
+			
+			
+			f << "\n\n\n===================================================================== \n\n\n" ;
+			f << "EfreiLoca vous remercie de votre confiance " ; 
 
 
+
+
+			
+		}
+
+	f.close();
 }
 
 
@@ -204,9 +227,11 @@ if (infile) // test de succès d'ouverture
 				{
 				nouv->set_myExemplaire(flo->recup_exemplaire (nouv->get(8)));
 				}
+
 				ajout (nouv);
 				//TEST DEVIS :
-				//devis (nouv);
+				if (nouv->get_myEmprunteur() != 0)
+				devis (nouv);
 			
 			}
 			
